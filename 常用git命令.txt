@@ -1,0 +1,2 @@
+对比文件的变更列表
+$ git diff 675f44bd8d7efa9259b0377acf858d23f1555d6c  28c22bc87b492f3624b29e709aaa6a0222371663 --name-status
