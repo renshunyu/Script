@@ -1,0 +1,5 @@
+Ëæ»ú²éÑ¯
+select area_id from uap_area  order by dbms_random.value
+
+¾ÙÀı
+update uap_main_acct t set t.area_id = (select area_id from (select area_id from uap_area  order by dbms_random.value) where t.main_acct_id =t.main_acct_id and rownum=1)

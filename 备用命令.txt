@@ -1,0 +1,140 @@
+./kafka-run-class.sh kafka.tools.ConsumerOffsetChecker --group aus-group --zookeeper 10.1.198.61:5181/consumers
+
+select hour(operate_time),count(1) from iap_app_log_import_minute t where day(operate_time)=16 and t.import_time like '2016-12-%' group by hour(operate_time) order by hour(operate_time)
+
+github.com/datafoundry/training
+
+
+https://github.com/boot2docker/windows-installer/releases/download/v1.8.0/docker-install.exe
+
+
+
+https://s10d.storage.yandex.net/rdisk/298936885f85c44263ceeb8d5115061b1a57905840d11317b1e18beff9866d64/586f837d/jEureRSpFNh_apPkYXRiEbDkDPeu5Pequ1x2x7rAss1ytX5wlJUVngyKFVaEkdmzxtMjoq7FCj7rT2EIZwHWMQ==?uid=0&filename=Chromedriver.zip&disposition=attachment&hash=3CuUzVwzoPngn5ni7J8Py1FXq7xEJUoA4qLJo85CyiM%3D%3A&limit=1&content_type=application%2Fx-zip-compressed&fsize=2398137&hid=fa0499d064d79ae880ea0ba05a7d64a1&media_type=compressed&tknv=v2&rtoken=xDKrCi7gkOY6&force_default=no&ycrid=na-e43e9baa155c213653a37c4a9daba488-downloader8g&ts=5456b901a1940&s=e4655db1d8de60e4ecf76cdc047dd38ee02243ce95ec0efd5de43c5c542eafd7&bp=/45/7/data-0.9:17485928220:2398137&pb=U2FsdGVkX1-UYrQTfKWyblzWoXfBWG1R65sdXI2SSMGTT2Hdzndgf4Tteb2Lm9z2g8oNWnXB8-pm-tdhSGE1CkEbc2GtGQgl9ggs90hMrdU=
+
+
+bin/kafka-console-consumer.sh --zookeeper 10.1.198.61:5181 --topic tcp-xml --from-beginning
+
+
+sh kafka-console-consumer.sh --zookeeper 10.1.198.61:5181 --topic tcp-xml --from-beginning|grep 1-SIMS-1-10008|grep 2016-12
+
+
+/ai4a30/aisia1.0/产品发布/aisiav04r00c00_20161111/安装包/iap.war
+
+
+java -jar "selenium-server-standalone-2.52.0.jar" -Dwebdriver.chrome.bin=".\chromedrivesr.exe"
+
+ClassPathXmlApplicationContext actx=new ClassPathXmlApplicationContext("main-spring.xml");
+File fi = (File) actx.getBean("filepath");
+
+
+imp audit30testa/audit30testa#@iap file=oridev_cmdlog_201701.dmp full=y log=1.log
+
+pip install http://wxpython.org/Phoenix/snapshot-builds/ wxPython_Phoenix
+
+./zookeeper-server-cleanup /var/lib/zookeeper/version-2  2
+
+src/main/resource
+
+sudo chgrp -R zookeeper /app/lib/zookeeper
+sudo chown -R zookeeper /app/lib/zookeeper
+
+cat xml.out |grep LOG4A|awk -F '[<>]' '{a[$47]++}END{for (i in a) {print $i}}'
+cat xml.out |grep LOG4A|awk -F '[<>]' '{print $47}'
+cat xml.out |grep LOG4A|awk -F '[<>]' '{j=NR;print $0 >> j".xml"}'
+cat ../xml.out |grep LOG4A|awk -F '[<>]' '{print $0 >> $27".txt"}'
+rm $(ls |grep 20072|awk '{if (NR!=1){print $1}}')
+cat xml.out |grep LOG4A|awk -F '[<>]' '{a[$27]++}END{for (i in a) {print i"  "a[i]}}'
+cat xml.out |grep LOG4A|awk -F '[<>]' '{a[$47]++}END{for (i in a) {print i"  "a[i]}}'
+
+
+
+
+kill -9 $(ps -ef |grep GatherSend|grep -v grep|awk '{print $2}')
+sh /home/aiuap/autobuild/gather_serverbuild.sh 
+sh /home/aiuap/autobuild/gather_server_tcp-xml_deploy.sh
+sleep 5
+sh start.sh uac record 30
+tail -f /home/aiuap30/gather30/ap_gather_server_tcp-xml/ap_gather_server_tcp-xml/log/ap.log
+
+
+kill -9 $(ps -ef |grep ap_gather_server_tcp-xml|grep -v grep|awk '{print $2}')
+csh start ap_gather_server_tcp-xml
+
+
+
+
+cat * |grep UAP|awk -F 'SUB_ACCOUNT_NAME' '{print $2}'|sed 's/>//g'|sed 's/<\///g'
+cat * |grep UAP|awk -F 'SERVER_ADDRESS' '{print $2}'|sed 's/>//g'|sed 's/<\///g'
+cat * |grep UAP|awk -F 'OPERATE_RESULT' '{print $2}'|sed 's/>//g'|sed 's/<\///g'
+cat * |grep UAP|awk -F 'OP_TYPE_ID' '{print $2}'|sed 's/>//g'|sed 's/<\///g'
+cat * |grep UAP|awk -F 'RESOURCE_CODE' '{print $2}'|sed 's/>//g'|sed 's/<\///g'
+cat * |grep UAP|awk -F 'MAIN_ACCOUNT_NAME' '{print $2}'|sed 's/>//g'|sed 's/<\///g'
+cat * |grep UAP|awk -F 'SERVER_PORT' '{print $2}'|sed 's/>//g'|sed 's/<\///g'
+cat * |grep UAP|awk -F 'CLIENT_NETWORK_ADDRESS' '{print $2}'|sed 's/>//g'|sed 's/<\///g'
+cat * |grep UAP|awk -F 'OPERATE_TIME' '{print $2}'|sed 's/>//g'|sed 's/<\///g'
+cat * |grep UAP|awk -F 'OPERATE_CONTENT' '{print $2}'|sed 's/>//g'|sed 's/<\///g'
+
+
+find audittest |grep no |awk '{print "csh logsendtool.sh uac "$1}'
+keyihelvmengduijie
+xitongziyuanjiangkong
+zhichiweixin
+rizhi  shiijanzhuangfa
+
+
+export JAVA_HOME=/usr/java/jdk1.8.0_121
+export CLASSPATH=$(echo $CLASSPATH|sed 's/jdk1.6.0_31/jdk1.8.0_121/g')
+export PATH=$(echo $PATH:$HOME/bin:/home/aiuap/tools/apache-ant-1.7.1/bin|sed 's/jdk1.6.0_31/jdk1.8.0_121/g')
+
+
+<CLIENT_BOIS_SERIAL>1234567890</CLIENT_BOIS_SERIAL><HARD_DISK_SERIAL>0987654321</HARD_DISK_SERIAL>
+sed -i "s/<ROOT><LOG4A>/<ROOT><LOG4A><CLIENT_BOIS_SERIAL>1234567890<\/CLIENT_BOIS_SERIAL><HARD_DISK_SERIAL>0987654321<\/HARD_DISK_SERIAL>/g"  主帐号*
+
+vi /etc/security/limits.d/90-nproc.conf 
+修改如下内容：
+* soft nproc 1024
+#修改为
+* soft nproc 10240
+
+
+alter database add logfile group 4 ('/aifs01/oracle11g/oradata/iap/redo04.log') size 1024M;
+alter database add logfile group 5 ('/aifs01/oracle11g/oradata/iap/redo05.log') size 1024M;
+alter database add logfile group 6 ('/aifs01/oracle11g/oradata/iap/redo06.log') size 1024M;
+
+echo 'select count(*) from v$process'|sqlplus audit30testa/audit30testa#@ai4a
+
+echo 'select count(*) from v$process;'|sqlplus audit30testa/audit30testa#@iap |grep '    '|awk '{print $NF}'
+
+mvn install:install-file -Dfile=ap-simulator-1.0.jar -DgroupId=com.asiainfo -DartifactId=ap-simulator -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=ap-commons-1.0.jar -DgroupId=com.asiainfo -DartifactId=ap-commons -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=ojdbc6-11.2.0.3.jar -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=11.2.0.3 -Dpackaging=jar
+
+cat `ls -t|grep err.log|awk 'NR<3'`|grep "`date '+%F %H:%M' -d '2017-07-22 14:20:02,180'`"
+
+ls -t|grep err.log|awk 'NR<3'
+
+sed "s\value=\".*?\"\value=\"`date "+%S %M %H * * ?" -d '60 second'`\"\g" iap-spring-report.xml 
+sed "30 s/value=\".*\"/value=\"`date "+%S %M %H * * ?" -d '60 second'`\"/g" iap-spring-report.xml
+sqlplus audit30testa/audit30testa#@10.15.42.37:1521/iap
+
+
+echo 'truncate table MODEL_MIDDLE_DETAIL_RESULT;'|sqlplus audit30testa/audit30testa#@10.15.42.37:1521/iap
+echo "truncate table MODEL_MIDDLE_DETAIL_RESULT;
+update iap_report_schedule set his_data_analysis_finish_time='' where report_id = 'ModelAudit ';
+commit;"|sqlplus audit30testa/audit30testa#@10.15.42.37:1521/iap
+echo 'use aiiap;
+truncate table MODEL_MIDDLE_DETAIL_RESULT;' |hive
+
+echo 'use aiiap;
+show partitions MODEL_MIDDLE_DETAIL_RESULT;' |hive|grep operate_day|awk -F= '{print "use aiiap;\nalter table MODEL_MIDDLE_DETAIL_RESULT drop partition("$1"='\''"$2"'\'');" }'|hive
+
+Insert into IAP_APP_LOG_ANALUSE_NORMAL_RESULT select  '10000048',t.main_acct_name ,'1-AIUAP-80005',t.operate_type_name,'70' from  aiiaptestc.iap_app_log_operate_day t where t.main_acct_id = '10000048' and t.operate_type_id = '1-AIUAP-80005' and  t.operate_day='2017-08-02' limit 1;
+Insert into IAP_APP_LOG_ANALUSE_NORMAL_RESULT select  '10000038',t.main_acct_name ,'1-AIUAP-20427',t.operate_type_name,'70' from  aiiaptestc.iap_app_log_operate_day t where t.main_acct_id = '10000038' and t.operate_type_id = '1-AIUAP-20427' and  t.operate_day='2017-07-19' limit 1;
+Insert into IAP_APP_LOG_ANALUSE_NORMAL_RESULT select t.main_acct_id,t.main_acct_name,t.operate_type_id,t.operate_type_name,'70' as num from  aiiaptestc.iap_app_log_operate_day t where t.operate_day = '2017-07-20' and t.main_acct_name<>'NULL' and t.operate_type_name not in ('主帐号加锁','主帐号新建','主帐号解锁') group by t.main_acct_id,t.main_acct_name,t.operate_type_id,t.operate_type_name;
+
+select * from  iap_app_log_operate_day t where t.main_acct_id = '10000048' and t.operate_type_id = '1-AIUAP-80005' and  t.operate_day='2017-08-02';
+select * from  iap_app_log_operate_day t where t.main_acct_id = '10000038' and t.operate_type_id = '1-AIUAP-20427' and  t.operate_day='2017-07-20';
+
+pwdx `jps|grep ReportApp|awk '{print $1}'`
+sudo netstat -anop |grep 1521|awk '{a[$7]++}END{for(i in a){print i" "a[i]}}'
+hadoop fs -du -h `hadoop fs -du -h /user/hive/warehouse/aiiap.db/iap_app_log_operate_day/|grep 2017-07|awk '{print $5}'`|grep K|awk '{print $NF}'|awk -F/ '{a[$7]++}END{for(i in a){print i" "a[i]}}'
