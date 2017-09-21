@@ -141,4 +141,9 @@ hadoop fs -du -h `hadoop fs -du -h /user/hive/warehouse/aiiap.db/iap_app_log_ope
 grep -n ERROR catalina.out |awk -F: '{a[$2]++}END{for( i in a ){print i" "a[i]}}'|sort
 
 curl -XGET -u kibanaserver:Kibanaserver4A@2017 http://10.1.198.55:8990/app-log-v1/_count
+hadoop fs -ls /user/hive/warehouse/aiiap.db/iap_app_log_operate_day|grep =|awk -F/ '{print "use aiiap;\nalter table iap_app_log_operate_day add partition("$NF"'\'');"}'|sed "s/=/='/g"|hive
+hadoop fs -lsr  /user/hive/warehouse/aiiaptestc.db/|grep =|awk -F/ '{print "alter table "$6" add partition("$NF"'\'');"}'|sed "s/=/='/g"|grep =
+hadoop fs -lsr  /user/hive/warehouse/aiiaptestc.db/|grep =|awk -F= '(NF>1 && !match($NF,"/")){print $0}'|awk -F/ '{if(NF==7){print "alter table "$6" add partition("$7"'\'');"};if(NF==8){print "alter table "$6" add partition("$7"'\'',"$8"'\'');"}}'|sed "s/=/='/g"
+hadoop fs -lsr  /user/hive/warehouse/aiiaptestc.db/|grep =|awk -F= '(NF>1 && !match($NF,"/")){print $0}'|awk -F/ '{if(NF==7){print "use aiiaptestc;\nalter table "$6" add partition("$7"'\'');"};if(NF==8){print "use aiiaptestc;\nalter table "$6" add partition("$7"'\'',"$8"'\'');"}}'|sed "s/=/='/g"|hive
+
 

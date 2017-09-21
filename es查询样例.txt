@@ -1,0 +1,57 @@
+GET app-log/_search
+{
+  "size":0,
+  "aggs": {
+    "mainAcctIds": {
+      "terms": {
+        "field": "mainAcctId"
+      },
+      "aggs":{"mm":{"max": {
+        "field": "operateTime"
+      }}}
+    }
+  }
+}
+GET app-log/_search
+{
+   "query": {
+       "match_all": {}
+    }
+  
+}
+GET app-log/_search
+{
+  "size":0,
+  "aggs": {
+    "mainAcctIds": {
+      "terms": {
+        "field": "mainAcctId"
+      }
+    }
+  }
+}
+
+GET app-log/_search
+{
+
+  "aggs": {
+    "mm": {
+      "max": {
+        "field": "operateTime"
+      }
+    }
+  }
+}
+
+
+GET app-log/_search
+{   "size":0,
+  "query" :
+ { "range":{
+    "operateTimeDate":{
+            "gte":"2017-07-17 06:43:20.00",
+            "lt":"2017-07-17 06:44:20.00" 
+    }
+  }}
+}
+
