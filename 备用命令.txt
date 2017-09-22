@@ -146,4 +146,6 @@ hadoop fs -lsr  /user/hive/warehouse/aiiaptestc.db/|grep =|awk -F/ '{print "alte
 hadoop fs -lsr  /user/hive/warehouse/aiiaptestc.db/|grep =|awk -F= '(NF>1 && !match($NF,"/")){print $0}'|awk -F/ '{if(NF==7){print "alter table "$6" add partition("$7"'\'');"};if(NF==8){print "alter table "$6" add partition("$7"'\'',"$8"'\'');"}}'|sed "s/=/='/g"
 hadoop fs -lsr  /user/hive/warehouse/aiiaptestc.db/|grep =|awk -F= '(NF>1 && !match($NF,"/")){print $0}'|awk -F/ '{if(NF==7){print "use aiiaptestc;\nalter table "$6" add partition("$7"'\'');"};if(NF==8){print "use aiiaptestc;\nalter table "$6" add partition("$7"'\'',"$8"'\'');"}}'|sed "s/=/='/g"|hive
 
+for i in $(ls /proc | grep "^[0-9]" | awk '$0>100'); do awk '/Swap:/{a=a+$2}END{print '"$i"',a/1024"M"}' /proc/$i/smaps;done| sort -k2nr | head -n 20|awk '{print $1}'|xargs pwdx
+
 
