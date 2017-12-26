@@ -3,8 +3,10 @@ export JAVA_HOME=/usr/java/jdk1.8.0_121
 export M2_HOME=/usr/java/apache-maven-3.3.9
 export PATH=$JAVA_HOME/bin:$M2_HOME/bin:$PATH
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
-
-svnhome=/home/aiuap/svnproject/program30/program/iap_aus_rm/iap_aus/
+#rmµÿ÷∑
+#svnhome=/home/aiuap/svnproject/program30/program/iap_aus_rm/iap_aus/
+#devµÿ÷∑
+svnhome=/home/aiuap/svnproject/program30/program/iap_aus_zjy/iap_aus/
 buildhome=/home/aiuap/svnproject/program30/builddir
 svn up $svnhome
 result=$?

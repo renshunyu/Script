@@ -25,7 +25,7 @@ then
   exit 1
 fi
 cd $buildhome/iap_report_flex_server/
-ant  >./build.log
+ant  -Dlocal=$1  >./build.log
 result=`cat build.log|grep -i "BUILD SUCCESSFUL"|wc -l`
 if [ $result != '1' ]
 then

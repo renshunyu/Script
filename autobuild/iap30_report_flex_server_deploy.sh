@@ -63,7 +63,7 @@ sh /home/aiuap30/tomcat_iapreport_flex/iap_flex_reportconfinit/install.sh
 sudo chmod -R 777 /home/aiuap30/tomcat_iapreport_flex/webapps/iap_report_flex_server/
 sudo chown -R aiuap30:aiuap /home/aiuap30/tomcat_iapreport_flex/webapps/iap_report_flex_server/
 sudo rm -rf /home/aiuap30/tomcat_iapreport_flex/webapps/iap_report_flex_server/iap_report_flex_server.war
-
+sudo sed -i "s/DprovLocalRootDir=.*/DprovLocalRootDir=$1/g" /home/aiuap30/tomcat_iapreport_flex/bin/catalina.sh
 sudo su - aiuap30 -c "sh /home/aiuap30/tomcat_iapreport_flex/bin/startup.sh"
 echo $?
 echo "审计report已经部署成功,请查看后台日志"

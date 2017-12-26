@@ -27,7 +27,7 @@ then
 fi
 cd $buildhome/iap_report_flex
 sed -i "s/\/home\/aiiap30\/sdks\/4\.0\.0/\/home\/aiuap30\/sdks\/4\.0\.0/g" build*
-ant >./build.log
+ant -f $1>./build.log
 result=`cat build.log|grep -i "BUILD SUCCESSFUL"|wc -l`
 if [ $result != '1' ]
 then

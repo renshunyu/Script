@@ -9,14 +9,14 @@ export PATH
 
 deployhome=/home/aiuap30/gather30/ap_gather_server_tcp-xml
 buildhome=/home/aiuap/svnproject/program30/builddir/ap_gather_Server
-cd $deployhome/ap_gather_server_tcp-xml
-sudo su aiuap30 -c "pwd"
+#cd $deployhome/ap_gather_server_tcp-xml
+#sudo su aiuap30 -c "pwd"
 #sudo su aiuap30 -c "csh stop.sh ap_gather_server_tcp-xml"
-sudo kill -9 $(ps -ef|grep ap_gather_server_tcp-xml|grep -v grep|awk '{print $2}')
+sudo kill -9 $(sudo pwdx `ps -ef|grep ap_gather_server_tcp-xml|grep -v grep|awk '{print $2}'`|grep $deployhome/ap_gather_server_tcp-xml|awk '{print $1}')
 
 while  [ 1 ]
 do
-result=`ps -ef|grep ap_gather_server_tcp-xml|grep -v grep|grep -v tail |wc -l`
+result=$(sudo pwdx `ps -ef|grep ap_gather_server_tcp-xml|grep -v grep|awk '{print $2}'`|grep $deployhome/ap_gather_server_tcp-xml|wc -l)
 if [ $result = '0' ]
 then
   echo "Í£Ö¹²É¼¯Íê±Ï"

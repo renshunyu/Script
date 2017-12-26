@@ -5,8 +5,8 @@ export M2_HOME=/usr/java/apache-maven-3.3.9
 export PATH=$JAVA_HOME/bin:$M2_HOME/bin:$PATH
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 
-svnhome=/home/aiuap/svnproject/program30/program/report_execute_engine
-buildhome=/home/aiuap/svnproject/program30/builddir
+svnhome=/home/aiuap/svnproject/program30rm/report_execute_engine
+buildhome=/home/aiuap/svnproject/program30rm/builddir
 svn up $svnhome
 result=$?
 if [ $result != '0' ]
@@ -33,7 +33,7 @@ then
 fi
 cd $buildhome/report_execute_engine
 
-mvn clean package -Dmaven.test.skip=true >./build.log
+mvn clean install -Dmaven.test.skip=true >./build.log
 
 #ant release >./build.log
 result=`cat build.log|grep -i "BUILD SUCCESS"|wc -l`

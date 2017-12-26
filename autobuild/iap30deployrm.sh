@@ -43,6 +43,7 @@ then
   echo "创建审计平台部署目录错误"
   exit 1
 fi
+#sudo cp /home/aiuap/svnproject/program30rm/builddir/iap/target/dist/iap.war /home/aiuap/aiuap30/tomcat_iap_rm/webapps/iap/iap.war
 sudo cp /home/aiuap/svnproject/program30rm/builddir/iap/target/dist/iap.war /home/aiuap30/zjy/tomcat_iap_audit30testb/webapps/iap/iap.war
 result=$?
 if [ $result != '0' ]

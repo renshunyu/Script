@@ -8,14 +8,14 @@ export PATH
 
 deployhome=/home/aiuap30/gather30/ap_standardize_server
 buildhome=/home/aiuap/svnproject/program30/builddir/ap_standardize_server
-cd $deployhome/ap_standardize_server
-sudo su aiuap30 -c "pwd"
+#cd $deployhome/ap_standardize_server
+#sudo su aiuap30 -c "pwd"
 
-sudo kill -9 $(ps -ef|grep ap_standardize_server|grep -v grep|grep -v ap_standardize_server_deploy|awk '{print $2}')
+sudo kill -9 $(sudo pwdx `ps -ef|grep ap_standardize_server|grep -v grep|awk '{print $2}'`|grep $deployhome/ap_standardize_server|awk -F: '{print $1}')
 
 while  [ 1 ]
 do
-result=`ps -ef|grep ap_standardize_server|grep -v grep|grep -v tail|grep -v ap_standardize_server_deploy|wc -l`
+result=$(sudo pwdx `ps -ef|grep ap_standardize_server|grep -v grep|awk '{print $2}'`|grep $deployhome/ap_standardize_server|wc -l)
 if [ $result = '0' ]
 then
   echo "停止标准化完毕"
