@@ -61,6 +61,9 @@ kill -9 $(ps -ef |grep ap_gather_server_tcp-xml|grep -v grep|awk '{print $2}')
 csh start ap_gather_server_tcp-xml
 
 
+curl -XGET 10.19.19.40:8990/_cluster/health -u kibanaserver:Kibanaserver4A@2017
+
+
 
 
 cat * |grep UAP|awk -F 'SUB_ACCOUNT_NAME' '{print $2}'|sed 's/>//g'|sed 's/<\///g'
@@ -147,5 +150,28 @@ hadoop fs -lsr  /user/hive/warehouse/aiiaptestc.db/|grep =|awk -F= '(NF>1 && !ma
 hadoop fs -lsr  /user/hive/warehouse/aiiaptestc.db/|grep =|awk -F= '(NF>1 && !match($NF,"/")){print $0}'|awk -F/ '{if(NF==7){print "use aiiaptestc;\nalter table "$6" add partition("$7"'\'');"};if(NF==8){print "use aiiaptestc;\nalter table "$6" add partition("$7"'\'',"$8"'\'');"}}'|sed "s/=/='/g"|hive
 
 for i in $(ls /proc | grep "^[0-9]" | awk '$0>100'); do awk '/Swap:/{a=a+$2}END{print '"$i"',a/1024"M"}' /proc/$i/smaps;done| sort -k2nr | head -n 20|awk '{print $1}'|xargs pwdx
+
+SELECT TO_CHAR(TO_DATE('2009-04' || '-1', 'YYYY-MM-DD') + ROWNUM - 1,
+               'YYYYMMDD') D1,TO_CHAR(TO_DATE('2009-04' || '-1', 'YYYY-MM-DD') + ROWNUM,
+               'YYYY-MM-DD hh24:mi:ss') D2
+  FROM DUAL
+CONNECT BY ROWNUM <=32 
+
+SELECT 'partition IAP_ORI_'||TO_CHAR(TO_DATE('2017-12' || '-1', 'YYYY-MM-DD') + ROWNUM - 1,
+               'YYYYMMDD')||' values less than (TIMESTAMP'''||TO_CHAR(TO_DATE('2017-12' || '-1', 'YYYY-MM-DD') + ROWNUM,
+               'YYYY-MM-DD hh24:mi:ss')||'''),'
+  FROM DUAL
+CONNECT BY ROWNUM <=32 ;
+
+SELECT TO_CHAR(ADD_MONTHS(TO_DATE('2009-03', 'YYYY-MM'), ROWNUM - 1),
+               'YYYY-MM') DAY_ID
+  FROM DUAL
+CONNECT BY ROWNUM <=
+           months_between(to_date('2010-03', 'yyyy-mm'),
+                          to_date('2009-03', 'yyyy-mm')) + 1
+
+
+echo 'use aiiaptestc;
+show partitions iap_app_log_import_minute;'|hive |grep 2017-09|awk -F = '{print "use aiiaptestc;\nalter table iap_app_log_import_minute drop partition ("$1"='\''"$2"'\'');"}'|hive
 
 

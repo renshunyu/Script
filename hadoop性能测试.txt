@@ -1,0 +1,2 @@
+º∆À„pi÷µ
+hadoop jar hadoop-examples.jar pi 10 1000
