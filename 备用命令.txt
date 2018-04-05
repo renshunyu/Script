@@ -174,4 +174,71 @@ CONNECT BY ROWNUM <=
 echo 'use aiiaptestc;
 show partitions iap_app_log_import_minute;'|hive |grep 2017-09|awk -F = '{print "use aiiaptestc;\nalter table iap_app_log_import_minute drop partition ("$1"='\''"$2"'\'');"}'|hive
 
+#oracle延迟函数
+select dbms_pipe.receive_message('RDS', 10)   from dual;
 
+project = SSSIA AND issuetype = 故障 AND assignee in (lusm, wangsz, tanrq, yutong3, zhangjy11, rensy, zhanghl8, liufd)
+project = SSSIA AND issuetype = 故障 AND status in (Open, 已上线, 已发布, 待发布, 待测试, 测试中, 定位中, 待修复, 故障修复中, 已提交) AND assignee not in (lusm, wangsz, tanrq, yutong3, zhangjy11, rensy, zhanghl8, liufd)
+
+for i in 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29; 
+
+do 
+
+echo $i;
+
+sudo dd if=/dev/zero of=/usr/swap_file$i bs=2G count=1;
+
+sudo chmod 600 /usr/swap_file$i;
+
+sudo mkswap /usr/swap_file$i;
+
+sudo swapon /usr/swap_file$i;
+
+#/usr/swap_file10 swap swap defaults 0 0
+
+done
+
+select decode(data_type,
+              'TIMESTAMP(6)',
+              'to_char(' || t.COLUMN_NAME ||
+              ',''yyyy-mm-dd hh24:mi:ss'') as ' || t.COLUMN_NAME || ',',
+              'DATE',
+              'to_char(' || t.COLUMN_NAME ||
+              ',''yyyy-mm-dd hh24:mi:ss'') as ' || t.COLUMN_NAME || ',',
+              t.COLUMN_NAME||',') as COLUMN_NAME
+  from user_tab_columns t
+ where t.TABLE_NAME = 'UAP_MAIN_ACCT';
+
+select 'select '||wm_concat(COLUMN_NAME) || ' from ' || 'UAP_MAIN_ACCT'
+  from (select decode(data_type,
+                      'TIMESTAMP(6)',
+                      'to_char(' || t.COLUMN_NAME ||
+                      ',''yyyy-mm-dd hh24:mi:ss'') as ' || t.COLUMN_NAME,
+                      'DATE',
+                      'to_char(' || t.COLUMN_NAME ||
+                      ',''yyyy-mm-dd hh24:mi:ss'') as ' || t.COLUMN_NAME,
+                      t.COLUMN_NAME) as COLUMN_NAME
+          from user_tab_columns t
+         where t.TABLE_NAME = 'UAP_MAIN_ACCT');
+
+select (select 'select ' || wm_concat(decode(data_type,
+                                             'TIMESTAMP(6)',
+                                             'to_char(' || t.COLUMN_NAME ||
+                                             ',''yyyy-mm-dd hh24:mi:ss'') as ' ||
+                                             t.COLUMN_NAME,
+                                             'DATE',
+                                             'to_char(' || t.COLUMN_NAME ||
+                                             ',''yyyy-mm-dd hh24:mi:ss'') as ' ||
+                                             t.COLUMN_NAME,
+                                             t.COLUMN_NAME)) || ' from ' ||
+               ut.table_name
+          from user_tab_columns t
+         where t.TABLE_NAME = ut.table_name)
+  from user_tables ut;
+
+ watch -n 5 " echo 'use iaptest;
+
+select count(1) from IAP_ORI_APP_LOG_201705;'|mysql -u root -p'2wsx#EDC'"
+
+
+awk '$1=="INSERT" || $1=="insert"{print $3}' 07_全部表数据.sql 
