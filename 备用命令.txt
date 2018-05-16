@@ -242,3 +242,12 @@ select count(1) from IAP_ORI_APP_LOG_201705;'|mysql -u root -p'2wsx#EDC'"
 
 
 awk '$1=="INSERT" || $1=="insert"{print $3}' 07_全部表数据.sql 
+
+
+
+svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/iap http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/aisiav04r04c02_20180509/iap
+PJ=data-reporting&&svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/aisiav04r04c02_20180509/$PJ
+svn -r133313:134535 log http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/iap
+svn diff -r134866:134581 --summarize http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30
+svn log http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/aisiav04r20c00-pacth03_20171128/iap --stop-on-copy -q
+java -jar hudson-cli.jar -s http://10.1.198.53:9080/hudson build iap -p sadf=ewdwq
