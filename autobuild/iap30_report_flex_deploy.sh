@@ -8,4 +8,5 @@ PATH=$JAVA_HOME/bin:$PATH:$HOME/bin:/home/aiuap/tools/apache-ant-1.7.1/bin:
 export PATH
 
 sudo cp /home/aiuap/mainConfig.xml /home/aiuap/svnproject/program30/builddir/iap_report_flex/dist/bin/config
+sudo cp /home/aiuap/svnproject/program30/builddir/iap_report_flex/dist/bin/* /home/aiuap30/tomcat_iapreport_flex/webapps/iap_report_flex_server/
 sudo chown aiuap30:aiuap /home/aiuap/svnproject/program30/builddir/iap_report_flex/dist/bin/config/mainConfig.xml

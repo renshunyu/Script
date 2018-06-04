@@ -8,6 +8,7 @@ builddir=/home/aiuap/svnproject/release/builddir
 rpath=/home/aiuap/svnproject/release/iap
 #发布版本的svn地址
 svnurl=$(svn info $rpath|awk 'NR==2{print $2}')
+thsvnurl=$(echo $svnurl/|sed 's/\//\\\//g')
 #更新文件开始插入的行数
 r=16
 #svn的release最新版本号
@@ -25,7 +26,7 @@ cp readme.txt $builddir/iapupdate/readme.txt
 #打印
 cat $builddir/iapupdate/update.sh
 #遍历发生变更的文件
-for i in $(svn diff -r$vn:$vo $svnurl|grep $vn|grep -v 'src/main/resource'|awk '{print $2}'|sed 's/src\/main\/java/$iapdir\/WEB-INF\/classes/g' |sed 's/.java/.class/g'|sed 's/WebRoot/$iapdir/g')
+for i in $(svn diff --summarize -r$vo:$vn $svnurl|grep -v 'src/main/resource'|awk '$1!="D"{print $2}'|sed "s/$thsvnurl//g"|sed 's/src\/main\/java/$iapdir\/WEB-INF\/classes/g' |sed 's/.java/.class/g'|sed 's/WebRoot/$iapdir/g')
 do
 	#获取修改的文件名
 	j=$(echo $i|awk -F / '{print $NF}')
@@ -66,7 +67,7 @@ jar -xvf iap.war
 cd ..
 #遍历修改的文件
 echo "svn diff -r$vn:$vo $svnurl"
-for i in $(svn diff -r$vn:$vo $svnurl|grep $vn|awk '{print $2}'|sed 's/src\/main\/java/iap\/WEB-INF\/classes/g' |sed 's/.java/.class/g'|sed 's/WebRoot/iap/g')
+for i in $(svn diff --summarize -r$vo:$vn $svnurl|awk '$1!="D"{print $2}'|sed "s/$thsvnurl//g"|sed 's/src\/main\/java/iap\/WEB-INF\/classes/g' |sed 's/.java/.class/g'|sed 's/WebRoot/iap/g')
 do
 	#cp $(echo $i|awk -F . '{print $1}')*.$(echo $i|awk -F . '{print $2}') .
 	#把修改的文件复制出来

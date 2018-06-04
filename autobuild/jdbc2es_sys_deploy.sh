@@ -7,7 +7,7 @@ export CLASSPATH=.:/usr/java/jdk1.8.0_121/lib:$CLASSPATH
 PATH=$JAVA_HOME/bin:$PATH:$HOME/bin:$M2_HOME/bin:
 export PATH
 
-deployhome=/home/aiuap/zjy/jdbc2es-sys
+deployhome=/home/aiuap30/zjy/jdbc2es-sys
 buildhome=/home/aiuap/svnproject/program30/builddir/jdbc2es
 cd $deployhome/jdbc2es-0.0.1-SNAPSHOT/bin
 #sudo su aiuap -c "pwd"

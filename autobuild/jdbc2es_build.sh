@@ -1,7 +1,7 @@
 #!bin/sh
 export JAVA_HOME=/usr/java/jdk1.8.0_121
 export M2_HOME=/usr/java/apache-maven-3.2.5
-export PATH=$M2_HOME/bin:$PATH
+export PATH=$M2_HOME/bin:$JAVA_HOME/bin:$PATH
 svnhome=/home/aiuap/svnproject/program30/program/jdbc2es
 buildhome=/home/aiuap/svnproject/program30/builddir
 svn up $svnhome
@@ -35,4 +35,4 @@ then
   echo "编译报错"
   exit 1
 fi
-echo "编辑成功"
+echo "编译成功"

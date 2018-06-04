@@ -34,5 +34,5 @@ then
   echo "编译报错"
   exit 1
 fi
-echo "编辑成功"
+echo "编译成功"
 

@@ -1,7 +1,8 @@
 #!bin/sh
-export JAVA_HOME=/usr/java/jdk1.6.0_31
+export JAVA_HOME=/usr/java/jdk1.7.0_80
 export ANT_HOME=/home/aiuap/tools/apache-ant-1.7.1
-export PATH=$ANT_HOME/bin:$PATH
+export PATH=$ANT_HOME/bin:$JAVA_HOME/bin:$PATH
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 svnhome=/home/aiuap/svnproject/program30/program/iap_server
 buildhome=/home/aiuap/svnproject/program30/builddir
 svn up $svnhome
@@ -32,4 +33,4 @@ then
   echo "编译报错"
   exit 1
 fi
-echo "编辑成功"
+echo "编译成功"
