@@ -255,3 +255,4 @@ java -jar hudson-cli.jar -s http://10.1.198.53:9080/hudson build iap -p sadf=ewd
 ncftpput -u 'ai\rensy' -p '3edc@WSX' -P 21 -m -R 10.1.252.239 ./ai4a30/aisia1.0/줄珂역랙경/ 
 
 svn info `ls |grep -v 'iap_aus_zjy'` |grep 'URL:'
+svn log http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/aisiav04r04c03_20180531 -v |grep 'products'|grep -v ' (from '
