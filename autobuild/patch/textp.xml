@@ -1,0 +1,7 @@
+\
+        <hudson.model.TextParameterDefinition>\
+          <name>notincluded</name>\
+          <description></description>\
+          <defaultValue>xxxxxx</defaultValue>\
+          <trim>false</trim>\
+        </hudson.model.TextParameterDefinition>

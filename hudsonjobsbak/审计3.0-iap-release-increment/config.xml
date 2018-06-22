@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>http://10.1.198.53:9033/iap/iapupdate.zip </description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers class="vector"/>
+  <concurrentBuild>false</concurrentBuild>
+  <cleanWorkspaceRequired>false</cleanWorkspaceRequired>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>sh /home/aiuap/autobuild/release/iap30buildincrement.sh</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>sh /home/aiuap/autobuild/release/iap30deployincrement.sh </command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>sh /home/aiuap/autobuild/iap30buildrelease.sh</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>sh /home/aiuap/autobuild/release/autoup.sh</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>cd /home/aiuap/svnproject/release/builddir/iapupdate/ 
+sh update.sh</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>sh /home/aiuap/aiuap30/tomcat_iap_increment/bin/shutdown.sh
+sleep 3
+sh /home/aiuap/aiuap30/tomcat_iap_increment/bin/startup.sh
+cd /home/aiuap/svnproject/release/builddir/
+zip -r /home/aiuap/aiuap30/tomcat_iap_increment/webapps/iap/iapupdate.zip iapupdate
+echo 可以到/home/aiuap/svnproject/release/builddir/目录下面获取iapupdate作为发布的增量文件！
+echo 或者可以访问 http://10.1.198.53:9033/iap/iapupdate.zip 进行获取！</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

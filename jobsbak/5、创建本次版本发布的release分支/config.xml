@@ -1,0 +1,56 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>ISSUEVERSION</name>
+          <description>本次发布的版本号例如：aisiav04r04c02_20180509</description>
+          <defaultValue>aisiav04r04c03_20180621</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>#创建发布目录
+svn mkdir http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION -m &quot;$ISSUEVERSION版本发布&quot;
+#审计前台
+PJ=iap &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+#南研原始日志完整性和非空校验稽核
+PJ=ap_validate_server &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+#elasticsearch和kibana
+PJ=&apos;elastic/install&apos; &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/install
+#标准化日志导入而是服务
+PJ=&apos;elastic/jdbc2es&apos; &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/jdbc2es
+#动态回放堡垒
+PJ=GFort &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+#审计工作任务后台
+PJ=iap_workflow &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+#新报表分析工具
+PJ=report_execute_engine &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+#报表前台的后台
+PJ=reports &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+#报表前台的前台
+PJ=reportc &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+#2018年新的数据上报
+PJ=&apos;data-reporting&apos; &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+#2017年敏感数据上报
+PJ=&apos;data-upload-tools&apos; &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

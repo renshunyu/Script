@@ -1,0 +1,56 @@
+<?xml version="1.1" encoding="UTF-8"?><project>
+  <actions/>
+  <description/>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>VER</name>
+          <description>release版本</description>
+          <defaultValue>aisiav04r04c02_20180509</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>PATCHNAME</name>
+          <description>补丁名称，格式为：xxxxx_yyyymmddhhmi</description>
+          <defaultValue>哈哈_yyyymmddhhmi</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.TextParameterDefinition>
+          <name>温馨提示：</name>
+          <description/>
+          <defaultValue>上传的ftp前，如果补丁中包含db变更，需要将db变更放在xxxxx_yyyymmddhhmi,并上传至svn的相应版本相应类型的与增量，全量目录同级的目录下，如果此步忽略。后续需要手动上传</defaultValue>
+          <trim>false</trim>
+        </hudson.model.TextParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>FTPUSER</name>
+          <description/>
+          <defaultValue>ai\rensy</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.PasswordParameterDefinition>
+          <name>FTPPASSWORD</name>
+          <description/>
+          <defaultValue>{AQAAABAAAAAQPaWU5niWoUme/1qDOrM7fNO/GHbuz0Hef07KNVgmcN0=}</defaultValue>
+        </hudson.model.PasswordParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>sh /home/aiuap/autobuild/patch/patchs/docpatch.sh ${VER}
+sh /home/aiuap/autobuild/patch/patchs/dbpatch.sh ${VER} ${PATCHNAME}
+sh /home/aiuap/autobuild/patch/uploadpatch.sh ${VER} ${PATCHNAME} ${FTPUSER} ${FTPPASSWORD}</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

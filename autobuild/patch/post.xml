@@ -1,0 +1,13 @@
+\
+        <hudson.plugins.parameterizedtrigger.BuildTriggerConfig>\
+          <configs>\
+            <hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>\
+              <properties>ISBUILD=${data_reportingincre};VER=${VER};SVNTAG=00000</properties>\
+              <textParamValueOnNewLine>false</textParamValueOnNewLine>\
+            </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>\
+          </configs>\
+          <projects>iapincre</projects>\
+          <condition>SUCCESS</condition>\
+          <triggerWithNoParameters>false</triggerWithNoParameters>\
+          <triggerFromChildProjects>false</triggerFromChildProjects>\
+        </hudson.plugins.parameterizedtrigger.BuildTriggerConfig>

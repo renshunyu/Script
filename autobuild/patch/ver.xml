@@ -1,0 +1,7 @@
+\
+        <hudson.model.StringParameterDefinition>\
+          <name>VER</name>\
+          <description></description>\
+          <defaultValue>aisiav04r04c03_20180531</defaultValue>\
+          <trim>false</trim>\
+        </hudson.model.StringParameterDefinition>

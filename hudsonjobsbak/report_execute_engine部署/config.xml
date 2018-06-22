@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>deployperameter</name>
+          <description>部署的xml</description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>AuthFailReportConfig.xml</string>
+              <string>BankSelfReportConfig.xml</string>
+              <string>EmploeeEntryReportConfig.xml</string>
+              <string>ItsmAckChangeConfig.xml</string>
+              <string>ItsmExtSensivtableConfig.xml</string>
+              <string>MacChangeConfig.xml</string>
+              <string>ModelAuditConfig.xml</string>
+              <string>NoWorkCreateAcctAnaResult.xml</string>
+              <string>OracleReportConfig.xml</string>
+              <string>ReportConfig.xml</string>
+              <string>StandardSecondStrategyConfig.xml</string>
+              <string>appSensitiveExtract.xml</string>
+              <string>devReportConfig.xml</string>
+              <string>goldSensitiveConfigAuto.xml</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers class="vector"/>
+  <concurrentBuild>false</concurrentBuild>
+  <cleanWorkspaceRequired>false</cleanWorkspaceRequired>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>sh /home/aiuap/autobuild/report_execute_engine_build.sh</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>sh /home/aiuap/autobuild/report_execute_engine_deploy.sh $deployperameter</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

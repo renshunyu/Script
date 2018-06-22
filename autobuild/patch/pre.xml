@@ -1,0 +1,6 @@
+\
+	<hudson.model.BooleanParameterDefinition>\
+          <name>IAPCRE</name>\
+          <description></description>\
+          <defaultValue>true</defaultValue>\
+        </hudson.model.BooleanParameterDefinition>

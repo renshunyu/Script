@@ -1,0 +1,7 @@
+\
+        <hudson.model.StringParameterDefinition>\
+          <name>SVNBASE</name>\
+          <description></description>\
+          <defaultValue>000000</defaultValue>\
+          <trim>false</trim>\
+        </hudson.model.StringParameterDefinition>

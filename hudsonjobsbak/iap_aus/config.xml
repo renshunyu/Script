@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>project</name>
+          <description></description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>elastic/ori_log_persistence_es</string>
+              <string>elastic/std_log_persistence_es</string>
+              <string>iap_aus_verification</string>
+              <string>iap_aus_adapter</string>
+              <string>ori_log_parser/ori_log_parser_common</string>
+              <string>ori_log_parser/ori_log_parser_syslog</string>
+              <string>iap_install_manage_platform</string>
+              <string>solr8hours</string>
+              <string>iap_ohter_log_mapping_solr</string>
+              <string>iap_other_log_persistence_hdfs</string>
+              <string>iap_log_persistence_hdfs</string>
+              <string>bigdata_aus_adapter</string>
+              <string>com.ai.common.environmentvar</string>
+              <string>std_log_persistence/std_log_persistence_hdfs</string>
+              <string>std_log_persistence/std_log_persistence_oracle</string>
+              <string>iap_other_ori_log_persistence</string>
+              <string>data_syn</string>
+              <string>crmep_whitelist_interface</string>
+              <string>bigdata_hiveloader</string>
+              <string>ori_log_persistence</string>
+              <string>iap_log_persistence_ftp</string>
+              <string>standardize/cache-server</string>
+              <string>standardize</string>
+              <string>standardize/standardize-component</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers class="vector"/>
+  <concurrentBuild>false</concurrentBuild>
+  <cleanWorkspaceRequired>false</cleanWorkspaceRequired>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>sh /home/aiuap/autobuild/iap_aus_build.sh $project</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>sh /home/aiuap/autobuild/iap_aus_deploy.sh $project</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>
