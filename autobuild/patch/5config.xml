@@ -8,7 +8,7 @@
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description/>
-          <defaultValue>aisiav04r04c02_20180509</defaultValue>
+          <defaultValue>aisiav04r05c00_20180627</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
@@ -19,8 +19,8 @@
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>PROJECTS</name>
-          <description>修改工程</description>
-          <defaultValue>jdbc2es data-upload-tools jdbc2es#动态回放堡垒 data-reporting</defaultValue>
+          <description/>
+          <defaultValue>data-reporting</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.TextParameterDefinition>

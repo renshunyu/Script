@@ -41,7 +41,7 @@ if [ $vd -eq $vn ]; then
         echo "无待发布的版本"
 else
         echo "有待发布的版本:"
-        projects=`svn log $svnpath -v -r$vn:$vd|grep products|awk '{print $2}'|awk -F'/' '{print $6}'|awk '{a[$1]++}END{for (i in a) {print i"full"}for (i in a) {print i"incre"}}'|sed 's/-/_/g'|sed "s/#.*/#/g"`
+        projects=`svn log $svnpath -v -r$vn:$[$vd+1]|grep products|awk '{print $2}'|awk -F'/' '{print $6}'|awk '{a[$1]++}END{for (i in a) {print i"full"}for (i in a) {print i"incre"}}'|sed 's/-/_/g'|sed "s/#.*/#/g"`
 	fulls=`java -jar jenkins-cli.jar -s http://10.1.198.53:9081/jenkins/ list-jobs 补丁`
 	echo $projects |sed 's/\( \)\+/\n/g'
 	echo "******************"

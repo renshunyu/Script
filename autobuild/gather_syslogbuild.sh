@@ -2,8 +2,9 @@
 export JAVA_HOME=/usr/java/jdk1.5.0_17
 export ANT_HOME=/home/aiuap/tools/apache-ant-1.7.1
 export PATH=$ANT_HOME/bin:$PATH
-svnhome=/home/aiuap/svnproject/program/program/ap_gather_syslog
-buildhome=/home/aiuap/svnproject/program/builddir
+export LANG=zh_CN.UTF-8
+svnhome=/home/aiuap/svnproject/program30/program/ap_gather_syslog
+buildhome=/home/aiuap/svnproject/program30/builddir
 svn up $svnhome
 result=$?
 if [ $result != '0' ]

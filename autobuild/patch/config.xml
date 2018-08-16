@@ -9,25 +9,25 @@
         <hudson.model.TextParameterDefinition>
           <name>notincluded</name>
           <description></description>
-          <defaultValue>jdbc2esfull,data_upload_toolsfull,jdbc2es#,jdbc2esincre,data_upload_toolsincre,jdbc2es#,data_reportingincre,</defaultValue>
+          <defaultValue>data_reportingincre,</defaultValue>
           <trim>false</trim>
         </hudson.model.TextParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>SVNTAG</name>
           <description></description>
-          <defaultValue>137249</defaultValue>
+          <defaultValue>137868</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>SVNBASE</name>
           <description></description>
-          <defaultValue>136193</defaultValue>
+          <defaultValue>137652</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description></description>
-          <defaultValue>aisiav04r04c03_20180531</defaultValue>
+          <defaultValue>aisiav04r05c00_20180627</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
 	<hudson.model.BooleanParameterDefinition>

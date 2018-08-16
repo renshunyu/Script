@@ -24,7 +24,7 @@
     <filterChangelog>false</filterChangelog>
   </scm>
   <canRoam>true</canRoam>
-  <disabled>false</disabled>
+  <disabled>true</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
@@ -57,6 +57,28 @@
   <reporters/>
   <publishers>
     <hudson.plugins.jacoco.JacocoPublisher plugin="jacoco@3.0.1">
+      <healthReports>
+        <minClass>0</minClass>
+        <maxClass>0</maxClass>
+        <minMethod>0</minMethod>
+        <maxMethod>0</maxMethod>
+        <minLine>0</minLine>
+        <maxLine>0</maxLine>
+        <minBranch>0</minBranch>
+        <maxBranch>0</maxBranch>
+        <minInstruction>0</minInstruction>
+        <maxInstruction>0</maxInstruction>
+        <minComplexity>0</minComplexity>
+        <maxComplexity>0</maxComplexity>
+      </healthReports>
+      <deltaHealthReport>
+        <deltaInstruction>0.0</deltaInstruction>
+        <deltaBranch>0.0</deltaBranch>
+        <deltaComplexity>0.0</deltaComplexity>
+        <deltaLine>0.0</deltaLine>
+        <deltaMethod>0.0</deltaMethod>
+        <deltaClass>0.0</deltaClass>
+      </deltaHealthReport>
       <execPattern>**/**.exec</execPattern>
       <classPattern>**/classes</classPattern>
       <sourcePattern>**/src/main/java</sourcePattern>

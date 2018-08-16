@@ -8,13 +8,13 @@
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description/>
-          <defaultValue>aisiav04r04c02_20180509</defaultValue>
+          <defaultValue>aisiav04r05c00_20180627</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>SVNTAG</name>
           <description/>
-          <defaultValue>137249</defaultValue>
+          <defaultValue>137868</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>

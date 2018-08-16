@@ -29,12 +29,13 @@ if [ $vd -eq $vn ]; then
 	echo "无待发布的版本"
 else
 	echo "有待发布的版本:"
-	plist=`svn log $svnpath -v -r$vn:$vd|grep products|awk '{print $2}'|awk -F'/' '{print $6}'|awk '{a[$1]++}END{for (i in a) {print "  "i}}'`
+	plist=`svn log $svnpath -v -r$vn:$[$vd+1]|grep products|awk '{print $2}'|awk -F'/' '{print $6}'|awk '{a[$1]++}END{for (i in a) {print "  "i}}'`
 	echo $plist
 
 	#exit 1
 fi
 gu=`sh $spath/g2u.sh "$plist"`
+echo 'gu='$gu
 
 sed "`awk '$1=="<name>VER</name>"{print (NR+2)}' $jhome/2、根据步骤1生成步骤3/config.xml`s/<defaultValue>.*<\/defaultValue>/<defaultValue>$1<\/defaultValue>/g"  $jhome/2、根据步骤1生成步骤3/config.xml >2config.xml
 java -jar jenkins-cli.jar -s http://10.1.198.53:9081/jenkins/ update-job 2、根据步骤1生成步骤3 <2config.xml

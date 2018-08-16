@@ -1,7 +1,6 @@
-<?xml version='1.1' encoding='UTF-8'?>
-<project>
+<?xml version="1.1" encoding="UTF-8"?><project>
   <actions/>
-  <description></description>
+  <description/>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.model.ParametersDefinitionProperty>
@@ -9,18 +8,18 @@
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description>本次发布的版本号例如：aisiav04r04c02_20180509</description>
-          <defaultValue>aisiav04r04c03_20180621</defaultValue>
+          <defaultValue>aisiav04r05c01_20180725</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>FTPUSER</name>
-          <description></description>
+          <description/>
           <defaultValue>ai\rensy</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.PasswordParameterDefinition>
           <name>FTPPASSWORD</name>
-          <description></description>
+          <description/>
           <defaultValue>{AQAAABAAAAAQvMGu7ZdDYBhg/xajP/i/jGjMMx27eIvki6ktPn9e3Oo=}</defaultValue>
         </hudson.model.PasswordParameterDefinition>
       </parameterDefinitions>

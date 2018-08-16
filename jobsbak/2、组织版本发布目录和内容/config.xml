@@ -8,7 +8,7 @@
         <hudson.model.StringParameterDefinition>
           <name>MVER</name>
           <description>本次发布的版本号例如：v04r04c03</description>
-          <defaultValue>v04r04c03</defaultValue>
+          <defaultValue>v04r05c01</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>

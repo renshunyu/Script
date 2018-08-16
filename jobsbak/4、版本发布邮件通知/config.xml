@@ -9,7 +9,7 @@
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description>发布版本，例如：aisiav04r04c02_20180509</description>
-          <defaultValue>aisiav04r04c03_20180621</defaultValue>
+          <defaultValue>aisiav04r05c01_20180725</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
@@ -68,17 +68,17 @@ w\:* {behavior:url(#default#VML);}
  &lt;o:DocumentProperties&gt;
   &lt;o:Author&gt;rensy&lt;/o:Author&gt;
   &lt;o:LastAuthor&gt;rensy&lt;/o:LastAuthor&gt;
-  &lt;o:Revision&gt;16&lt;/o:Revision&gt;
-  &lt;o:TotalTime&gt;68&lt;/o:TotalTime&gt;
+  &lt;o:Revision&gt;44&lt;/o:Revision&gt;
+  &lt;o:TotalTime&gt;97&lt;/o:TotalTime&gt;
   &lt;o:Created&gt;2018-05-31T03:26:00Z&lt;/o:Created&gt;
-  &lt;o:LastSaved&gt;2018-05-31T09:12:00Z&lt;/o:LastSaved&gt;
+  &lt;o:LastSaved&gt;2018-07-25T08:48:00Z&lt;/o:LastSaved&gt;
   &lt;o:Pages&gt;1&lt;/o:Pages&gt;
-  &lt;o:Words&gt;169&lt;/o:Words&gt;
-  &lt;o:Characters&gt;969&lt;/o:Characters&gt;
+  &lt;o:Words&gt;161&lt;/o:Words&gt;
+  &lt;o:Characters&gt;918&lt;/o:Characters&gt;
   &lt;o:Company&gt;Asiainfo-Linkage&lt;/o:Company&gt;
-  &lt;o:Lines&gt;8&lt;/o:Lines&gt;
+  &lt;o:Lines&gt;7&lt;/o:Lines&gt;
   &lt;o:Paragraphs&gt;2&lt;/o:Paragraphs&gt;
-  &lt;o:CharactersWithSpaces&gt;1136&lt;/o:CharactersWithSpaces&gt;
+  &lt;o:CharactersWithSpaces&gt;1077&lt;/o:CharactersWithSpaces&gt;
   &lt;o:Version&gt;12.00&lt;/o:Version&gt;
  &lt;/o:DocumentProperties&gt;
 &lt;/xml&gt;&lt;![endif]--&gt;
@@ -402,6 +402,7 @@ target=&quot;hi.files/props0009.xml&quot;&gt;
  @font-face
 	{font-family:Wingdings;
 	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-alt:Wingdings;
 	mso-font-charset:2;
 	mso-generic-font-family:auto;
 	mso-font-pitch:variable;
@@ -409,7 +410,7 @@ target=&quot;hi.files/props0009.xml&quot;&gt;
 @font-face
 	{font-family:宋体;
 	panose-1:2 1 6 0 3 1 1 1 1 1;
-	mso-font-alt:SimSun;
+	mso-font-alt:宋体;
 	mso-font-charset:134;
 	mso-generic-font-family:auto;
 	mso-font-pitch:variable;
@@ -417,11 +418,10 @@ target=&quot;hi.files/props0009.xml&quot;&gt;
 @font-face
 	{font-family:&quot;Cambria Math&quot;;
 	panose-1:2 4 5 3 5 4 6 3 2 4;
-	mso-font-charset:1;
+	mso-font-charset:0;
 	mso-generic-font-family:roman;
-	mso-font-format:other;
 	mso-font-pitch:variable;
-	mso-font-signature:0 0 0 0 0 0;}
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
 @font-face
 	{font-family:Calibri;
 	panose-1:2 15 5 2 2 2 4 3 2 4;
@@ -429,6 +429,13 @@ target=&quot;hi.files/props0009.xml&quot;&gt;
 	mso-generic-font-family:swiss;
 	mso-font-pitch:variable;
 	mso-font-signature:-536870145 1073786111 1 0 415 0;}
+@font-face
+	{font-family:&quot;\@宋体&quot;;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 680460288 22 0 262145 0;}
 @font-face
 	{font-family:微软雅黑;
 	panose-1:2 11 5 3 2 2 4 2 2 4;
@@ -443,13 +450,6 @@ target=&quot;hi.files/props0009.xml&quot;&gt;
 	mso-generic-font-family:swiss;
 	mso-font-pitch:variable;
 	mso-font-signature:-2147483001 672087122 22 0 262175 0;}
-@font-face
-	{font-family:&quot;\@宋体&quot;;
-	panose-1:2 1 6 0 3 1 1 1 1 1;
-	mso-font-charset:134;
-	mso-generic-font-family:auto;
-	mso-font-pitch:variable;
-	mso-font-signature:3 680460288 22 0 262145 0;}
 @font-face
 	{font-family:Verdana;
 	panose-1:2 11 6 4 3 5 4 4 2 4;
@@ -579,6 +579,9 @@ span.Char1
 	mso-fareast-font-family:宋体;
 	mso-hansi-font-family:宋体;
 	mso-font-kerning:1.0pt;}
+span.SpellE
+	{mso-style-name:&quot;&quot;;
+	mso-spl-e:yes;}
 span.GramE
 	{mso-style-name:&quot;&quot;;
 	mso-gram-e:yes;}
@@ -702,6 +705,63 @@ div.WordSection1
 	{mso-level-tab-stop:324.0pt;
 	mso-level-number-position:left;
 	text-indent:-18.0pt;}
+@list l2
+	{mso-list-id:1258908617;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1729650880 1693887758 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-text:%1）;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:85.5pt;
+	text-indent:-36.0pt;}
+@list l2:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:&quot;%5\)&quot;;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:154.5pt;
+	text-indent:-21.0pt;}
+@list l2:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3
+	{mso-list-id:1374230608;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-482985624 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:106.5pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
 ol
 	{margin-bottom:0cm;}
 ul
@@ -727,7 +787,7 @@ ul
 	font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;}
 &lt;/style&gt;
 &lt;![endif]--&gt;&lt;!--[if gte mso 9]&gt;&lt;xml&gt;
- &lt;o:shapedefaults v:ext=&quot;edit&quot; spidmax=&quot;10242&quot;/&gt;
+ &lt;o:shapedefaults v:ext=&quot;edit&quot; spidmax=&quot;16386&quot;/&gt;
 &lt;/xml&gt;&lt;![endif]--&gt;&lt;!--[if gte mso 9]&gt;&lt;xml&gt;
  &lt;o:shapelayout v:ext=&quot;edit&quot;&gt;
   &lt;o:idmap v:ext=&quot;edit&quot; data=&quot;1&quot;/&gt;
@@ -754,7 +814,7 @@ mso-font-kerning:0pt&apos;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;
 &lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:24.0pt;
 mso-pagination:widow-orphan&apos;&gt;&lt;b style=&apos;mso-bidi-font-weight:normal&apos;&gt;&lt;span
 style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
-0pt&apos;&gt;大家好，审计&lt;span lang=EN-US&gt;aisiav04r04c03_20180531 &lt;/span&gt;版本发布&lt;span
+0pt&apos;&gt;大家好，审计&lt;span lang=EN-US&gt;aisiav04r05c01_20180725 &lt;/span&gt;版本发布&lt;span
 lang=EN-US&gt;!&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
 
 &lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:24.0pt;
@@ -770,103 +830,94 @@ style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-
 mso-pagination:widow-orphan&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:12.0pt;
 font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal align=left style=&apos;margin-left:67.5pt;text-align:left;
-text-indent:-18.0pt;mso-pagination:widow-orphan;mso-outline-level:1&apos;&gt;&lt;span
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l2 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
 lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
-mso-bidi-font-family:Calibri;color:black;mso-font-kerning:0pt&apos;&gt;1&lt;/span&gt;&lt;span
-style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
-Calibri;color:black;mso-font-kerning:0pt&apos;&gt;）&lt;span lang=EN-US&gt;&amp;nbsp; &lt;/span&gt;江苏需求—网络设备&lt;span
-class=GramE&gt;智能工&lt;/span&gt;单审计&lt;/span&gt;&lt;span lang=EN-US style=&apos;font-size:12.0pt;
-font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p class=MsoNormal align=left style=&apos;margin-left:67.5pt;text-align:left;
-text-indent:-18.0pt;mso-pagination:widow-orphan;mso-outline-level:1&apos;&gt;&lt;span
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;1）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span class=GramE&gt;&lt;span style=&apos;mso-bidi-font-size:
+10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;移动业支&lt;/span&gt;&lt;/span&gt;&lt;span
 lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
-mso-bidi-font-family:Calibri;color:black;mso-font-kerning:0pt&apos;&gt;2&lt;/span&gt;&lt;span
-style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
-Calibri;color:black;mso-font-kerning:0pt&apos;&gt;）&lt;span lang=EN-US&gt;&amp;nbsp; &lt;/span&gt;上海需求—新增金库策略绕行和金库操作绕行审计&lt;/span&gt;&lt;span
-lang=EN-US style=&apos;font-size:12.0pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
-宋体;mso-font-kerning:0pt&apos;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p class=MsoNormal align=left style=&apos;margin-left:67.5pt;text-align:left;
-text-indent:-18.0pt;mso-pagination:widow-orphan;mso-outline-level:1&apos;&gt;&lt;span
-lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
-mso-bidi-font-family:Calibri;color:black;mso-font-kerning:0pt&apos;&gt;3&lt;/span&gt;&lt;span
-style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
-Calibri;color:black;mso-font-kerning:0pt&apos;&gt;）&lt;span lang=EN-US&gt;&amp;nbsp; &lt;/span&gt;公共需求—敏感数据上报若干问题的修改&lt;span
+mso-bidi-font-family:Calibri;color:black&apos;&gt;-&lt;/span&gt;&lt;span style=&apos;mso-bidi-font-size:
+10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;敏感数据上报监控&lt;span
 lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;p class=MsoListParagraph style=&apos;margin-left:105.0pt;text-indent:-21.0pt;
-mso-outline-level:1;mso-list:l1 level5 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+mso-outline-level:1;mso-list:l1 level5 lfo4&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
 lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:Wingdings;mso-fareast-font-family:
 Wingdings;mso-bidi-font-family:Wingdings;color:black&apos;&gt;&lt;span style=&apos;mso-list:
 Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
 style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
-Calibri;color:black&apos;&gt;取消&lt;span lang=EN-US&gt;data-reporting&lt;/span&gt;合并上报&lt;span
+Calibri;color:black&apos;&gt;敏感数据上报监控短信报警&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:105.0pt;text-indent:-21.0pt;
+mso-outline-level:1;mso-list:l1 level5 lfo4&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:Wingdings;mso-fareast-font-family:
+Wingdings;mso-bidi-font-family:Wingdings;color:black&apos;&gt;&lt;span style=&apos;mso-list:
+Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
+Calibri;color:black&apos;&gt;敏感数据上报监控状态前台展示&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l2 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;2）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span style=&apos;mso-bidi-font-size:10.5pt;
+font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;公共需求—审计任务指定审批人下派&lt;span
 lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoListParagraph style=&apos;margin-left:105.0pt;text-indent:-21.0pt;
-mso-outline-level:1;mso-list:l1 level5 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
-lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:Wingdings;mso-fareast-font-family:
-Wingdings;mso-bidi-font-family:Wingdings;color:black&apos;&gt;&lt;span style=&apos;mso-list:
-Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
-style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
-Calibri;color:black&apos;&gt;解决了多个业务回执位于同一目录的文件读取问题&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p class=MsoListParagraph style=&apos;margin-left:105.0pt;text-indent:-21.0pt;
-mso-outline-level:1;mso-list:l1 level5 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
-lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:Wingdings;mso-fareast-font-family:
-Wingdings;mso-bidi-font-family:Wingdings;color:black&apos;&gt;&lt;span style=&apos;mso-list:
-Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
-style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
-Calibri;color:black&apos;&gt;解决&lt;span lang=EN-US&gt;ftp&lt;/span&gt;连接泄露的问题&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p class=MsoListParagraph style=&apos;margin-left:105.0pt;text-indent:-21.0pt;
-mso-outline-level:1;mso-list:l1 level5 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
-lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:Wingdings;mso-fareast-font-family:
-Wingdings;mso-bidi-font-family:Wingdings;color:black&apos;&gt;&lt;span style=&apos;mso-list:
-Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
-style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
-Calibri;color:black&apos;&gt;解决生成文件名时间的问题&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p class=MsoListParagraph style=&apos;margin-left:105.0pt;text-indent:-21.0pt;
-mso-outline-level:1;mso-list:l1 level5 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
-lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:Wingdings;mso-fareast-font-family:
-Wingdings;mso-bidi-font-family:Wingdings;color:black&apos;&gt;&lt;span style=&apos;mso-list:
-Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
-style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
-Calibri;color:black&apos;&gt;日月按照开始时间分钟按照结束时间&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p class=MsoListParagraph style=&apos;margin-left:105.0pt;text-indent:-21.0pt;
-mso-list:l1 level5 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span lang=EN-US
-style=&apos;mso-bidi-font-size:10.5pt;font-family:Wingdings;mso-fareast-font-family:
-Wingdings;mso-bidi-font-family:Wingdings;color:black&apos;&gt;&lt;span style=&apos;mso-list:
-Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
-style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
-Calibri;color:black&apos;&gt;启动后进度差半个小时的问题 &lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p class=MsoListParagraph style=&apos;margin-left:105.0pt;text-indent:-21.0pt;
-mso-list:l1 level5 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span lang=EN-US
-style=&apos;mso-bidi-font-size:10.5pt;font-family:Wingdings;mso-fareast-font-family:
-Wingdings;mso-bidi-font-family:Wingdings;color:black&apos;&gt;&lt;span style=&apos;mso-list:
-Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
-style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
-Calibri;color:black&apos;&gt;支持宁夏按照时间创建目录&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p class=MsoListParagraph style=&apos;margin-left:105.0pt;text-indent:-21.0pt;
-mso-list:l1 level5 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span lang=EN-US
-style=&apos;mso-bidi-font-size:10.5pt;font-family:Wingdings;mso-fareast-font-family:
-Wingdings;mso-bidi-font-family:Wingdings;color:black&apos;&gt;&lt;span style=&apos;mso-list:
-Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l2 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
 lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
-mso-bidi-font-family:Calibri;color:black&apos;&gt;ftp&lt;/span&gt;&lt;span style=&apos;mso-bidi-font-size:
-10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;上传文件改为串行，先传数据文件再传校验的文件&lt;span
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;3）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span style=&apos;mso-bidi-font-size:10.5pt;
+font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;公共需求—审计取数管理&lt;span
+lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l2 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;4）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span style=&apos;mso-bidi-font-size:10.5pt;
+font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;上海&lt;span
+class=GramE&gt;个&lt;/span&gt;需&lt;span class=GramE&gt;—应用&lt;/span&gt;&lt;span lang=EN-US&gt;4A&lt;/span&gt;自行记录应用系统访问日志并优化应用&lt;span
+lang=EN-US&gt;4A&lt;/span&gt;绕行审计功能&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l2 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;5）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span style=&apos;mso-bidi-font-size:10.5pt;
+font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;若干故障处理和优化&lt;span
+lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:106.5pt;text-indent:-21.0pt;
+mso-outline-level:1;mso-list:l3 level1 lfo7&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:Wingdings;mso-fareast-font-family:
+Wingdings;mso-bidi-font-family:Wingdings;color:black&apos;&gt;&lt;span style=&apos;mso-list:
+Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
+Calibri;color:black&apos;&gt;解决福建南&lt;span class=GramE&gt;研&lt;/span&gt;&lt;span class=SpellE&gt;&lt;span
+lang=EN-US&gt;uac&lt;/span&gt;&lt;/span&gt;日志入&lt;span class=SpellE&gt;&lt;span lang=EN-US&gt;es&lt;/span&gt;&lt;/span&gt;问题&lt;span
+lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:106.5pt;text-indent:-21.0pt;
+mso-outline-level:1;mso-list:l3 level1 lfo7&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:Wingdings;mso-fareast-font-family:
+Wingdings;mso-bidi-font-family:Wingdings;color:black&apos;&gt;&lt;span style=&apos;mso-list:
+Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
+Calibri;color:black&apos;&gt;回放堡垒&lt;span class=SpellE&gt;&lt;span lang=EN-US&gt;aiuap&lt;/span&gt;&lt;/span&gt;&lt;span
+lang=EN-US&gt;-replay&lt;/span&gt;支持&lt;span class=SpellE&gt;&lt;span lang=EN-US&gt;sftp&lt;/span&gt;&lt;/span&gt;方式&lt;span
 lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;p class=MsoNormal align=left style=&apos;text-align:left;mso-pagination:widow-orphan&apos;&gt;&lt;span
 lang=EN-US style=&apos;font-size:12.0pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
-宋体;mso-font-kerning:0pt&apos;&gt;&lt;span
-style=&apos;mso-spacerun:yes&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+宋体;mso-font-kerning:0pt&apos;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:24.0pt;
 mso-pagination:widow-orphan&apos;&gt;&lt;b style=&apos;mso-bidi-font-weight:normal&apos;&gt;&lt;span
@@ -878,28 +929,28 @@ mso-pagination:widow-orphan&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:1
 font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;p class=MsoListParagraph style=&apos;margin-left:69.0pt;text-indent:-21.0pt;
-mso-list:l0 level1 lfo4&apos;&gt;&lt;![if !supportLists]&gt;&lt;span lang=EN-US
+mso-list:l0 level1 lfo6&apos;&gt;&lt;![if !supportLists]&gt;&lt;span lang=EN-US
 style=&apos;font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
 Wingdings&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;文档路径：&lt;span lang=EN-US&gt;&lt;a
 href=&quot;ftp://10.1.252.239/ai4a30/aisia1.0/&quot;&gt;ftp://10.1.252.239/ai4a30/aisia1.0/&lt;/a&gt;&lt;/span&gt;产品发布&lt;span
-lang=EN-US&gt;/aisiav04r04c03_20180531/doc/&lt;/span&gt;&lt;/p&gt;
+lang=EN-US&gt;/aisiav04r05c01_20180725/doc/&lt;/span&gt;&lt;/p&gt;
 
 &lt;p class=MsoListParagraph style=&apos;margin-left:69.0pt;text-indent:-21.0pt;
-mso-list:l0 level1 lfo4&apos;&gt;&lt;![if !supportLists]&gt;&lt;span lang=EN-US
+mso-list:l0 level1 lfo6&apos;&gt;&lt;![if !supportLists]&gt;&lt;span lang=EN-US
 style=&apos;font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
 Wingdings&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;安装包路径：&lt;span lang=EN-US&gt;&lt;a
 href=&quot;ftp://10.1.252.239/ai4a30/aisia1.0/&quot;&gt;ftp://10.1.252.239/ai4a30/aisia1.0/&lt;/a&gt;&lt;/span&gt;产品发布&lt;span
-lang=EN-US&gt;/aisiav04r04c03_20180531/&lt;/span&gt;安装包&lt;span lang=EN-US&gt;/&lt;/span&gt;&lt;/p&gt;
+lang=EN-US&gt;/aisiav04r05c01_20180725/&lt;/span&gt;安装包&lt;span lang=EN-US&gt;/&lt;/span&gt;&lt;/p&gt;
 
 &lt;p class=MsoListParagraph style=&apos;margin-left:69.0pt;text-indent:-21.0pt;
-mso-list:l0 level1 lfo4&apos;&gt;&lt;![if !supportLists]&gt;&lt;span lang=EN-US
+mso-list:l0 level1 lfo6&apos;&gt;&lt;![if !supportLists]&gt;&lt;span lang=EN-US
 style=&apos;font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
 Wingdings&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span lang=EN-US&gt;db&lt;/span&gt;变更路径：&lt;span lang=EN-US&gt;&lt;a
 href=&quot;ftp://10.1.252.239/ai4a30/aisia1.0/&quot;&gt;ftp://10.1.252.239/ai4a30/aisia1.0/&lt;/a&gt;&lt;/span&gt;产品发布&lt;span
-lang=EN-US&gt;/aisiav04r04c03_20180531/db&lt;/span&gt;脚本&lt;span lang=EN-US&gt;/&lt;/span&gt;&lt;/p&gt;
+lang=EN-US&gt;/aisiav04r05c01_20180725/db&lt;/span&gt;脚本&lt;span lang=EN-US&gt;/&lt;/span&gt;&lt;/p&gt;
 
 &lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:48.0pt;
 mso-pagination:widow-orphan&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:12.0pt;
@@ -917,14 +968,14 @@ font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;&am
 &lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:48.0pt;
 mso-pagination:widow-orphan&apos;&gt;&lt;span style=&apos;font-size:12.0pt;font-family:宋体;
 mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;按照《移动&lt;span lang=EN-US&gt;4A&lt;/span&gt;项目审计发布说明&lt;span
-lang=EN-US&gt;v04r04c03.docx&lt;/span&gt;》描述的升级即可&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+lang=EN-US&gt;v04r05c01.docx&lt;/span&gt;》描述的升级即可&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:48.0pt;
 mso-pagination:widow-orphan&apos;&gt;&lt;span style=&apos;font-size:12.0pt;font-family:宋体;
 mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;路径：&lt;span lang=EN-US&gt;&lt;a
 href=&quot;ftp://10.1.252.239/ai4a30/aisia1.0/&quot;&gt;ftp://10.1.252.239/ai4a30/aisia1.0/&lt;/a&gt;&lt;/span&gt;产品发布&lt;span
-lang=EN-US&gt;/aisiav04r04c03_20180531/doc/&lt;/span&gt;移动&lt;span lang=EN-US&gt;4A&lt;/span&gt;项目审计发布说明&lt;span
-lang=EN-US&gt;v04r04c03.&lt;span class=GramE&gt;docx&lt;/span&gt; &lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+lang=EN-US&gt;/aisiav04r05c01_20180725/doc/&lt;/span&gt;移动&lt;span lang=EN-US&gt;4A&lt;/span&gt;项目审计发布说明&lt;span
+lang=EN-US&gt;v04r05c01.&lt;span class=GramE&gt;docx&lt;/span&gt; &lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;p class=MsoNormal&gt;&lt;span lang=EN-US&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
 
