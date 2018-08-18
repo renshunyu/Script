@@ -332,3 +332,6 @@ alter system kill session 'sid£¬ s.serial#¡®;
 
 --²éÑ¯oracle¹Ø¼ü×Ö
 select * from v$reserved_words order by keyword asc;
+
+svn log http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/data-reporting -r139842:138652 |grep -v '\-\-\-\-\-\-\-\-\-\-\-\-'|grep  '^r'|grep 'line$'|awk -F'|' '{print "<tr><td class=tablerow>"$1"</td><td class=tablerow>"$3"</td><td class=tablerow>"$2"</td><td class=tablerow></td></tr>"}'
+svn log http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/data-reporting -r139842:138652 |grep -v '\-\-\-\-\-\-\-\-\-\-\-\-'|grep -v '^$'|awk -F'|' '{if(NF==4){if(NR!=1){print "</tr>"}print "  <tr><td class=tablerow>"$1"</td><td class=tablerow>"$3"</td><td class=tablerow>"$2"</td>"}else{print "<td class=tablerow>"$0"</td>"}}' >>duibi.html

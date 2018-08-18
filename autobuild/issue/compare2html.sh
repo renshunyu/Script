@@ -1,7 +1,8 @@
 #/bin/sh
 echo '##########################################################################'
 #============
-echo '<html>' >duibi.html
+echo '<?xml version="1.0" encoding="UTF-8"?>' >duibi.html
+echo '<html>' >>duibi.html
 echo ' <head>' >>duibi.html
 echo '    <title>对比</title>' >>duibi.html
 echo '  </head>' >>duibi.html
@@ -11,7 +12,7 @@ echo '	<!--*********************************************************************
 echo "    <p>$1</p>" >>duibi.html
 echo "    <p>`date`</p>" >>duibi.html
 echo '	<!--***************************************************************************************************************-->' >>duibi.html
-echo '    <h3>目录：</h3>' >>duibi.html
+#echo '    <h3>目录：</h3>' >>duibi.html
 #============
 
 
@@ -32,7 +33,7 @@ for i in $release
 do
 echo '	'$biaoti'. '$i
 #================
-echo "    <p class='index'>$biaoti、$i</p>" >>duibi.html
+#echo "    <p class='index'>$biaoti、$i</p>" >>duibi.html
 #================
 biaoti=$[ biaoti + 1 ]
 done
@@ -64,10 +65,17 @@ do
         	echo '  '主干版本$i有过提交记录
                 #==================================
                 echo "  <p>${biaoti}、<a href=\"javascript:openShutManager('${iproject}detail');\">${iproject}</a><span class= 'detailisupdate'>主干版本$i有过提交记录</span></p>" >>duibi.html
-		echo "	<div id=${iproject}detail style=\"display: none;\">" >>duibi.html
+		echo "	<div id=${iproject}detail ondblclick=\"javascript:openShutManager('${iproject}detail');\" style=\"display: none;\">" >>duibi.html
                 echo "	  <div>" >>duibi.html
                 echo "	    <p>svnurl:http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$i</p>" >>duibi.html
                 echo "	    <table border=0 cellpadding=0 cellspacing=0 width=951 style='border-collapse: collapse;table-layout:fixed;width:715pt'>" >>duibi.html
+                echo "		  <colgroup>" >>duibi.html
+                echo "            <col width="8%" />" >>duibi.html
+                echo "            <col width="38%" />" >>duibi.html
+                echo "			<col width="12%" />" >>duibi.html
+                echo "			<col width="42%" />" >>duibi.html
+                echo "          </colgroup>" >>duibi.html
+                echo "		  <tbody>" >>duibi.html
                 echo "	      <tr>" >>duibi.html
                 echo "		    <td class=tablehead>svn版本号</td>" >>duibi.html
                 echo "		    <td class=tablehead>提交时间</td>" >>duibi.html
@@ -78,20 +86,29 @@ do
                 echo '	'$sourcepath
 		svn log -r$or:$nr $sourcepath|awk '{print "	"$0}'
                 #==================================
-                svn log -r$or:$nr $sourcepath|grep -v '\-\-\-\-\-\-\-\-\-\-\-\-'|grep -v '^$'|awk -F'|' '{if(NF==4){if(NR!=1){print "</tr>"}print "  <tr><td class=tablerow>"$1"</td><td class=tablerow>"$3"</td><td class=tablerow>"$2"</td>"}else{print "<td class=tablerow>"$0"</td>"}}' >>duibi.html
-                if [ `tail -n 1 duibi.html |grep '</tr>'|wc -l` -eq 0 ];then
-                  echo "            </tr>" >>duibi.html
-                fi
+                #svn log -r$or:$nr $sourcepath|grep -v '\-\-\-\-\-\-\-\-\-\-\-\-'|grep -v '^$'|awk -F'|' '{if(NF==4){if(NR!=1){print "</tr>"}print "  <tr><td class=tablerow>"$1"</td><td class=tablerow>"$3"</td><td class=tablerow>"$2"</td>"}else{print "<td class=tablerow>"$0"</td>"}}' >>duibi.html
+                #if [ `tail -n 1 duibi.html |grep '</tr>'|wc -l` -eq 0 ];then
+                #  echo "            </tr>" >>duibi.html
+                #fi
+                svn log -r$or:$nr $sourcepath|grep '^r'|grep -E 'lines$|line$'|awk -F'|' -v sul=$sourcepath '{print "  <tr><td class=tablerow>"$1"</td><td class=tablerow>"$3"</td><td class=tablerow>"$2"</td><td class=tablerow>"}{v= $1;system("svn log " sul " -" v "|grep -v \"\\\-\\\-\\\-\\\-\"|sed 1,2d")}{print "</td></tr>"}'>>duibi.html
                 #==================================
 		echo '              ^              '
 		echo '              |              '
 		echo '              v              '
                 #==================================
+                echo "		  </tbody>" >>duibi.html
                 echo "	    </table>" >>duibi.html
                 echo "	  </div>" >>duibi.html
                 echo "	  <div>" >>duibi.html
                 echo "	    <p>svnurl:http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/${reno}/${i}</p>" >>duibi.html
                 echo "	    <table border=0 cellpadding=0 cellspacing=0 width=951 style='border-collapse: collapse;table-layout:fixed;width:715pt'>" >>duibi.html
+                echo "		  <colgroup>" >>duibi.html
+                echo "            <col width="8%" />" >>duibi.html
+                echo "            <col width="38%" />" >>duibi.html
+                echo "			<col width="12%" />" >>duibi.html
+                echo "			<col width="42%" />" >>duibi.html
+                echo "          </colgroup>" >>duibi.html
+                echo "		  <tbody>" >>duibi.html
                 echo "	      <tr>" >>duibi.html
                 echo "		    <td class=tablehead>svn版本号</td>" >>duibi.html
                 echo "		    <td class=tablehead>提交时间</td>" >>duibi.html
@@ -102,19 +119,27 @@ do
 		echo '  '$aiiappath/release/$reno/$i
 		svn log -r$or:$nr $aiiappath/release/$reno/$i|awk '{print "     "$0}'
                 #==================================
-                svn log -r$or:$nr $aiiappath/release/$reno/$i|grep -v '\-\-\-\-\-\-\-\-\-\-\-\-'|grep -v '^$'|awk -F'|' '{if(NF==4){if(NR!=1){print "</tr>"}print "  <tr><td class=tablerow>"$1"</td><td class=tablerow>"$3"</td><td class=tablerow>"$2"</td>"}else{print "<td class=tablerow>"$0"</td>"}}' >>duibi.html
-                if [ `tail -n 1 duibi.html |grep '</tr>'|wc -l` -eq 0 ];then
-                  echo "            </tr>" >>duibi.html
-                fi
+                #svn log -r$or:$nr $aiiappath/release/$reno/$i|grep -v '\-\-\-\-\-\-\-\-\-\-\-\-'|grep -v '^$'|awk -F'|' '{if(NF==4){if(NR!=1){print "</tr>"}print "  <tr><td class=tablerow>"$1"</td><td class=tablerow>"$3"</td><td class=tablerow>"$2"</td>"}else{print "<td class=tablerow>"$0"</td>"}}' >>duibi.html
+                #if [ `tail -n 1 duibi.html |grep '</tr>'|wc -l` -eq 0 ];then
+                #  echo "            </tr>" >>duibi.html
+                #fi
+                svn log -r$or:$nr $aiiappath/release/$reno/$i|grep '^r'|grep -E 'lines$|line$'|awk -F'|' -v sul=$aiiappath/release/$reno/$i '{print "  <tr><td class=tablerow>"$1"</td><td class=tablerow>"$3"</td><td class=tablerow>"$2"</td><td class=tablerow>"}{v= $1;system("svn log " sul " -" v "|grep -v \"\\\-\\\-\\\-\\\-\"|sed 1,2d")}{print "</td></tr>"}'>>duibi.html
                 #==================================
 	else
 		echo '  '主干版本$i没有过提交记录
                 #=================================
                 echo "  <p>${biaoti}、<a href=\"javascript:openShutManager('${iproject}detail');\">${iproject}</a><span class= 'detailisnotupdate'>主干版本$i没有过提交记录</span></p>" >>duibi.html
-                echo "  <div id=${iproject}detail style=\"display: none;\">" >>duibi.html
+                echo "  <div id=${iproject}detail ondblclick=\"javascript:openShutManager('${iproject}detail');\" style=\"display: none;\">" >>duibi.html
                 echo "    <div>" >>duibi.html
                 echo "      <p>svnurl:http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$i</p>" >>duibi.html
                 echo "      <table border=0 cellpadding=0 cellspacing=0 width=951 style='border-collapse: collapse;table-layout:fixed;width:715pt'>" >>duibi.html
+                echo "		  <colgroup>" >>duibi.html
+                echo "            <col width="8%" />" >>duibi.html
+                echo "            <col width="38%" />" >>duibi.html
+                echo "			<col width="12%" />" >>duibi.html
+                echo "			<col width="42%" />" >>duibi.html
+                echo "          </colgroup>" >>duibi.html
+                echo "		  <tbody>" >>duibi.html
                 echo "        <tr>" >>duibi.html
                 echo "              <td class=tablehead>svn版本号</td>" >>duibi.html
                 echo "              <td class=tablehead>提交时间</td>" >>duibi.html
@@ -125,20 +150,29 @@ do
                 echo '  '$sourcepath
 		svn log -r$or:$nr $sourcepath|awk '{print "     "$0}'
                 #=================================
-                svn log -r$or:$nr $sourcepath|grep -v '\-\-\-\-\-\-\-\-\-\-\-\-'|grep -v '^$'|awk -F'|' '{if(NF==4){if(NR!=1){print "</tr>"}print "  <tr><td class=tablerow>"$1"</td><td class=tablerow>"$3"</td><td class=tablerow>"$2"</td>"}else{print "<td class=tablerow>"$0"</td>"}}' >>duibi.html
-                if [ `tail -n 1 duibi.html |grep '</tr>'|wc -l` -eq 0 ];then
-                  echo "            </tr>" >>duibi.html
-                fi
+                #svn log -r$or:$nr $sourcepath|grep -v '\-\-\-\-\-\-\-\-\-\-\-\-'|grep -v '^$'|awk -F'|' '{if(NF==4){if(NR!=1){print "</tr>"}print "  <tr><td class=tablerow>"$1"</td><td class=tablerow>"$3"</td><td class=tablerow>"$2"</td>"}else{print "<td class=tablerow>"$0"</td>"}}' >>duibi.html
+                #if [ `tail -n 1 duibi.html |grep '</tr>'|wc -l` -eq 0 ];then
+                #  echo "            </tr>" >>duibi.html
+                #fi
+                svn log -r$or:$nr $sourcepath|grep '^r'|grep -E 'lines$|line$'|awk -F'|' -v sul=$sourcepath '{print "  <tr><td class=tablerow>"$1"</td><td class=tablerow>"$3"</td><td class=tablerow>"$2"</td><td class=tablerow>"}{v= $1;system("svn log " sul " -" v "|grep -v \"\\\-\\\-\\\-\\\-\"|sed 1,2d")}{print "</td></tr>"}'>>duibi.html
                 #=================================
                 echo '              ^              '
                 echo '              |              '
                 echo '              v              '
                 #==================================
+                echo "		  </tbody>" >>duibi.html
                 echo "      </table>" >>duibi.html
                 echo "    </div>" >>duibi.html
                 echo "    <div>" >>duibi.html
                 echo "      <p>svnurl:http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/${reno}/${i}</p>" >>duibi.html
                 echo "      <table border=0 cellpadding=0 cellspacing=0 width=951 style='border-collapse: collapse;table-layout:fixed;width:715pt'>" >>duibi.html
+                echo "		  <colgroup>" >>duibi.html
+                echo "            <col width="8%" />" >>duibi.html
+                echo "            <col width="38%" />" >>duibi.html
+                echo "			<col width="12%" />" >>duibi.html
+                echo "			<col width="42%" />" >>duibi.html
+                echo "          </colgroup>" >>duibi.html
+                echo "		  <tbody>" >>duibi.html
                 echo "        <tr>" >>duibi.html
                 echo "              <td class=tablehead>svn版本号</td>" >>duibi.html
                 echo "              <td class=tablehead>提交时间</td>" >>duibi.html
@@ -149,14 +183,17 @@ do
 		echo '  '$aiiappath/release/$reno/$i
 		svn log -r$or:$nr $aiiappath/release/$reno/$i|awk '{print "     "$0}'
                 #==================================
-                svn log -r$or:$nr $aiiappath/release/$reno/$i|grep -v '\-\-\-\-\-\-\-\-\-\-\-\-'|grep -v '^$'|awk -F'|' '{if(NF==4){if(NR!=1){print "</tr>"}print "  <tr><td class=tablerow>"$1"</td><td class=tablerow>"$3"</td><td class=tablerow>"$2"</td>"}else{print "<td class=tablerow>"$0"</td>"}}' >>duibi.html
-                if [ `tail -n 1 duibi.html |grep '</tr>'|wc -l` -eq 0 ];then
-                  echo "            </tr>" >>duibi.html
-                fi
+                #svn log -r$or:$nr $aiiappath/release/$reno/$i|grep -v '\-\-\-\-\-\-\-\-\-\-\-\-'|grep -v '^$'|awk -F'|' '{if(NF==4){if(NR!=1){print "</tr>"}print "  <tr><td class=tablerow>"$1"</td><td class=tablerow>"$3"</td><td class=tablerow>"$2"</td>"}else{print "<td class=tablerow>"$0"</td>"}}' >>duibi.html
+                #if [ `tail -n 1 duibi.html |grep '</tr>'|wc -l` -eq 0 ];then
+                #  echo "            </tr>" >>duibi.html
+                #fi
+                svn log -r$or:$nr $aiiappath/release/$reno/$i|grep '^r'|grep -E 'lines$|line$'|awk -F'|' -v sul=$aiiappath/release/$reno/$i '{print "  <tr><td class=tablerow>"$1"</td><td class=tablerow>"$3"</td><td class=tablerow>"$2"</td><td class=tablerow>"}{v= $1;system("svn log " sul " -" v "|grep -v \"\\\-\\\-\\\-\\\-\"|sed 1,2d")}{print "</td></tr>"}'>>duibi.html
                 #==================================
 	fi
+        echo "		  </tbody>" >>duibi.html
         echo "	    </table>" >>duibi.html
         echo "	  </div>" >>duibi.html
+        echo "    <a href=\"javascript:openShutManager('${iproject}detail');\">收起</a>" >>duibi.html
         echo "	</div>" >>duibi.html
 
  
@@ -202,4 +239,4 @@ echo "  }" >>duibi.html
 echo "}" >>duibi.html
 echo "</script>" >>duibi.html
 echo "</html>" >>duibi.html
-
+iconv -f gbk -t utf-8 duibi.html > "report.html"
