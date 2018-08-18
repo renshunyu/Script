@@ -10,8 +10,8 @@ echo '  </head>' >>duibi.html
 echo '  <body>' >>duibi.html
 echo '    <h1>对比指定版本program和release的提交记录</h1>' >>duibi.html
 echo '	<!--***************************************************************************************************************-->' >>duibi.html
-echo "    <p>$1</p>" >>duibi.html
-echo "    <p>`date`</p>" >>duibi.html
+echo "    <p><strong>$1</strong></p>" >>duibi.html
+echo "    <p><strong>`date`</strong></p>" >>duibi.html
 echo '	<!--***************************************************************************************************************-->' >>duibi.html
 #echo '    <h3>目录：</h3>' >>duibi.html
 #============
@@ -239,7 +239,7 @@ do
 		echo "		  </tbody>" >>duibi.html
         echo "	    </table>" >>duibi.html
         echo "	  </div>" >>duibi.html
-        echo "    <a href=\"javascript:openShutManager('${iproject}detail');\">收起</a>" >>duibi.html
+        echo "    <a class=textfont href=\"javascript:openShutManager('${iproject}detail');\">收起</a>" >>duibi.html
         echo "	</div>" >>duibi.html
 		#================
 		#==================================
@@ -300,6 +300,42 @@ echo "	mso-pattern:auto;" >>duibi.html
 echo "	mso-protection:locked visible;" >>duibi.html
 echo "	white-space:nowrap;" >>duibi.html
 echo "	mso-rotate:0;}" >>duibi.html
+echo "td" >>duibi.html
+echo "	{mso-style-parent:style0;" >>duibi.html
+echo "	padding-top:1px;" >>duibi.html
+echo "	padding-right:1px;" >>duibi.html
+echo "	padding-left:1px;" >>duibi.html
+echo "	mso-ignore:padding;" >>duibi.html
+echo "	color:black;" >>duibi.html
+echo "	font-size:11.0pt;" >>duibi.html
+echo "	font-weight:400;" >>duibi.html
+echo "	font-style:normal;" >>duibi.html
+echo "	text-decoration:none;" >>duibi.html
+echo "	font-family:宋体;" >>duibi.html
+echo "	mso-generic-font-family:auto;" >>duibi.html
+echo "	mso-font-charset:134;" >>duibi.html
+echo "	mso-number-format:General;" >>duibi.html
+echo "	text-align:general;" >>duibi.html
+echo "	vertical-align:middle;" >>duibi.html
+echo "	border:none;" >>duibi.html
+echo "	mso-background-source:auto;" >>duibi.html
+echo "	mso-pattern:auto;" >>duibi.html
+echo "	mso-protection:locked visible;" >>duibi.html
+echo "	mso-rotate:0;}" >>duibi.html
+echo "p{" >>duibi.html
+echo "	font-size:11.0pt;" >>duibi.html
+echo "	font-weight:400;" >>duibi.html
+echo "	font-style:normal;" >>duibi.html
+echo "	text-decoration:none;" >>duibi.html
+echo "	font-family:宋体;" >>duibi.html
+echo "    }" >>duibi.html
+echo ".textfont{" >>duibi.html
+echo "	font-size:11.0pt;" >>duibi.html
+echo "	font-weight:400;" >>duibi.html
+echo "	font-style:normal;" >>duibi.html
+echo "	text-decoration:none;" >>duibi.html
+echo "	font-family:宋体;" >>duibi.html
+echo "    }" >>duibi.html
 echo "</style>" >>duibi.html
 echo "<script>" >>duibi.html
 echo "function openShutManager(id){" >>duibi.html
