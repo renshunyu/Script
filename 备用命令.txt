@@ -351,4 +351,6 @@ awk '{a[$0]++}END{for(i in a){if(a[i]==1){print i}}}' a.txt b.txt |awk '{print $
 awk 'ARGIND==1{a[$0]=$2;next}{if (!($0 in a)){print $2}}' a.txt b.txt
 集合A减去集合B，即b文件里面存在a文件里面不存在的
 awk 'ARGIND==1{a[$0]=$2;next}{if (!($0 in a)){print $2}}' b.txt a.txt
+awk自定义函数
+awk 'BEGIN{print "asd"}function getpath(fpath){split(fpath,a,"a");str="";for (i=1;i<length(a);i++ ){str= str a[i]"/"}return str}BEGIN{print getpath("sadaverfssdfasdfr")}'
 

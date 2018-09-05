@@ -256,3 +256,6 @@ GET app-log-v1/_search
     }
   }
 }
+
+查询主机的索引
+curl -XGET http://10.1.245.55:8990/_cat/indices
