@@ -335,3 +335,20 @@ select * from v$reserved_words order by keyword asc;
 
 svn log http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/data-reporting -r139842:138652 |grep -v '\-\-\-\-\-\-\-\-\-\-\-\-'|grep  '^r'|grep 'line$'|awk -F'|' '{print "<tr><td class=tablerow>"$1"</td><td class=tablerow>"$3"</td><td class=tablerow>"$2"</td><td class=tablerow></td></tr>"}'
 svn log http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/data-reporting -r139842:138652 |grep -v '\-\-\-\-\-\-\-\-\-\-\-\-'|grep -v '^$'|awk -F'|' '{if(NF==4){if(NR!=1){print "</tr>"}print "  <tr><td class=tablerow>"$1"</td><td class=tablerow>"$3"</td><td class=tablerow>"$2"</td>"}else{print "<td class=tablerow>"$0"</td>"}}' >>duibi.html
+
+
+md5sum `find . -type f` |wc -l
+md5sum `find . -type f` |awk '{a[$1]++}{for(i in a ){print i}}'
+md5sum `find . -type f` |awk '{a[$1]++}END{for(i in a ){print i}}'
+md5sum `find . -type f` |awk '{a[$1]++}END{for(i in a ){print i}}'|wc -l
+md5sum `find . -type f` |wc -l
+md5sum `find . -type f` |awk '{a[$1]++}END{for(i in a ){if (a[i] > 1){print i}}}'
+md5sum `find . -type f` |awk '{a[$1]++}END{for(i in a ){if (a[i] > 1){print i""a[i]}}}'
+md5sum `find . -type f` |awk '{a[$1]++}END{for(i in a ){if (a[i] > 1){print i""$a[i]}}}'
+md5sum `find . -type f` |awk '{a[$1]++}END{for(i in a ){if (a[i] > 1){print i}}}'
+awk '{a[$0]++}END{for(i in a){if(a[i]==1){print i}}}' a.txt b.txt |awk '{print $2" "$1}'
+集合B减去集合A，即a文件里面存在b文件里面不存在的
+awk 'ARGIND==1{a[$0]=$2;next}{if (!($0 in a)){print $2}}' a.txt b.txt
+集合A减去集合B，即b文件里面存在a文件里面不存在的
+awk 'ARGIND==1{a[$0]=$2;next}{if (!($0 in a)){print $2}}' b.txt a.txt
+
