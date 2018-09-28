@@ -41,7 +41,8 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>sh /home/aiuap/autobuild/patch/patchs/iapincrepatch.sh ${ISBUILD} ${VER} ${SVNTAG} ${SVNBASE}</command>
+      <command>#sh /home/aiuap/autobuild/patch/patchs/iapincrepatch.sh ${ISBUILD} ${VER} ${SVNTAG} ${SVNBASE}
+sh /home/aiuap/autobuild/patch/patchs/iapincrepatchmd5.sh ${ISBUILD} ${VER} ${SVNTAG} ${SVNBASE}</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

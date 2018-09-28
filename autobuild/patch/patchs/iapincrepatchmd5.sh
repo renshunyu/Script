@@ -51,7 +51,7 @@ cd ${buildpath}
   #删除后重新创建
   mkdir -p $buildpath/iapupdate
   #按照模板复制一份update脚本
-  cp $spath/upmu.sh $buildpath/iapupdate/update.sh
+  cp $spath/upmubegin.sh $buildpath/iapupdate/update.sh
   cp $spath/readme.txt $buildpath/iapupdate/readme.txt
 
   rm -fr $buildpath/iap

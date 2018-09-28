@@ -1,7 +1,6 @@
 #!/bin/sh
-export JAVA_HOME=/usr/java/jdk1.8.0_121
-export M2_HOME=/usr/java/apache-maven-3.2.5
-export PATH=$M2_HOME/bin:$JAVA_HOME/bin:$PATH
+export JAVA_HOME=/usr/java/jdk1.6.0_31
+export PATH=$JAVA_HOME/bin:$PATH
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 if [[ -z "$1" ]]; then
   echo "参数不足"
@@ -43,7 +42,7 @@ fi
 
 
 ant release >./build.log
-result=`cat build.log|grep -i "BUILD SUCCESSFULL"|wc -l`
+result=`cat build.log|grep -i "BUILD SUCCESSFUL"|wc -l`
 if [ $result != '1' ]
 then
   echo "编译报错"

@@ -1,5 +1,6 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
+  <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
@@ -22,6 +23,9 @@
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
+    <hudson.tasks.Shell>
+      <command>sh /home/aiuap/autobuild/dbscript_build.sh  </command>
+    </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>sh /home/aiuap/autobuild/fbissue/package/dbscript.sh $VER</command>
     </hudson.tasks.Shell>

@@ -8,7 +8,7 @@
         <hudson.model.StringParameterDefinition>
           <name>MVER</name>
           <description>本次发布的版本号例如：v04r04c03</description>
-          <defaultValue>v04r05c01</defaultValue>
+          <defaultValue>v04r06c00</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
@@ -23,8 +23,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>sh /home/aiuap/autobuild/issue/organ.sh ${MVER}
-rm ~/package -fr</command>
+      <command>rm ~/package -fr</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
@@ -37,7 +36,7 @@ rm ~/package -fr</command>
               <textParamValueOnNewLine>false</textParamValueOnNewLine>
             </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
           </configs>
-          <projects>doc,dbscript</projects>
+          <projects>doc,dbscript,data-reportingrmpackage,iaprmpackage</projects>
           <condition>SUCCESS</condition>
           <triggerWithNoParameters>false</triggerWithNoParameters>
           <triggerFromChildProjects>false</triggerFromChildProjects>

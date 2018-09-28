@@ -9,9 +9,20 @@
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description>发布版本，例如：aisiav04r04c02_20180509</description>
-          <defaultValue>aisiav04r05c01_20180725</defaultValue>
+          <defaultValue>aisiav04r05c03_20180913</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>SJR</name>
+          <description></description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>rensy@asiainfo-sec.com</string>
+              <string>rensy@asiainfo-sec.com,yanglw3@asiainfo-sec.com</string>
+              <string>NSG-4A-AUDIT@asiainfo-sec.com,cc:NSG-SPRD2@asiainfo-sec.com,cc:NSG-4A-QC@asiainfo-sec.com,cc:NSG-4A-PM@asiainfo-sec.com,cc:wudong@asiainfo-sec.com,cc:wangyb@asiainfo-sec.com,cc:hejt@asiainfo-sec.com</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
   </properties>
@@ -25,7 +36,7 @@
   <builders/>
   <publishers>
     <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.57">
-      <recipientList>NSG-4A-AUDIT@asiainfo-sec.com,cc:NSG-SPRD2@asiainfo-sec.com,cc:NSG-4A-QC@asiainfo-sec.com,cc:NSG-4A-PM@asiainfo-sec.com,cc:wudong@asiainfo-sec.com,cc:wangyb@asiainfo-sec.com,cc:hejt@asiainfo-sec.com</recipientList>
+      <recipientList>${SJR}</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.AlwaysTrigger>
           <email>
@@ -53,8 +64,8 @@ xmlns=&quot;http://www.w3.org/TR/REC-html40&quot;&gt;
 &lt;head&gt;
 &lt;meta http-equiv=Content-Type content=&quot;text/html; charset=gb2312&quot;&gt;
 &lt;meta name=ProgId content=Word.Document&gt;
-&lt;meta name=Generator content=&quot;Microsoft Word 12&quot;&gt;
-&lt;meta name=Originator content=&quot;Microsoft Word 12&quot;&gt;
+&lt;meta name=Generator content=&quot;Microsoft Word 15&quot;&gt;
+&lt;meta name=Originator content=&quot;Microsoft Word 15&quot;&gt;
 &lt;link rel=File-List href=&quot;hi.files/filelist.xml&quot;&gt;
 &lt;link rel=Edit-Time-Data href=&quot;hi.files/editdata.mso&quot;&gt;
 &lt;!--[if !mso]&gt;
@@ -67,30 +78,29 @@ w\:* {behavior:url(#default#VML);}
 &lt;![endif]--&gt;&lt;!--[if gte mso 9]&gt;&lt;xml&gt;
  &lt;o:DocumentProperties&gt;
   &lt;o:Author&gt;rensy&lt;/o:Author&gt;
-  &lt;o:LastAuthor&gt;rensy&lt;/o:LastAuthor&gt;
-  &lt;o:Revision&gt;44&lt;/o:Revision&gt;
-  &lt;o:TotalTime&gt;97&lt;/o:TotalTime&gt;
+  &lt;o:LastAuthor&gt;Shunyu Ren&lt;/o:LastAuthor&gt;
+  &lt;o:Revision&gt;94&lt;/o:Revision&gt;
+  &lt;o:TotalTime&gt;337&lt;/o:TotalTime&gt;
   &lt;o:Created&gt;2018-05-31T03:26:00Z&lt;/o:Created&gt;
-  &lt;o:LastSaved&gt;2018-07-25T08:48:00Z&lt;/o:LastSaved&gt;
-  &lt;o:Pages&gt;1&lt;/o:Pages&gt;
-  &lt;o:Words&gt;161&lt;/o:Words&gt;
-  &lt;o:Characters&gt;918&lt;/o:Characters&gt;
+  &lt;o:LastSaved&gt;2018-09-13T08:04:00Z&lt;/o:LastSaved&gt;
+  &lt;o:Pages&gt;3&lt;/o:Pages&gt;
+  &lt;o:Words&gt;206&lt;/o:Words&gt;
+  &lt;o:Characters&gt;1179&lt;/o:Characters&gt;
   &lt;o:Company&gt;Asiainfo-Linkage&lt;/o:Company&gt;
-  &lt;o:Lines&gt;7&lt;/o:Lines&gt;
+  &lt;o:Lines&gt;9&lt;/o:Lines&gt;
   &lt;o:Paragraphs&gt;2&lt;/o:Paragraphs&gt;
-  &lt;o:CharactersWithSpaces&gt;1077&lt;/o:CharactersWithSpaces&gt;
-  &lt;o:Version&gt;12.00&lt;/o:Version&gt;
+  &lt;o:CharactersWithSpaces&gt;1383&lt;/o:CharactersWithSpaces&gt;
+  &lt;o:Version&gt;15.00&lt;/o:Version&gt;
  &lt;/o:DocumentProperties&gt;
 &lt;/xml&gt;&lt;![endif]--&gt;
 &lt;link rel=dataStoreItem href=&quot;hi.files/item0008.xml&quot;
-target=&quot;hi.files/props0009.xml&quot;&gt;
+target=&quot;hi.files/props009.xml&quot;&gt;
 &lt;link rel=themeData href=&quot;hi.files/themedata.thmx&quot;&gt;
 &lt;link rel=colorSchemeMapping href=&quot;hi.files/colorschememapping.xml&quot;&gt;
 &lt;!--[if gte mso 9]&gt;&lt;xml&gt;
  &lt;w:WordDocument&gt;
-  &lt;w:Zoom&gt;120&lt;/w:Zoom&gt;
-  &lt;w:SpellingState&gt;Clean&lt;/w:SpellingState&gt;
-  &lt;w:GrammarState&gt;Clean&lt;/w:GrammarState&gt;
+  &lt;w:View&gt;Print&lt;/w:View&gt;
+  &lt;w:DontDisplayPageBoundaries/&gt;
   &lt;w:TrackMoves&gt;false&lt;/w:TrackMoves&gt;
   &lt;w:TrackFormatting/&gt;
   &lt;w:PunctuationKerning/&gt;
@@ -140,260 +150,573 @@ target=&quot;hi.files/props0009.xml&quot;&gt;
    &lt;m:naryLim m:val=&quot;undOvr&quot;/&gt;
   &lt;/m:mathPr&gt;&lt;/w:WordDocument&gt;
 &lt;/xml&gt;&lt;![endif]--&gt;&lt;!--[if gte mso 9]&gt;&lt;xml&gt;
- &lt;w:LatentStyles DefLockedState=&quot;false&quot; DefUnhideWhenUsed=&quot;true&quot;
-  DefSemiHidden=&quot;true&quot; DefQFormat=&quot;false&quot; DefPriority=&quot;99&quot;
-  LatentStyleCount=&quot;267&quot;&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;0&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; QFormat=&quot;true&quot; Name=&quot;Normal&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; QFormat=&quot;true&quot; Name=&quot;heading 1&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; QFormat=&quot;true&quot; Name=&quot;heading 2&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; QFormat=&quot;true&quot; Name=&quot;heading 3&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; QFormat=&quot;true&quot; Name=&quot;heading 4&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; QFormat=&quot;true&quot; Name=&quot;heading 5&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; QFormat=&quot;true&quot; Name=&quot;heading 6&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; QFormat=&quot;true&quot; Name=&quot;heading 7&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; QFormat=&quot;true&quot; Name=&quot;heading 8&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; QFormat=&quot;true&quot; Name=&quot;heading 9&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; Name=&quot;toc 1&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; Name=&quot;toc 2&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; Name=&quot;toc 3&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; Name=&quot;toc 4&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; Name=&quot;toc 5&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; Name=&quot;toc 6&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; Name=&quot;toc 7&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; Name=&quot;toc 8&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; Name=&quot;toc 9&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;35&quot; QFormat=&quot;true&quot; Name=&quot;caption&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;10&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; QFormat=&quot;true&quot; Name=&quot;Title&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;1&quot; Name=&quot;Default Paragraph Font&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;11&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; QFormat=&quot;true&quot; Name=&quot;Subtitle&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;22&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; QFormat=&quot;true&quot; Name=&quot;Strong&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;20&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; QFormat=&quot;true&quot; Name=&quot;Emphasis&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;59&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Table Grid&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; UnhideWhenUsed=&quot;false&quot; Name=&quot;Placeholder Text&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;1&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; QFormat=&quot;true&quot; Name=&quot;No Spacing&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;60&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Light Shading&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;61&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Light List&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;62&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Light Grid&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;63&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Shading 1&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;64&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Shading 2&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;65&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium List 1&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;66&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium List 2&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;67&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Grid 1&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;68&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Grid 2&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;69&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Grid 3&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;70&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Dark List&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;71&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Colorful Shading&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;72&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Colorful List&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;73&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Colorful Grid&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;60&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Light Shading Accent 1&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;61&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Light List Accent 1&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;62&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Light Grid Accent 1&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;63&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Shading 1 Accent 1&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;64&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Shading 2 Accent 1&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;65&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium List 1 Accent 1&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; UnhideWhenUsed=&quot;false&quot; Name=&quot;Revision&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;34&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; QFormat=&quot;true&quot; Name=&quot;List Paragraph&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;29&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; QFormat=&quot;true&quot; Name=&quot;Quote&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;30&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; QFormat=&quot;true&quot; Name=&quot;Intense Quote&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;66&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium List 2 Accent 1&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;67&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Grid 1 Accent 1&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;68&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Grid 2 Accent 1&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;69&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Grid 3 Accent 1&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;70&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Dark List Accent 1&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;71&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Colorful Shading Accent 1&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;72&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Colorful List Accent 1&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;73&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Colorful Grid Accent 1&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;60&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Light Shading Accent 2&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;61&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Light List Accent 2&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;62&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Light Grid Accent 2&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;63&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Shading 1 Accent 2&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;64&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Shading 2 Accent 2&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;65&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium List 1 Accent 2&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;66&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium List 2 Accent 2&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;67&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Grid 1 Accent 2&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;68&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Grid 2 Accent 2&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;69&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Grid 3 Accent 2&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;70&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Dark List Accent 2&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;71&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Colorful Shading Accent 2&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;72&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Colorful List Accent 2&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;73&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Colorful Grid Accent 2&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;60&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Light Shading Accent 3&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;61&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Light List Accent 3&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;62&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Light Grid Accent 3&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;63&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Shading 1 Accent 3&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;64&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Shading 2 Accent 3&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;65&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium List 1 Accent 3&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;66&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium List 2 Accent 3&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;67&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Grid 1 Accent 3&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;68&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Grid 2 Accent 3&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;69&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Grid 3 Accent 3&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;70&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Dark List Accent 3&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;71&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Colorful Shading Accent 3&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;72&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Colorful List Accent 3&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;73&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Colorful Grid Accent 3&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;60&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Light Shading Accent 4&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;61&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Light List Accent 4&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;62&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Light Grid Accent 4&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;63&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Shading 1 Accent 4&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;64&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Shading 2 Accent 4&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;65&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium List 1 Accent 4&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;66&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium List 2 Accent 4&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;67&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Grid 1 Accent 4&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;68&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Grid 2 Accent 4&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;69&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Grid 3 Accent 4&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;70&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Dark List Accent 4&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;71&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Colorful Shading Accent 4&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;72&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Colorful List Accent 4&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;73&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Colorful Grid Accent 4&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;60&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Light Shading Accent 5&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;61&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Light List Accent 5&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;62&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Light Grid Accent 5&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;63&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Shading 1 Accent 5&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;64&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Shading 2 Accent 5&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;65&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium List 1 Accent 5&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;66&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium List 2 Accent 5&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;67&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Grid 1 Accent 5&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;68&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Grid 2 Accent 5&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;69&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Grid 3 Accent 5&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;70&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Dark List Accent 5&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;71&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Colorful Shading Accent 5&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;72&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Colorful List Accent 5&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;73&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Colorful Grid Accent 5&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;60&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Light Shading Accent 6&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;61&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Light List Accent 6&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;62&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Light Grid Accent 6&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;63&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Shading 1 Accent 6&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;64&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Shading 2 Accent 6&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;65&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium List 1 Accent 6&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;66&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium List 2 Accent 6&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;67&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Grid 1 Accent 6&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;68&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Grid 2 Accent 6&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;69&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Medium Grid 3 Accent 6&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;70&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Dark List Accent 6&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;71&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Colorful Shading Accent 6&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;72&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Colorful List Accent 6&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;73&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; Name=&quot;Colorful Grid Accent 6&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;19&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; QFormat=&quot;true&quot; Name=&quot;Subtle Emphasis&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;21&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; QFormat=&quot;true&quot; Name=&quot;Intense Emphasis&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;31&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; QFormat=&quot;true&quot; Name=&quot;Subtle Reference&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;32&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; QFormat=&quot;true&quot; Name=&quot;Intense Reference&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;33&quot; SemiHidden=&quot;false&quot;
-   UnhideWhenUsed=&quot;false&quot; QFormat=&quot;true&quot; Name=&quot;Book Title&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;37&quot; Name=&quot;Bibliography&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; QFormat=&quot;true&quot; Name=&quot;TOC Heading&quot;/&gt;
+ &lt;w:LatentStyles DefLockedState=&quot;false&quot; DefUnhideWhenUsed=&quot;false&quot;
+  DefSemiHidden=&quot;false&quot; DefQFormat=&quot;false&quot; DefPriority=&quot;99&quot;
+  LatentStyleCount=&quot;371&quot;&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;0&quot; QFormat=&quot;true&quot; Name=&quot;Normal&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; QFormat=&quot;true&quot; Name=&quot;heading 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; SemiHidden=&quot;true&quot;
+   UnhideWhenUsed=&quot;true&quot; QFormat=&quot;true&quot; Name=&quot;heading 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; SemiHidden=&quot;true&quot;
+   UnhideWhenUsed=&quot;true&quot; QFormat=&quot;true&quot; Name=&quot;heading 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; SemiHidden=&quot;true&quot;
+   UnhideWhenUsed=&quot;true&quot; QFormat=&quot;true&quot; Name=&quot;heading 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; SemiHidden=&quot;true&quot;
+   UnhideWhenUsed=&quot;true&quot; QFormat=&quot;true&quot; Name=&quot;heading 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; SemiHidden=&quot;true&quot;
+   UnhideWhenUsed=&quot;true&quot; QFormat=&quot;true&quot; Name=&quot;heading 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; SemiHidden=&quot;true&quot;
+   UnhideWhenUsed=&quot;true&quot; QFormat=&quot;true&quot; Name=&quot;heading 7&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; SemiHidden=&quot;true&quot;
+   UnhideWhenUsed=&quot;true&quot; QFormat=&quot;true&quot; Name=&quot;heading 8&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; SemiHidden=&quot;true&quot;
+   UnhideWhenUsed=&quot;true&quot; QFormat=&quot;true&quot; Name=&quot;heading 9&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;index 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;index 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;index 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;index 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;index 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;index 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;index 7&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;index 8&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;index 9&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; SemiHidden=&quot;true&quot;
+   UnhideWhenUsed=&quot;true&quot; Name=&quot;toc 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; SemiHidden=&quot;true&quot;
+   UnhideWhenUsed=&quot;true&quot; Name=&quot;toc 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; SemiHidden=&quot;true&quot;
+   UnhideWhenUsed=&quot;true&quot; Name=&quot;toc 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; SemiHidden=&quot;true&quot;
+   UnhideWhenUsed=&quot;true&quot; Name=&quot;toc 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; SemiHidden=&quot;true&quot;
+   UnhideWhenUsed=&quot;true&quot; Name=&quot;toc 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; SemiHidden=&quot;true&quot;
+   UnhideWhenUsed=&quot;true&quot; Name=&quot;toc 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; SemiHidden=&quot;true&quot;
+   UnhideWhenUsed=&quot;true&quot; Name=&quot;toc 7&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; SemiHidden=&quot;true&quot;
+   UnhideWhenUsed=&quot;true&quot; Name=&quot;toc 8&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; SemiHidden=&quot;true&quot;
+   UnhideWhenUsed=&quot;true&quot; Name=&quot;toc 9&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Normal Indent&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;footnote text&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;annotation text&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;header&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;footer&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;index heading&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;35&quot; SemiHidden=&quot;true&quot;
+   UnhideWhenUsed=&quot;true&quot; QFormat=&quot;true&quot; Name=&quot;caption&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;table of figures&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;envelope address&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;envelope return&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;footnote reference&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;annotation reference&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;line number&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;page number&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;endnote reference&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;endnote text&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;table of authorities&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;macro&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;toa heading&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;List&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;List Bullet&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;List Number&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;List 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;List 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;List 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;List 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;List Bullet 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;List Bullet 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;List Bullet 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;List Bullet 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;List Number 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;List Number 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;List Number 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;List Number 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;10&quot; QFormat=&quot;true&quot; Name=&quot;Title&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Closing&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Signature&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;1&quot; SemiHidden=&quot;true&quot;
+   UnhideWhenUsed=&quot;true&quot; Name=&quot;Default Paragraph Font&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Body Text&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Body Text Indent&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;List Continue&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;List Continue 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;List Continue 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;List Continue 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;List Continue 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Message Header&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;11&quot; QFormat=&quot;true&quot; Name=&quot;Subtitle&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Salutation&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Date&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Body Text First Indent&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Body Text First Indent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Note Heading&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Body Text 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Body Text 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Body Text Indent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Body Text Indent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Block Text&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Hyperlink&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;FollowedHyperlink&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;22&quot; QFormat=&quot;true&quot; Name=&quot;Strong&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;20&quot; QFormat=&quot;true&quot; Name=&quot;Emphasis&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Document Map&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Plain Text&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;E-mail Signature&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;HTML Top of Form&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;HTML Bottom of Form&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Normal (Web)&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;HTML Acronym&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;HTML Address&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;HTML Cite&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;HTML Code&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;HTML Definition&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;HTML Keyboard&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;HTML Preformatted&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;HTML Sample&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;HTML Typewriter&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;HTML Variable&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Normal Table&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;annotation subject&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;No List&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Outline List 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Outline List 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Outline List 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Simple 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Simple 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Simple 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Classic 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Classic 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Classic 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Classic 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Colorful 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Colorful 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Colorful 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Columns 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Columns 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Columns 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Columns 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Columns 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Grid 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Grid 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Grid 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Grid 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Grid 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Grid 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Grid 7&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Grid 8&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table List 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table List 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table List 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table List 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table List 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table List 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table List 7&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table List 8&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table 3D effects 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table 3D effects 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table 3D effects 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Contemporary&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Elegant&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Professional&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Subtle 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Subtle 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Web 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Web 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Web 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Balloon Text&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;59&quot; Name=&quot;Table Grid&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
+   Name=&quot;Table Theme&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; Name=&quot;Placeholder Text&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;1&quot; QFormat=&quot;true&quot; Name=&quot;No Spacing&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;60&quot; Name=&quot;Light Shading&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;61&quot; Name=&quot;Light List&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;62&quot; Name=&quot;Light Grid&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;63&quot; Name=&quot;Medium Shading 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;64&quot; Name=&quot;Medium Shading 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;65&quot; Name=&quot;Medium List 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;66&quot; Name=&quot;Medium List 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;67&quot; Name=&quot;Medium Grid 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;68&quot; Name=&quot;Medium Grid 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;69&quot; Name=&quot;Medium Grid 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;70&quot; Name=&quot;Dark List&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;71&quot; Name=&quot;Colorful Shading&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;72&quot; Name=&quot;Colorful List&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;73&quot; Name=&quot;Colorful Grid&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;60&quot; Name=&quot;Light Shading Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;61&quot; Name=&quot;Light List Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;62&quot; Name=&quot;Light Grid Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;63&quot; Name=&quot;Medium Shading 1 Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;64&quot; Name=&quot;Medium Shading 2 Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;65&quot; Name=&quot;Medium List 1 Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; Name=&quot;Revision&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;34&quot; QFormat=&quot;true&quot;
+   Name=&quot;List Paragraph&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;29&quot; QFormat=&quot;true&quot; Name=&quot;Quote&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;30&quot; QFormat=&quot;true&quot;
+   Name=&quot;Intense Quote&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;66&quot; Name=&quot;Medium List 2 Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;67&quot; Name=&quot;Medium Grid 1 Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;68&quot; Name=&quot;Medium Grid 2 Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;69&quot; Name=&quot;Medium Grid 3 Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;70&quot; Name=&quot;Dark List Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;71&quot; Name=&quot;Colorful Shading Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;72&quot; Name=&quot;Colorful List Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;73&quot; Name=&quot;Colorful Grid Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;60&quot; Name=&quot;Light Shading Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;61&quot; Name=&quot;Light List Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;62&quot; Name=&quot;Light Grid Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;63&quot; Name=&quot;Medium Shading 1 Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;64&quot; Name=&quot;Medium Shading 2 Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;65&quot; Name=&quot;Medium List 1 Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;66&quot; Name=&quot;Medium List 2 Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;67&quot; Name=&quot;Medium Grid 1 Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;68&quot; Name=&quot;Medium Grid 2 Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;69&quot; Name=&quot;Medium Grid 3 Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;70&quot; Name=&quot;Dark List Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;71&quot; Name=&quot;Colorful Shading Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;72&quot; Name=&quot;Colorful List Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;73&quot; Name=&quot;Colorful Grid Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;60&quot; Name=&quot;Light Shading Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;61&quot; Name=&quot;Light List Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;62&quot; Name=&quot;Light Grid Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;63&quot; Name=&quot;Medium Shading 1 Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;64&quot; Name=&quot;Medium Shading 2 Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;65&quot; Name=&quot;Medium List 1 Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;66&quot; Name=&quot;Medium List 2 Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;67&quot; Name=&quot;Medium Grid 1 Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;68&quot; Name=&quot;Medium Grid 2 Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;69&quot; Name=&quot;Medium Grid 3 Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;70&quot; Name=&quot;Dark List Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;71&quot; Name=&quot;Colorful Shading Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;72&quot; Name=&quot;Colorful List Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;73&quot; Name=&quot;Colorful Grid Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;60&quot; Name=&quot;Light Shading Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;61&quot; Name=&quot;Light List Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;62&quot; Name=&quot;Light Grid Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;63&quot; Name=&quot;Medium Shading 1 Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;64&quot; Name=&quot;Medium Shading 2 Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;65&quot; Name=&quot;Medium List 1 Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;66&quot; Name=&quot;Medium List 2 Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;67&quot; Name=&quot;Medium Grid 1 Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;68&quot; Name=&quot;Medium Grid 2 Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;69&quot; Name=&quot;Medium Grid 3 Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;70&quot; Name=&quot;Dark List Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;71&quot; Name=&quot;Colorful Shading Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;72&quot; Name=&quot;Colorful List Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;73&quot; Name=&quot;Colorful Grid Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;60&quot; Name=&quot;Light Shading Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;61&quot; Name=&quot;Light List Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;62&quot; Name=&quot;Light Grid Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;63&quot; Name=&quot;Medium Shading 1 Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;64&quot; Name=&quot;Medium Shading 2 Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;65&quot; Name=&quot;Medium List 1 Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;66&quot; Name=&quot;Medium List 2 Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;67&quot; Name=&quot;Medium Grid 1 Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;68&quot; Name=&quot;Medium Grid 2 Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;69&quot; Name=&quot;Medium Grid 3 Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;70&quot; Name=&quot;Dark List Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;71&quot; Name=&quot;Colorful Shading Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;72&quot; Name=&quot;Colorful List Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;73&quot; Name=&quot;Colorful Grid Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;60&quot; Name=&quot;Light Shading Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;61&quot; Name=&quot;Light List Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;62&quot; Name=&quot;Light Grid Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;63&quot; Name=&quot;Medium Shading 1 Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;64&quot; Name=&quot;Medium Shading 2 Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;65&quot; Name=&quot;Medium List 1 Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;66&quot; Name=&quot;Medium List 2 Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;67&quot; Name=&quot;Medium Grid 1 Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;68&quot; Name=&quot;Medium Grid 2 Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;69&quot; Name=&quot;Medium Grid 3 Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;70&quot; Name=&quot;Dark List Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;71&quot; Name=&quot;Colorful Shading Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;72&quot; Name=&quot;Colorful List Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;73&quot; Name=&quot;Colorful Grid Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;19&quot; QFormat=&quot;true&quot;
+   Name=&quot;Subtle Emphasis&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;21&quot; QFormat=&quot;true&quot;
+   Name=&quot;Intense Emphasis&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;31&quot; QFormat=&quot;true&quot;
+   Name=&quot;Subtle Reference&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;32&quot; QFormat=&quot;true&quot;
+   Name=&quot;Intense Reference&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;33&quot; QFormat=&quot;true&quot; Name=&quot;Book Title&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;37&quot; SemiHidden=&quot;true&quot;
+   UnhideWhenUsed=&quot;true&quot; Name=&quot;Bibliography&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; SemiHidden=&quot;true&quot;
+   UnhideWhenUsed=&quot;true&quot; QFormat=&quot;true&quot; Name=&quot;TOC Heading&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;41&quot; Name=&quot;Plain Table 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;42&quot; Name=&quot;Plain Table 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;43&quot; Name=&quot;Plain Table 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;44&quot; Name=&quot;Plain Table 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;45&quot; Name=&quot;Plain Table 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;40&quot; Name=&quot;Grid Table Light&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot; Name=&quot;Grid Table 1 Light&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;Grid Table 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;Grid Table 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;Grid Table 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;Grid Table 5 Dark&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot; Name=&quot;Grid Table 6 Colorful&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot; Name=&quot;Grid Table 7 Colorful&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot;
+   Name=&quot;Grid Table 1 Light Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;Grid Table 2 Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;Grid Table 3 Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;Grid Table 4 Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;Grid Table 5 Dark Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot;
+   Name=&quot;Grid Table 6 Colorful Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot;
+   Name=&quot;Grid Table 7 Colorful Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot;
+   Name=&quot;Grid Table 1 Light Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;Grid Table 2 Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;Grid Table 3 Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;Grid Table 4 Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;Grid Table 5 Dark Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot;
+   Name=&quot;Grid Table 6 Colorful Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot;
+   Name=&quot;Grid Table 7 Colorful Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot;
+   Name=&quot;Grid Table 1 Light Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;Grid Table 2 Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;Grid Table 3 Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;Grid Table 4 Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;Grid Table 5 Dark Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot;
+   Name=&quot;Grid Table 6 Colorful Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot;
+   Name=&quot;Grid Table 7 Colorful Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot;
+   Name=&quot;Grid Table 1 Light Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;Grid Table 2 Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;Grid Table 3 Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;Grid Table 4 Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;Grid Table 5 Dark Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot;
+   Name=&quot;Grid Table 6 Colorful Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot;
+   Name=&quot;Grid Table 7 Colorful Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot;
+   Name=&quot;Grid Table 1 Light Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;Grid Table 2 Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;Grid Table 3 Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;Grid Table 4 Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;Grid Table 5 Dark Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot;
+   Name=&quot;Grid Table 6 Colorful Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot;
+   Name=&quot;Grid Table 7 Colorful Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot;
+   Name=&quot;Grid Table 1 Light Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;Grid Table 2 Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;Grid Table 3 Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;Grid Table 4 Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;Grid Table 5 Dark Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot;
+   Name=&quot;Grid Table 6 Colorful Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot;
+   Name=&quot;Grid Table 7 Colorful Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot; Name=&quot;List Table 1 Light&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;List Table 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;List Table 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;List Table 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;List Table 5 Dark&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot; Name=&quot;List Table 6 Colorful&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot; Name=&quot;List Table 7 Colorful&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot;
+   Name=&quot;List Table 1 Light Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;List Table 2 Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;List Table 3 Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;List Table 4 Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;List Table 5 Dark Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot;
+   Name=&quot;List Table 6 Colorful Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot;
+   Name=&quot;List Table 7 Colorful Accent 1&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot;
+   Name=&quot;List Table 1 Light Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;List Table 2 Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;List Table 3 Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;List Table 4 Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;List Table 5 Dark Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot;
+   Name=&quot;List Table 6 Colorful Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot;
+   Name=&quot;List Table 7 Colorful Accent 2&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot;
+   Name=&quot;List Table 1 Light Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;List Table 2 Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;List Table 3 Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;List Table 4 Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;List Table 5 Dark Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot;
+   Name=&quot;List Table 6 Colorful Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot;
+   Name=&quot;List Table 7 Colorful Accent 3&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot;
+   Name=&quot;List Table 1 Light Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;List Table 2 Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;List Table 3 Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;List Table 4 Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;List Table 5 Dark Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot;
+   Name=&quot;List Table 6 Colorful Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot;
+   Name=&quot;List Table 7 Colorful Accent 4&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot;
+   Name=&quot;List Table 1 Light Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;List Table 2 Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;List Table 3 Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;List Table 4 Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;List Table 5 Dark Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot;
+   Name=&quot;List Table 6 Colorful Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot;
+   Name=&quot;List Table 7 Colorful Accent 5&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot;
+   Name=&quot;List Table 1 Light Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;List Table 2 Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;List Table 3 Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;List Table 4 Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;List Table 5 Dark Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot;
+   Name=&quot;List Table 6 Colorful Accent 6&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot;
+   Name=&quot;List Table 7 Colorful Accent 6&quot;/&gt;
  &lt;/w:LatentStyles&gt;
 &lt;/xml&gt;&lt;![endif]--&gt;
 &lt;style&gt;
@@ -402,7 +725,6 @@ target=&quot;hi.files/props0009.xml&quot;&gt;
  @font-face
 	{font-family:Wingdings;
 	panose-1:5 0 0 0 0 0 0 0 0 0;
-	mso-font-alt:Wingdings;
 	mso-font-charset:2;
 	mso-generic-font-family:auto;
 	mso-font-pitch:variable;
@@ -410,7 +732,7 @@ target=&quot;hi.files/props0009.xml&quot;&gt;
 @font-face
 	{font-family:宋体;
 	panose-1:2 1 6 0 3 1 1 1 1 1;
-	mso-font-alt:宋体;
+	mso-font-alt:SimSun;
 	mso-font-charset:134;
 	mso-generic-font-family:auto;
 	mso-font-pitch:variable;
@@ -579,12 +901,6 @@ span.Char1
 	mso-fareast-font-family:宋体;
 	mso-hansi-font-family:宋体;
 	mso-font-kerning:1.0pt;}
-span.SpellE
-	{mso-style-name:&quot;&quot;;
-	mso-spl-e:yes;}
-span.GramE
-	{mso-style-name:&quot;&quot;;
-	mso-gram-e:yes;}
 .MsoChpDefault
 	{mso-style-type:export-only;
 	mso-default-props:yes;
@@ -658,17 +974,15 @@ div.WordSection1
 	mso-level-number-position:left;
 	text-indent:-18.0pt;}
 @list l1
-	{mso-list-id:462774320;
+	{mso-list-id:1258908617;
 	mso-list-type:hybrid;
-	mso-list-template-ids:-1624454134 67698689 67698691 67698693 67698689 67698689 67698693 67698689 67698691 67698693;}
+	mso-list-template-ids:1729650880 1693887758 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
 @list l1:level1
-	{mso-level-number-format:bullet;
-	mso-level-text:\F06C;
+	{mso-level-text:%1）;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:21.0pt;
-	text-indent:-21.0pt;
-	font-family:Wingdings;}
+	margin-left:85.5pt;
+	text-indent:-36.0pt;}
 @list l1:level2
 	{mso-level-tab-stop:72.0pt;
 	mso-level-number-position:left;
@@ -682,13 +996,12 @@ div.WordSection1
 	mso-level-number-position:left;
 	text-indent:-18.0pt;}
 @list l1:level5
-	{mso-level-number-format:bullet;
-	mso-level-text:\F06C;
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:&quot;%5\)&quot;;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:105.0pt;
-	text-indent:-21.0pt;
-	font-family:Wingdings;}
+	margin-left:154.5pt;
+	text-indent:-21.0pt;}
 @list l1:level6
 	{mso-level-tab-stop:216.0pt;
 	mso-level-number-position:left;
@@ -706,50 +1019,81 @@ div.WordSection1
 	mso-level-number-position:left;
 	text-indent:-18.0pt;}
 @list l2
-	{mso-list-id:1258908617;
+	{mso-list-id:1333797687;
 	mso-list-type:hybrid;
-	mso-list-template-ids:1729650880 1693887758 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+	mso-list-template-ids:1556368324 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
 @list l2:level1
-	{mso-level-text:%1）;
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:85.5pt;
-	text-indent:-36.0pt;}
+	margin-left:106.5pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
 @list l2:level2
-	{mso-level-tab-stop:72.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l2:level3
-	{mso-level-tab-stop:108.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l2:level4
-	{mso-level-tab-stop:144.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l2:level5
-	{mso-level-number-format:alpha-lower;
-	mso-level-text:&quot;%5\)&quot;;
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06E;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:154.5pt;
-	text-indent:-21.0pt;}
+	margin-left:127.5pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l2:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F075;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:148.5pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l2:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:169.5pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l2:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06E;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:190.5pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
 @list l2:level6
-	{mso-level-tab-stop:216.0pt;
+	{mso-level-number-format:bullet;
+	mso-level-text:\F075;
+	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-18.0pt;}
+	margin-left:211.5pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
 @list l2:level7
-	{mso-level-tab-stop:252.0pt;
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-18.0pt;}
+	margin-left:232.5pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
 @list l2:level8
-	{mso-level-tab-stop:288.0pt;
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06E;
+	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-18.0pt;}
+	margin-left:253.5pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
 @list l2:level9
-	{mso-level-tab-stop:324.0pt;
+	{mso-level-number-format:bullet;
+	mso-level-text:\F075;
+	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-18.0pt;}
+	margin-left:274.5pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
 @list l3
 	{mso-list-id:1374230608;
 	mso-list-type:hybrid;
@@ -762,6 +1106,38 @@ div.WordSection1
 	margin-left:106.5pt;
 	text-indent:-21.0pt;
 	font-family:Wingdings;}
+@list l3:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
 ol
 	{margin-bottom:0cm;}
 ul
@@ -777,7 +1153,6 @@ ul
 	mso-tstyle-colband-size:0;
 	mso-style-noshow:yes;
 	mso-style-priority:99;
-	mso-style-qformat:yes;
 	mso-style-parent:&quot;&quot;;
 	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
 	mso-para-margin:0cm;
@@ -787,7 +1162,7 @@ ul
 	font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;}
 &lt;/style&gt;
 &lt;![endif]--&gt;&lt;!--[if gte mso 9]&gt;&lt;xml&gt;
- &lt;o:shapedefaults v:ext=&quot;edit&quot; spidmax=&quot;16386&quot;/&gt;
+ &lt;o:shapedefaults v:ext=&quot;edit&quot; spidmax=&quot;2049&quot;/&gt;
 &lt;/xml&gt;&lt;![endif]--&gt;&lt;!--[if gte mso 9]&gt;&lt;xml&gt;
  &lt;o:shapelayout v:ext=&quot;edit&quot;&gt;
   &lt;o:idmap v:ext=&quot;edit&quot; data=&quot;1&quot;/&gt;
@@ -814,7 +1189,7 @@ mso-font-kerning:0pt&apos;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;
 &lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:24.0pt;
 mso-pagination:widow-orphan&apos;&gt;&lt;b style=&apos;mso-bidi-font-weight:normal&apos;&gt;&lt;span
 style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
-0pt&apos;&gt;大家好，审计&lt;span lang=EN-US&gt;aisiav04r05c01_20180725 &lt;/span&gt;版本发布&lt;span
+0pt&apos;&gt;大家好，审计&lt;span lang=EN-US&gt;aisiav04r05c03_20180913 &lt;/span&gt;版本发布&lt;span
 lang=EN-US&gt;!&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
 
 &lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:24.0pt;
@@ -831,89 +1206,277 @@ mso-pagination:widow-orphan&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:1
 font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
-mso-outline-level:1;mso-list:l2 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
 lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
 mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;1）&lt;span
 style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span class=GramE&gt;&lt;span style=&apos;mso-bidi-font-size:
-10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;移动业支&lt;/span&gt;&lt;/span&gt;&lt;span
-lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
-mso-bidi-font-family:Calibri;color:black&apos;&gt;-&lt;/span&gt;&lt;span style=&apos;mso-bidi-font-size:
-10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;敏感数据上报监控&lt;span
-lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p class=MsoListParagraph style=&apos;margin-left:105.0pt;text-indent:-21.0pt;
-mso-outline-level:1;mso-list:l1 level5 lfo4&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
-lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:Wingdings;mso-fareast-font-family:
-Wingdings;mso-bidi-font-family:Wingdings;color:black&apos;&gt;&lt;span style=&apos;mso-list:
-Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
-style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
-Calibri;color:black&apos;&gt;敏感数据上报监控短信报警&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p class=MsoListParagraph style=&apos;margin-left:105.0pt;text-indent:-21.0pt;
-mso-outline-level:1;mso-list:l1 level5 lfo4&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
-lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:Wingdings;mso-fareast-font-family:
-Wingdings;mso-bidi-font-family:Wingdings;color:black&apos;&gt;&lt;span style=&apos;mso-list:
-Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
-style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
-Calibri;color:black&apos;&gt;敏感数据上报监控状态前台展示&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span style=&apos;mso-bidi-font-size:10.5pt;
+font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;审计规范&lt;span
+lang=EN-US&gt;-&lt;/span&gt;角色范围视图；&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
-mso-outline-level:1;mso-list:l2 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
 lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
 mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;2）&lt;span
 style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span style=&apos;mso-bidi-font-size:10.5pt;
-font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;公共需求—审计任务指定审批人下派&lt;span
-lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;审计规范&lt;span
+lang=EN-US&gt;-&lt;/span&gt;功能与权限视图；&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
-mso-outline-level:1;mso-list:l2 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
 lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
 mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;3）&lt;span
 style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span style=&apos;mso-bidi-font-size:10.5pt;
-font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;公共需求—审计取数管理&lt;span
-lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;态势规范&lt;span
+lang=EN-US&gt;-&lt;/span&gt;账号删除&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
-mso-outline-level:1;mso-list:l2 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
 lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
 mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;4）&lt;span
 style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span style=&apos;mso-bidi-font-size:10.5pt;
-font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;上海&lt;span
-class=GramE&gt;个&lt;/span&gt;需&lt;span class=GramE&gt;—应用&lt;/span&gt;&lt;span lang=EN-US&gt;4A&lt;/span&gt;自行记录应用系统访问日志并优化应用&lt;span
-lang=EN-US&gt;4A&lt;/span&gt;绕行审计功能&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;态势规范&lt;span
+lang=EN-US&gt;-&lt;/span&gt;账号新增&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
-mso-outline-level:1;mso-list:l2 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
 lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
 mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;5）&lt;span
 style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span style=&apos;mso-bidi-font-size:10.5pt;
-font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;若干故障处理和优化&lt;span
+font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;态势规范&lt;span
+lang=EN-US&gt;-&lt;/span&gt;账号变更&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;6）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span style=&apos;mso-bidi-font-size:10.5pt;
+font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;态势规范&lt;span
+lang=EN-US&gt;-&lt;/span&gt;账号锁定、解锁&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;7）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span style=&apos;mso-bidi-font-size:10.5pt;
+font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;态势规范&lt;span
+lang=EN-US&gt;-&lt;/span&gt;沉默帐号审计&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;8）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span style=&apos;mso-bidi-font-size:10.5pt;
+font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;态势规范&lt;span
+lang=EN-US&gt;-&lt;/span&gt;孤立账号审计&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;9）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span style=&apos;mso-bidi-font-size:10.5pt;
+font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;态势规范&lt;span
+lang=EN-US&gt;-&lt;/span&gt;远程登录（&lt;span lang=EN-US&gt;VPN&lt;/span&gt;）&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;10）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
+Calibri;color:black&apos;&gt;态势规范&lt;span lang=EN-US&gt;-&lt;/span&gt;绕行&lt;span lang=EN-US&gt;4A&lt;/span&gt;访问后台审计&lt;span
 lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoListParagraph style=&apos;margin-left:106.5pt;text-indent:-21.0pt;
-mso-outline-level:1;mso-list:l3 level1 lfo7&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
-lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:Wingdings;mso-fareast-font-family:
-Wingdings;mso-bidi-font-family:Wingdings;color:black&apos;&gt;&lt;span style=&apos;mso-list:
-Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;11）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
 style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
-Calibri;color:black&apos;&gt;解决福建南&lt;span class=GramE&gt;研&lt;/span&gt;&lt;span class=SpellE&gt;&lt;span
-lang=EN-US&gt;uac&lt;/span&gt;&lt;/span&gt;日志入&lt;span class=SpellE&gt;&lt;span lang=EN-US&gt;es&lt;/span&gt;&lt;/span&gt;问题&lt;span
+Calibri;color:black&apos;&gt;态势规范&lt;span lang=EN-US&gt;-&lt;/span&gt;绕行&lt;span lang=EN-US&gt;4A&lt;/span&gt;执行前台授权操作审计&lt;span
 lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoListParagraph style=&apos;margin-left:106.5pt;text-indent:-21.0pt;
-mso-outline-level:1;mso-list:l3 level1 lfo7&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
-lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:Wingdings;mso-fareast-font-family:
-Wingdings;mso-bidi-font-family:Wingdings;color:black&apos;&gt;&lt;span style=&apos;mso-list:
-Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;12）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
 style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
-Calibri;color:black&apos;&gt;回放堡垒&lt;span class=SpellE&gt;&lt;span lang=EN-US&gt;aiuap&lt;/span&gt;&lt;/span&gt;&lt;span
-lang=EN-US&gt;-replay&lt;/span&gt;支持&lt;span class=SpellE&gt;&lt;span lang=EN-US&gt;sftp&lt;/span&gt;&lt;/span&gt;方式&lt;span
+Calibri;color:black&apos;&gt;态势规范&lt;span lang=EN-US&gt;-&lt;/span&gt;金库操作审批一致性审计&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;13）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
+Calibri;color:black&apos;&gt;态势规范&lt;span lang=EN-US&gt;-&lt;/span&gt;金库自管理审计&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;14）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
+Calibri;color:black&apos;&gt;态势规范&lt;span lang=EN-US&gt;-&lt;/span&gt;绕行&lt;span lang=EN-US&gt;4A&lt;/span&gt;访问前台审计&lt;span
 lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;15）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
+Calibri;color:black&apos;&gt;态势规范&lt;span lang=EN-US&gt;-&lt;/span&gt;多&lt;span lang=EN-US&gt;IP&lt;/span&gt;登录&lt;span
+lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;16）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
+Calibri;color:black&apos;&gt;态势规范&lt;span lang=EN-US&gt;-&lt;/span&gt;异常时间登录&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;17）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
+Calibri;color:black&apos;&gt;态势规范&lt;span lang=EN-US&gt;-&lt;/span&gt;无密码查询语音详单查询&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;18）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
+Calibri;color:black&apos;&gt;态势规范&lt;span lang=EN-US&gt;-&lt;/span&gt;无密码查询未模糊化客户资料查询&lt;span
+lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;19）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
+Calibri;color:black&apos;&gt;态势规范&lt;span lang=EN-US&gt;-&lt;/span&gt;数据完整性&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;20）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
+Calibri;color:black&apos;&gt;态势规范&lt;span lang=EN-US&gt;-&lt;/span&gt;数据正确性&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;21）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
+Calibri;color:black&apos;&gt;态势规范&lt;span lang=EN-US&gt;-&lt;/span&gt;主机高危操作&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;22）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
+Calibri;color:black&apos;&gt;态势规范&lt;span lang=EN-US&gt;-&lt;/span&gt;数据库高危操作&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;23）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
+Calibri;color:black&apos;&gt;态势规范&lt;span lang=EN-US&gt;-&lt;/span&gt;重要业务操作审计（单笔）&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;24）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
+Calibri;color:black&apos;&gt;态势规范&lt;span lang=EN-US&gt;-&lt;/span&gt;批量操作审计&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;25）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
+Calibri;color:black&apos;&gt;态势规范&lt;span lang=EN-US&gt;-&lt;/span&gt;省内异地只查询不办理业务审计&lt;span
+lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;26）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
+Calibri;color:black&apos;&gt;态势规范&lt;span lang=EN-US&gt;-&lt;/span&gt;安全审计任务完成率&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;27）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
+Calibri;color:black&apos;&gt;态势规范&lt;span lang=EN-US&gt;-&lt;/span&gt;安全审计任务完成及时率&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;28）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
+Calibri;color:black&apos;&gt;态势规范&lt;span lang=EN-US&gt;-&lt;/span&gt;省间异地只查询不办理业务审计&lt;span
+lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;29）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
+Calibri;color:black&apos;&gt;态势规范&lt;span lang=EN-US&gt;-&lt;/span&gt;本地只查询不办理业务审计&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;30）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
+Calibri;color:black&apos;&gt;态势规范&lt;span lang=EN-US&gt;-&lt;/span&gt;后台敏感信息修改&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;31）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
+Calibri;color:black&apos;&gt;态势规范&lt;span lang=EN-US&gt;-&lt;/span&gt;合作伙伴后台生产系统访问安全性审计&lt;span
+lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
+mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
+lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;32）&lt;span
+style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
+style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
+Calibri;color:black&apos;&gt;态势规范&lt;span lang=EN-US&gt;-&lt;/span&gt;合作伙伴涉敏账号审计&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;p class=MsoNormal align=left style=&apos;text-align:left;mso-pagination:widow-orphan&apos;&gt;&lt;span
 lang=EN-US style=&apos;font-size:12.0pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
@@ -929,28 +1492,28 @@ mso-pagination:widow-orphan&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:1
 font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;p class=MsoListParagraph style=&apos;margin-left:69.0pt;text-indent:-21.0pt;
-mso-list:l0 level1 lfo6&apos;&gt;&lt;![if !supportLists]&gt;&lt;span lang=EN-US
+mso-list:l0 level1 lfo8&apos;&gt;&lt;![if !supportLists]&gt;&lt;span lang=EN-US
 style=&apos;font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
 Wingdings&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;文档路径：&lt;span lang=EN-US&gt;&lt;a
 href=&quot;ftp://10.1.252.239/ai4a30/aisia1.0/&quot;&gt;ftp://10.1.252.239/ai4a30/aisia1.0/&lt;/a&gt;&lt;/span&gt;产品发布&lt;span
-lang=EN-US&gt;/aisiav04r05c01_20180725/doc/&lt;/span&gt;&lt;/p&gt;
+lang=EN-US&gt;/aisiav04r05c03_20180913/doc/&lt;/span&gt;&lt;/p&gt;
 
 &lt;p class=MsoListParagraph style=&apos;margin-left:69.0pt;text-indent:-21.0pt;
-mso-list:l0 level1 lfo6&apos;&gt;&lt;![if !supportLists]&gt;&lt;span lang=EN-US
+mso-list:l0 level1 lfo8&apos;&gt;&lt;![if !supportLists]&gt;&lt;span lang=EN-US
 style=&apos;font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
 Wingdings&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;安装包路径：&lt;span lang=EN-US&gt;&lt;a
 href=&quot;ftp://10.1.252.239/ai4a30/aisia1.0/&quot;&gt;ftp://10.1.252.239/ai4a30/aisia1.0/&lt;/a&gt;&lt;/span&gt;产品发布&lt;span
-lang=EN-US&gt;/aisiav04r05c01_20180725/&lt;/span&gt;安装包&lt;span lang=EN-US&gt;/&lt;/span&gt;&lt;/p&gt;
+lang=EN-US&gt;/aisiav04r05c03_20180913/&lt;/span&gt;安装包&lt;span lang=EN-US&gt;/&lt;/span&gt;&lt;/p&gt;
 
 &lt;p class=MsoListParagraph style=&apos;margin-left:69.0pt;text-indent:-21.0pt;
-mso-list:l0 level1 lfo6&apos;&gt;&lt;![if !supportLists]&gt;&lt;span lang=EN-US
+mso-list:l0 level1 lfo8&apos;&gt;&lt;![if !supportLists]&gt;&lt;span lang=EN-US
 style=&apos;font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
 Wingdings&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span lang=EN-US&gt;db&lt;/span&gt;变更路径：&lt;span lang=EN-US&gt;&lt;a
 href=&quot;ftp://10.1.252.239/ai4a30/aisia1.0/&quot;&gt;ftp://10.1.252.239/ai4a30/aisia1.0/&lt;/a&gt;&lt;/span&gt;产品发布&lt;span
-lang=EN-US&gt;/aisiav04r05c01_20180725/db&lt;/span&gt;脚本&lt;span lang=EN-US&gt;/&lt;/span&gt;&lt;/p&gt;
+lang=EN-US&gt;/aisiav04r05c03_20180913/db&lt;/span&gt;脚本&lt;span lang=EN-US&gt;/&lt;/span&gt;&lt;/p&gt;
 
 &lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:48.0pt;
 mso-pagination:widow-orphan&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:12.0pt;
@@ -968,14 +1531,14 @@ font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;&am
 &lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:48.0pt;
 mso-pagination:widow-orphan&apos;&gt;&lt;span style=&apos;font-size:12.0pt;font-family:宋体;
 mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;按照《移动&lt;span lang=EN-US&gt;4A&lt;/span&gt;项目审计发布说明&lt;span
-lang=EN-US&gt;v04r05c01.docx&lt;/span&gt;》描述的升级即可&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+lang=EN-US&gt;v04r05c03.docx&lt;/span&gt;》描述的升级即可&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:48.0pt;
 mso-pagination:widow-orphan&apos;&gt;&lt;span style=&apos;font-size:12.0pt;font-family:宋体;
 mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;路径：&lt;span lang=EN-US&gt;&lt;a
 href=&quot;ftp://10.1.252.239/ai4a30/aisia1.0/&quot;&gt;ftp://10.1.252.239/ai4a30/aisia1.0/&lt;/a&gt;&lt;/span&gt;产品发布&lt;span
-lang=EN-US&gt;/aisiav04r05c01_20180725/doc/&lt;/span&gt;移动&lt;span lang=EN-US&gt;4A&lt;/span&gt;项目审计发布说明&lt;span
-lang=EN-US&gt;v04r05c01.&lt;span class=GramE&gt;docx&lt;/span&gt; &lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+lang=EN-US&gt;/aisiav04r05c03_20180913/doc/&lt;/span&gt;移动&lt;span lang=EN-US&gt;4A&lt;/span&gt;项目审计发布说明&lt;span
+lang=EN-US&gt;v04r05c03.docx &lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;p class=MsoNormal&gt;&lt;span lang=EN-US&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
 
@@ -986,7 +1549,7 @@ style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-
 
 &lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:24.0pt;
 mso-pagination:widow-orphan&apos;&gt;&lt;span style=&apos;font-size:12.0pt;font-family:宋体;
-mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;卢双明，谭荣强，王栓柱，于桐，谭荣强，宁桂鑫，王瑞华，张晋恺，李振鹏，陈仲勋，吴军峰，李振鹏，陈豆豆&lt;span
+mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;卢双明，谭荣强，王栓柱，陈相，秦健，谭荣强，宁桂鑫，王瑞华，张晋恺，李振鹏，陈仲勋，李振鹏，陈豆豆&lt;span
 lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:24.0pt;
@@ -995,10 +1558,8 @@ style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-
 0pt&apos;&gt;测试人员：&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
 
 &lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:24.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;span class=GramE&gt;&lt;span style=&apos;font-size:12.0pt;
-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;任顺禹&lt;/span&gt;&lt;/span&gt;&lt;span
-style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
-0pt&apos;&gt;，张佳燕，杨柳微，李洋洋&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+mso-pagination:widow-orphan&apos;&gt;&lt;span style=&apos;font-size:12.0pt;font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;任顺禹，张佳燕，杨柳微&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:24.0pt;
 mso-pagination:widow-orphan&apos;&gt;&lt;b style=&apos;mso-bidi-font-weight:normal&apos;&gt;&lt;span
@@ -1006,18 +1567,12 @@ style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-
 0pt&apos;&gt;发布人：&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
 
 &lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:24.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;span class=GramE&gt;&lt;span style=&apos;font-size:12.0pt;
-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;任顺禹&lt;/span&gt;&lt;/span&gt;&lt;span
-lang=EN-US style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;
-mso-font-kerning:0pt&apos;&gt; 18210964425&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p class=MsoNormal&gt;&lt;span lang=EN-US&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p class=MsoNormal&gt;&lt;span lang=EN-US&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+mso-pagination:widow-orphan&apos;&gt;&lt;span style=&apos;font-size:12.0pt;font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;任顺禹&lt;span lang=EN-US&gt; 18210964425&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;p class=MsoNormal align=left style=&apos;text-align:left;mso-pagination:widow-orphan&apos;&gt;&lt;span
 lang=EN-US style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;
-mso-font-kerning:0pt&apos;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+mso-font-kerning:0pt&apos;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;div class=MsoNormal align=left style=&apos;text-align:left;mso-pagination:widow-orphan&apos;&gt;&lt;span
 lang=EN-US style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;
@@ -1049,12 +1604,11 @@ mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt&apos;&gt;&lt;o:p&gt
 
 &lt;p class=MsoNormal align=left style=&apos;text-align:left;mso-pagination:widow-orphan&apos;&gt;&lt;span
 style=&apos;font-size:10.0pt;font-family:宋体;mso-bidi-font-family:宋体;color:#999999;
-mso-font-kerning:0pt&apos;&gt;邮件：&lt;/span&gt;&lt;span class=GramE&gt;&lt;u&gt;&lt;span lang=EN-US
-style=&apos;font-size:10.0pt;font-family:宋体;mso-bidi-font-family:宋体;color:#0066CC;
-mso-font-kerning:0pt&apos;&gt;rensy&lt;/span&gt;&lt;/u&gt;&lt;/span&gt;&lt;span lang=EN-US style=&apos;font-size:
-10.0pt;font-family:宋体;mso-bidi-font-family:宋体;color:#999999;mso-font-kerning:
-0pt&apos;&gt;&lt;a href=&quot;mailto:rensy@asiainfo-sec.com&quot; target=&quot;_blank&quot;&gt;&lt;span
-style=&apos;mso-bidi-font-size:11.0pt&apos;&gt;@asiainfo-sec.com&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;span
+mso-font-kerning:0pt&apos;&gt;邮件：&lt;/span&gt;&lt;u&gt;&lt;span lang=EN-US style=&apos;font-size:10.0pt;
+font-family:宋体;mso-bidi-font-family:宋体;color:#0066CC;mso-font-kerning:0pt&apos;&gt;rensy&lt;/span&gt;&lt;/u&gt;&lt;span
+lang=EN-US style=&apos;font-size:10.0pt;font-family:宋体;mso-bidi-font-family:宋体;
+color:#999999;mso-font-kerning:0pt&apos;&gt;&lt;a href=&quot;mailto:rensy@asiainfo-sec.com&quot;
+target=&quot;_blank&quot;&gt;&lt;span style=&apos;mso-bidi-font-size:11.0pt&apos;&gt;@asiainfo-sec.com&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;span
 lang=EN-US style=&apos;font-size:9.0pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
 mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt&apos;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
 

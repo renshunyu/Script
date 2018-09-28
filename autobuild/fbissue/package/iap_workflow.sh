@@ -1,7 +1,7 @@
 #!/bin/sh
-export JAVA_HOME=/usr/java/jdk1.8.0_121
+export JAVA_HOME=/usr/java/jdk1.7.0_80
 export M2_HOME=/usr/java/apache-maven-3.2.5
-export PATH=$M2_HOME/bin:$JAVA_HOME/bin:$PATH
+export PATH=$JAVA_HOME/bin:$M2_HOME/bin:$PATH
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 if [[ -z "$1" ]]; then
   echo "参数不足"
@@ -65,62 +65,62 @@ then
   echo "复制安装包错误"
   exit 1
 fi
-mkdir -p ~/package/sssia/安装包/iap_workflow/iap_workflow_anhui/
-result=$?
-if [ $result != '0' ]
-then
-  echo "创建目录错误"
-  exit 1
-fi
-cp ./iap_workflow_anhui/target/*tar.gz ~/package/sssia/安装包/iap_workflow/iap_workflow_anhui/
-result=$?
-if [ $result != '0' ]
-then
-  echo "复制安装包错误"
-  exit 1
-fi
+#mkdir -p ~/package/sssia/安装包/iap_workflow/iap_workflow_anhui/
+#result=$?
+#if [ $result != '0' ]
+#then
+#  echo "创建目录错误"
+#  exit 1
+#fi
+#cp ./iap_workflow_anhui/target/*tar.gz ~/package/sssia/安装包/iap_workflow/iap_workflow_anhui/
+#result=$?
+#if [ $result != '0' ]
+#then
+#  echo "复制安装包错误"
+#  exit 1
+#fi
 
-mkdir -p ~/package/sssia/安装包/iap_workflow/iap_workflow_shanghai/
-result=$?
-if [ $result != '0' ]
-then
-  echo "创建目录错误"
-  exit 1
-fi
-cp ./iap_workflow_shanghai/target/*tar.gz ~/package/sssia/安装包/iap_workflow/iap_workflow_shanghai/
-result=$?
-if [ $result != '0' ]
-then
-  echo "复制安装包错误"
-  exit 1
-fi
+#mkdir -p ~/package/sssia/安装包/iap_workflow/iap_workflow_shanghai/
+#result=$?
+#if [ $result != '0' ]
+#then
+#  echo "创建目录错误"
+#  exit 1
+#fi
+#cp ./iap_workflow_shanghai/target/*tar.gz ~/package/sssia/安装包/iap_workflow/iap_workflow_shanghai/
+#result=$?
+#if [ $result != '0' ]
+#then
+#  echo "复制安装包错误"
+#  exit 1
+#fi
 
-mkdir -p ~/package/sssia/安装包/iap_workflow/iap_workflow_shanxi/
-result=$?
-if [ $result != '0' ]
-then
-  echo "创建目录错误"
-  exit 1
-fi
-cp ./iap_workflow_shanxi/target/*tar.gz ~/package/sssia/安装包/iap_workflow/iap_workflow_shanxi/
-result=$?
-if [ $result != '0' ]
-then
-  echo "复制安装包错误"
-  exit 1
-fi
+#mkdir -p ~/package/sssia/安装包/iap_workflow/iap_workflow_shanxi/
+#result=$?
+#if [ $result != '0' ]
+#then
+#  echo "创建目录错误"
+#  exit 1
+#fi
+#cp ./iap_workflow_shanxi/target/*tar.gz ~/package/sssia/安装包/iap_workflow/iap_workflow_shanxi/
+#result=$?
+#if [ $result != '0' ]
+#then
+#  echo "复制安装包错误"
+#  exit 1
+#fi
 
-mkdir -p ~/package/sssia/安装包/iap_workflow/iap_workflow_henan/
-result=$?
-if [ $result != '0' ]
-then
-  echo "创建目录错误"
-  exit 1
-fi
-cp ./iap_workflow_henan/target/*tar.gz ~/package/sssia/安装包/iap_workflow/iap_workflow_henan/
-result=$?
-if [ $result != '0' ]
-then
-  echo "复制安装包错误"
-  exit 1
-fi
+#mkdir -p ~/package/sssia/安装包/iap_workflow/iap_workflow_henan/
+#result=$?
+#if [ $result != '0' ]
+#then
+#  echo "创建目录错误"
+#  exit 1
+#fi
+#cp ./iap_workflow_henan/target/*tar.gz ~/package/sssia/安装包/iap_workflow/iap_workflow_henan/
+#result=$?
+#if [ $result != '0' ]
+#then
+#  echo "复制安装包错误"
+#  exit 1
+#fi

@@ -63,9 +63,9 @@ cd ${buildpath}
 
   cd ..
 
-  awk 'ARGIND==1{a[$0]=$2;next}{if (!($0 in a)){print $2}}' n.txt o.txt
+  awk 'ARGIND==1{a[$0]=$2;next}{if (!($0 in a)){print "rm -f \$\{iapdir\}/'\''"$2"'\''\nresult \$?"}}' n.txt o.txt
   echo ===============================================================
-  awk 'ARGIND==1{a[$0]=$2;next}{if (!($0 in a)){print $2}}' o.txt n.txt 
+  awk 'ARGIND==1{a[$0]=$2;next}{if (!($0 in a)){print "cp iap/'\''"$2"'\'' \$\{iapdir\}/'\''"$2"'\''\nresult \$?"}}' o.txt n.txt 
 
 cd
 

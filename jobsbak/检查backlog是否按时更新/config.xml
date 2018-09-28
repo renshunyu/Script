@@ -31,8 +31,7 @@
   </builders>
   <publishers>
     <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.57">
-      <recipientList>rensy@asiainfo-sec.com,tanrq@asiainfo-sec.com,lusm@asiainfo-sec.com,zhangjy11@asiainfo-sec.com,lantian@asiainfo-sec.com,chenxiang5@asiainfo-sec.com,
-qinjian3@asiainfo-sec.com,wangsz@asiainfo-sec.com</recipientList>
+      <recipientList>rensy@asiainfo-sec.com,tanrq@asiainfo-sec.com,lusm@asiainfo-sec.com,chenxiang5@asiainfo-sec.com,wangsz@asiainfo-sec.com</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.FailureTrigger>
           <email>

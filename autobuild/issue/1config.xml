@@ -1,6 +1,7 @@
-<?xml version="1.1" encoding="UTF-8"?><project>
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
   <actions/>
-  <description/>
+  <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.model.ParametersDefinitionProperty>
@@ -8,7 +9,7 @@
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description>上次发布的版本号，举例：aisiav04r04c02_20180509</description>
-          <defaultValue>aisiav04r05c01_20180725</defaultValue>
+          <defaultValue>aisiav04r05c03_20180913</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
@@ -23,12 +24,26 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>sh /home/aiuap/autobuild/issue/compare.sh $VER</command>
+      <command>sh /home/aiuap/autobuild/issue/compare2html.sh $VER</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
+    <htmlpublisher.HtmlPublisher plugin="htmlpublisher@1.16">
+      <reportTargets>
+        <htmlpublisher.HtmlPublisherTarget>
+          <reportName>HTML Report</reportName>
+          <reportDir>./</reportDir>
+          <reportFiles>report.html</reportFiles>
+          <alwaysLinkToLastBuild>false</alwaysLinkToLastBuild>
+          <reportTitles></reportTitles>
+          <keepAll>false</keepAll>
+          <allowMissing>false</allowMissing>
+          <includes>**/*</includes>
+        </htmlpublisher.HtmlPublisherTarget>
+      </reportTargets>
+    </htmlpublisher.HtmlPublisher>
     <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.57">
-      <recipientList>rensy@asiainfo-sec.com,zhangjy11@asiainfo-sec.com,yanglw3@asiainfo-sec.com,liyy@asiainfo-sec.com,cc:ninggx@asiainfo-sec.com,cc:lusm@asiainfo-sec.com,cc:hejt@asiainfo-sec.com</recipientList>
+      <recipientList>rensy@asiainfo-sec.com,zhangjy11@asiainfo-sec.com,yanglw3@asiainfo-sec.com,cc:ninggx@asiainfo-sec.com,cc:lusm@asiainfo-sec.com,cc:hejt@asiainfo-sec.com</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.AlwaysTrigger>
           <email>
@@ -37,7 +52,7 @@
             <recipientProviders>
               <hudson.plugins.emailext.plugins.recipients.ListRecipientProvider/>
             </recipientProviders>
-            <attachmentsPattern/>
+            <attachmentsPattern></attachmentsPattern>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
             <replyTo>$PROJECT_DEFAULT_REPLYTO</replyTo>
@@ -49,8 +64,10 @@
       <defaultSubject>核对release和program的提交记录</defaultSubject>
       <defaultContent>hi：
 
-          附件是release版本和program的版本对比，请核对有无预期之外的提交！</defaultContent>
-      <attachmentsPattern/>
+          附件是release版本和program的版本对比，请核对有无预期之外的提交！
+          也可通过下面链接查看：
+       http://10.1.198.53:9081/jenkins/view/%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83%E6%B5%81%E7%A8%8B/job/1%E3%80%81%E5%AF%B9%E6%AF%94%E6%8C%87%E5%AE%9A%E7%89%88%E6%9C%ACprogram%E5%92%8Crelease%E7%9A%84%E6%8F%90%E4%BA%A4%E8%AE%B0%E5%BD%95/HTML_20Report/</defaultContent>
+      <attachmentsPattern></attachmentsPattern>
       <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
       <postsendScript>$DEFAULT_POSTSEND_SCRIPT</postsendScript>
       <attachBuildLog>true</attachBuildLog>

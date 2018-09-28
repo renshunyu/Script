@@ -8,19 +8,19 @@
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description/>
-          <defaultValue>aisiav04r05c00_20180627</defaultValue>
+          <defaultValue>aisiav04r05c02_20180820</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>PATCHNAME</name>
           <description/>
-          <defaultValue>甘肃发现的敏感数据上报获取回执后入库的回执状态偶现错误_201806221055</defaultValue>
+          <defaultValue>敏感数据上报区分17年和18年的回执_201809191100</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>PROJECTS</name>
           <description/>
-          <defaultValue>data-reporting</defaultValue>
+          <defaultValue/>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.TextParameterDefinition>

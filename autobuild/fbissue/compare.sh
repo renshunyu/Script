@@ -17,9 +17,9 @@ function fPro()
 echo '##########################################################################'
 
 
-fPro http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/aisiav04r05c00_20180627/iap
-fPro "http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/aisiav04r05c00_20180627/data-reporting"
-fPro "http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/test/data-reporting"
+#fPro http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/aisiav04r05c00_20180627/iap
+#fPro "http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/aisiav04r05c00_20180627/data-reporting"
+#fPro "http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/test/data-reporting"
 
 
 

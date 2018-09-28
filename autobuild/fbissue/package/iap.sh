@@ -9,7 +9,7 @@ if [[ -z "$1" ]]; then
 fi
 
 packagepath=/home/aiuap/svnproject/program30rm/fbissue
-svnurl=http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$1/reportc
+svnurl=http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$1/iap
 
 cd $packagepath
 result=$?
@@ -19,8 +19,8 @@ then
   exit 1
 fi
 
-if [ -d reportc ]; then
-  rm -fr reportc
+if [ -d iap ]; then
+  rm -fr iap
 fi
 
 
@@ -33,7 +33,7 @@ then
 fi
 
 
-cd reportc
+cd iap
 result=$?
 if [ $result != '0' ]
 then
@@ -51,14 +51,14 @@ then
 fi
 echo "编译成功"
 
-mkdir -p ~/package/sssia/安装包/reportc/
+mkdir -p ~/package/sssia/安装包/iap/
 result=$?
 if [ $result != '0' ]
 then
   echo "创建目录错误"
   exit 1
 fi
-cp ./target/dist/*.war ~/package/sssia/安装包/reportc/
+cp ./target/dist/*.war ~/package/sssia/安装包/iap/
 result=$?
 if [ $result != '0' ]
 then

@@ -6,7 +6,7 @@ confpath=/home/aiuap/svnproject/program30/program/iap/src/main/resource/iap-busi
 function testKeynum()
 {
 v=`java readpro $confpath -s`
-assertEquals "324" "$v"
+assertEquals "326" "$v"
 
 }
 function testIsSendMessage()
