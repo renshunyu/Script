@@ -6,7 +6,7 @@ confpath=/home/aiuap/svnproject/program30/program/iap/src/main/resource/iap-busi
 function testKeynum()
 {
 v=`java readpro $confpath -s`
-assertEquals "326" "$v"
+assertEquals "330" "$v"
 
 }
 function testIsSendMessage()
@@ -251,7 +251,20 @@ assertEquals "off" "$v"
 
 }
 
+function testGansuCron()
+{
+v=`java readpro $confpath -g gansuCron`
+assertEquals "off" "$v"
+
+}
 
 
+
+function testAudit_on()
+{
+v=`java readpro $confpath -g audit-on`
+assertEquals "off" "$v"
+
+}
 
 . "${SHUNIT2_HOME}/shunit2"

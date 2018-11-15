@@ -9,29 +9,34 @@
         <hudson.model.TextParameterDefinition>
           <name>notincluded</name>
           <description></description>
-          <defaultValue>data_reportingincre,</defaultValue>
+          <defaultValue></defaultValue>
           <trim>false</trim>
         </hudson.model.TextParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>SVNTAG</name>
           <description></description>
-          <defaultValue>142417</defaultValue>
+          <defaultValue>144852</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>SVNBASE</name>
           <description></description>
-          <defaultValue>141873</defaultValue>
+          <defaultValue>144494</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description></description>
-          <defaultValue>aisiav04r05c02_20180820</defaultValue>
+          <defaultValue>aisiav04r06c00_20181017</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
 	<hudson.model.BooleanParameterDefinition>
-          <name>data_reportingfull</name>
+          <name>iapincre</name>
+          <description></description>
+          <defaultValue>true</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+	<hudson.model.BooleanParameterDefinition>
+          <name>iapfull</name>
           <description></description>
           <defaultValue>true</defaultValue>
         </hudson.model.BooleanParameterDefinition>
@@ -57,14 +62,29 @@ sh /home/aiuap/autobuild/patch/organ.sh ${SVNTAG}</command>
         <hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
           <configs>
             <hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
-              <properties>ISBUILD=${data_reportingfull}
+              <properties>ISBUILD=${iapincre}
 VER=${VER}
 SVNTAG=${SVNTAG}
 SVNBASE=${SVNBASE}</properties>
               <textParamValueOnNewLine>false</textParamValueOnNewLine>
             </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
           </configs>
-          <projects>data_reportingfull</projects>
+          <projects>iapincre</projects>
+          <condition>SUCCESS</condition>
+          <triggerWithNoParameters>false</triggerWithNoParameters>
+          <triggerFromChildProjects>false</triggerFromChildProjects>
+        </hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
+        <hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
+          <configs>
+            <hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
+              <properties>ISBUILD=${iapfull}
+VER=${VER}
+SVNTAG=${SVNTAG}
+SVNBASE=${SVNBASE}</properties>
+              <textParamValueOnNewLine>false</textParamValueOnNewLine>
+            </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
+          </configs>
+          <projects>iapfull</projects>
           <condition>SUCCESS</condition>
           <triggerWithNoParameters>false</triggerWithNoParameters>
           <triggerFromChildProjects>false</triggerFromChildProjects>

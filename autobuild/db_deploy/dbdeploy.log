@@ -1,5 +1,5 @@
 
-SQL*Plus: Release 10.2.0.5.0 - Production on 星期四 9月 13 09:12:04 2018
+SQL*Plus: Release 10.2.0.5.0 - Production on 星期一 10月 15 10:28:07 2018
 
 Copyright (c) 1982, 2010, Oracle.  All Rights Reserved.
 
@@ -10740,6 +10740,27 @@ SQL>
 
 注释已创建。
 
+
+表已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
 SQL> 
 表已创建。
 
@@ -19518,6 +19539,12 @@ PL/SQL 过程已成功完成。
 
 提交完成。
 
+
+已创建 1 行。
+
+
+提交完成。
+
 SQL> 
 视图已创建。
 
@@ -22456,7 +22483,7 @@ SQL> 从 Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Produc
 With the Partitioning, Oracle Label Security, OLAP, Data Mining,
 Oracle Database Vault and Real Application Testing options 断开
 
-SQL*Plus: Release 10.2.0.5.0 - Production on 星期四 9月 13 09:18:20 2018
+SQL*Plus: Release 10.2.0.5.0 - Production on 星期一 10月 15 10:34:16 2018
 
 Copyright (c) 1982, 2010, Oracle.  All Rights Reserved.
 

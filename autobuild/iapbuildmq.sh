@@ -4,10 +4,10 @@ export JAVA_HOME=/usr/java/jdk1.8.0_121
 export ANT_HOME=/home/aiuap/tools/apache-ant-1.7.1
 export PATH=$JAVA_HOME/bin:$ANT_HOME/bin:$PATH
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
-export LANG=zh_CN.UTF-8
 
-svnhome=/home/aiuap/svnproject/program30rm/iap
-buildhome=/home/aiuap/svnproject/program30/builddir
+
+svnhome=/home/aiuap/svnproject/program30/program/iap_mysql
+buildhome=/home/aiuap/svnproject/program30/builddir/iap_mysql
 svn up $svnhome
 result=$?
 if [ $result != '0' ]
@@ -16,20 +16,20 @@ then
   exit 1
 fi
 echo "¸üÐÂsvnÄ¿Â¼³É¹¦"
-rm -rf  $buildhome/iap
+rm -rf  $buildhome
 if [ $result != '0' ]
 then
   echo "É¾³ý±àÒëÄ¿Â¼´íÎó"
   exit 1
 fi
-cp -rf $svnhome $buildhome/iap
+cp -rf $svnhome $buildhome/
 result=$?
 if [ $result != '0' ]
 then
   echo "¿½±´Ä¿Â¼´íÎó"
   exit 1
 fi
-cd $buildhome/iap
+cd $buildhome/
 ant >./build.log
 result=`cat build.log|grep -i "BUILD SUCCESSFUL"|wc -l`
 if [ $result != '1' ]

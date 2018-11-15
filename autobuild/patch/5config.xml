@@ -8,13 +8,13 @@
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description/>
-          <defaultValue>aisiav04r05c02_20180820</defaultValue>
+          <defaultValue>aisiav04r06c00_20181017</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>PATCHNAME</name>
           <description/>
-          <defaultValue>敏感数据上报区分17年和18年的回执_201809191100</defaultValue>
+          <defaultValue>取数管理取数的时候excel生成数据量过大会造成oom_201811141800</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>

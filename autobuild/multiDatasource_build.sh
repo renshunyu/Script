@@ -1,12 +1,10 @@
 #!bin/sh
-#export JAVA_HOME=/usr/java/jdk1.6.0_31
 export JAVA_HOME=/usr/java/jdk1.8.0_121
-export ANT_HOME=/home/aiuap/tools/apache-ant-1.7.1
-export PATH=$JAVA_HOME/bin:$ANT_HOME/bin:$PATH
+export M2_HOME=/usr/java/apache-maven-3.2.5
+export PATH=$M2_HOME/bin:$JAVA_HOME/bin:$PATH
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
-export LANG=zh_CN.UTF-8
 
-svnhome=/home/aiuap/svnproject/program30rm/iap
+svnhome=/home/aiuap/svnproject/program30/program/multiDatasource
 buildhome=/home/aiuap/svnproject/program30/builddir
 svn up $svnhome
 result=$?
@@ -15,23 +13,25 @@ then
   echo "∏¸–¬svnƒø¬º¥ÌŒÛ"
   exit 1
 fi
-echo "∏¸–¬svnƒø¬º≥…π¶"
-rm -rf  $buildhome/iap
+rm -rf $buildhome/multiDatasource
 if [ $result != '0' ]
 then
   echo "…æ≥˝±‡“Îƒø¬º¥ÌŒÛ"
   exit 1
 fi
-cp -rf $svnhome $buildhome/iap
+cp -rf $svnhome $buildhome/multiDatasource
 result=$?
 if [ $result != '0' ]
 then
   echo "øΩ±¥ƒø¬º¥ÌŒÛ"
   exit 1
 fi
-cd $buildhome/iap
-ant >./build.log
-result=`cat build.log|grep -i "BUILD SUCCESSFUL"|wc -l`
+cd $buildhome/multiDatasource
+
+mvn clean install package -Dmaven.test.skip=true >./build.log
+
+#ant release >./build.log
+result=`cat build.log|grep -i "BUILD SUCCESS"|wc -l`
 if [ $result != '1' ]
 then
   echo "±‡“Î±®¥Ì"

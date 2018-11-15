@@ -4,9 +4,9 @@ export JAVA_HOME=/usr/java/jdk1.8.0_121
 export ANT_HOME=/home/aiuap/tools/apache-ant-1.7.1
 export PATH=$JAVA_HOME/bin:$ANT_HOME/bin:$PATH
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
-export LANG=zh_CN.UTF-8
 
-svnhome=/home/aiuap/svnproject/program30rm/iap
+
+svnhome=/home/aiuap/svnproject/program30/program/iap
 buildhome=/home/aiuap/svnproject/program30/builddir
 svn up $svnhome
 result=$?

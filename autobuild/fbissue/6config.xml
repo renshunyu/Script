@@ -8,13 +8,13 @@
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description/>
-          <defaultValue>aisiav04r06c00_20180914</defaultValue>
+          <defaultValue>aisiav04r06c04_20181115</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>VERNUM</name>
           <description/>
-          <defaultValue>v04r06c00</defaultValue>
+          <defaultValue>v04r06c04</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
@@ -22,10 +22,9 @@
           <description/>
           <choices class="java.util.Arrays$ArrayList">
             <a class="string-array">
-              <string>只更新第二步的参数</string>
-              <string>创建rm封版目录</string>
-              <string>SSSIA封版</string>
-              <string>SSSSA封版</string>
+              <string>创建release目录</string>
+              <string>SSSIA发布</string>
+              <string>SSSSA发布</string>
             </a>
           </choices>
         </hudson.model.ChoiceParameterDefinition>
@@ -53,9 +52,9 @@ PJ=iap &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/pr
 #南研原始日志完整性和非空校验稽核
 PJ=ap_validate_server &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
 #elasticsearch和kibana
-PJ='elastic/install' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/install
+PJ='elastic/install' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/install http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/install
 #标准化日志导入而是服务
-PJ='elastic/jdbc2es' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/jdbc2es
+PJ='elastic/jdbc2es' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/jdbc2es http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/jdbc2es
 #动态回放堡垒
 PJ=GFort &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
 #审计工作任务后台
@@ -72,24 +71,30 @@ PJ='data-reporting' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/
 PJ='data-upload-tools' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
 #2018年新的数据上报监控
 PJ='data-monitor' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
+#2018年新的数据上报监控前台
+PJ='report-to-monitoring' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
 #注册中心
 PJ='eureka-server' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
+#认证组件
+PJ='sso-plugin' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
+#审计管理
+PJ='auditManagement' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ  http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
 
 elif [[ $createReleaseBranch = 'SSSSA发布' ]];then
 echo $createReleaseBranch
 
-#PJ=SSA_analyze &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
-#PJ=sdc_aus &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
-#PJ=kettle &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
-#PJ=ETL_Script &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
-#PJ=azkaban &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
+PJ=SSA_analyze &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
+PJ=sdc_aus &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
+PJ=kettle &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
+PJ=ETL_Script &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
+PJ=azkaban &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
 #solr数据导入服务
 PJ=iap_solr_dataimport &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
 #策略分析服务
 PJ=iap_server &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
-#PJ=work_order_audit &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
-#PJ=SSAServer &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
-#PJ=ssac &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
+PJ=work_order_audit &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
+PJ=SSAServer &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
+PJ=ssac &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
 #基础数据同步服务
 PJ=iap_syn &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
 #smp接口服务

@@ -15,7 +15,7 @@ sed "`awk '$1=="<name>VER</name>"{print (NR+2)}' $jhome/1、审计产品封版/config.x
 java -jar jenkins-cli.jar -s http://10.1.198.53:9081/jenkins/ update-job 1、审计产品封版 <1config.xml
 
 
-sed "`awk '$1=="<name>VER</name>"{print (NR+2)}' $jhome/3、【封版】组织版本发布目录和内容/config.xml`s/<defaultValue>.*<\/defaultValue>/<defaultValue>$1<\/defaultValue>/g"  $jhome/3、【封版】组织版本发布目录和内容/config.xml >3config.xml
+sed "`awk '$1=="<name>MVER</name>"{print (NR+2)}' $jhome/3、【封版】组织版本发布目录和内容/config.xml`s/<defaultValue>.*<\/defaultValue>/<defaultValue>$1<\/defaultValue>/g"  $jhome/3、【封版】组织版本发布目录和内容/config.xml >3config.xml
 java -jar jenkins-cli.jar -s http://10.1.198.53:9081/jenkins/ update-job 3、【封版】组织版本发布目录和内容 <3config.xml
 sed "`awk '$1=="<name>VER</name>"{print (NR+2)}' $jhome/4、【封版】上传版本发布目录到ftp/config.xml`s/<defaultValue>.*<\/defaultValue>/<defaultValue>$VER<\/defaultValue>/g"  $jhome/4、【封版】上传版本发布目录到ftp/config.xml >4config.xml
 java -jar jenkins-cli.jar -s http://10.1.198.53:9081/jenkins/ update-job 4、【封版】上传版本发布目录到ftp <4config.xml

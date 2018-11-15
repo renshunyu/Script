@@ -8,7 +8,7 @@
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description/>
-          <defaultValue>aisiav04r05c02_20180820</defaultValue>
+          <defaultValue>aisiav04r06c00_20181017</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>

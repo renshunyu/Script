@@ -40,7 +40,7 @@ then
   echo "¿½±´data-reporting-0.0.1-SNAPSHOTÏîÄ¿´íÎó"
   exit 1
 fi
-sudo su - aiuap30 -c "cd $deployhome/ && tar -zxvf data-reporting-0.0.1-SNAPSHOT-RELEASE.tar.gz && rm data-reporting-0.0.1-SNAPSHOT-RELEASE.tar.gz"
+sudo su - aiuap30 -c "cd $deployhome/ && tar -zxvf data-reporting-0.0.1-SNAPSHOT-RELEASE.tar.gz"
 result=$?
 if [ $result != '0' ]
 then
