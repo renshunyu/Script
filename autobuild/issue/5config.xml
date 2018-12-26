@@ -1,7 +1,6 @@
-<?xml version='1.1' encoding='UTF-8'?>
-<project>
+<?xml version="1.1" encoding="UTF-8"?><project>
   <actions/>
-  <description></description>
+  <description/>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.model.ParametersDefinitionProperty>
@@ -9,12 +8,12 @@
         <hudson.model.StringParameterDefinition>
           <name>ISSUEVERSION</name>
           <description>本次发布的版本号例如：aisiav04r04c02_20180509</description>
-          <defaultValue>aisiav04r05c03_20180913</defaultValue>
+          <defaultValue>aisiav04r07c00_20181218</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
           <name>createReleaseBranch</name>
-          <description></description>
+          <description/>
           <choices class="java.util.Arrays$ArrayList">
             <a class="string-array">
               <string>创建release目录</string>
@@ -35,81 +34,83 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>if [[ $createReleaseBranch = &apos;创建release目录&apos; ]];then
+      <command>if [[ $createReleaseBranch = '创建release目录' ]];then
 echo $createReleaseBranch
 #创建发布目录
-svn mkdir http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION -m &quot;$ISSUEVERSION版本发布&quot;
-elif [[ $createReleaseBranch = &apos;SSSIA发布&apos; ]];then
+svn mkdir http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION -m "$ISSUEVERSION版本发布"
+elif [[ $createReleaseBranch = 'SSSIA发布' ]];then
 echo $createReleaseBranch
 
 
 #审计前台
-PJ=iap &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=iap &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #南研原始日志完整性和非空校验稽核
-PJ=ap_validate_server &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=ap_validate_server &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #elasticsearch和kibana
-PJ=&apos;elastic/install&apos; &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/install
+PJ='elastic/install' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/install
 #标准化日志导入而是服务
-PJ=&apos;elastic/jdbc2es&apos; &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/jdbc2es
+PJ='elastic/jdbc2es' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/jdbc2es
 #动态回放堡垒
-PJ=GFort &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=GFort &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #审计工作任务后台
-PJ=iap_workflow &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=iap_workflow &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #新报表分析工具
-PJ=report_execute_engine &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=report_execute_engine &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #报表前台的后台
-PJ=reports &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=reports &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #报表前台的前台
-PJ=reportc &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=reportc &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #2018年新的数据上报
-PJ=&apos;data-reporting&apos; &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ='data-reporting' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #2017年敏感数据上报
-PJ=&apos;data-upload-tools&apos; &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ='data-upload-tools' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #2018年新的数据上报监控后台
-PJ=&apos;data-monitor&apos; &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
-#2018年新的数据上报监控前台
-PJ=&apos;report-to-monitoring&apos; &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ='data-monitor' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #2018年新的数据上报监控注册中心
-PJ=&apos;eureka-server&apos; &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ='eureka-server' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #认证组件
-PJ=&apos;sso-plugin&apos; &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ='sso-plugin' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #审计管理
-PJ=&apos;auditManagement&apos; &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ='auditManagement' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+#数据库连接组件
+PJ='multiDatasource' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+#日志组件
+PJ='auditInfoLog' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 
-elif [[ $createReleaseBranch = &apos;SSSSA发布&apos; ]];then
+elif [[ $createReleaseBranch = 'SSSSA发布' ]];then
 echo $createReleaseBranch
 
 
-PJ=SSA_analyze &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
-PJ=sdc_aus &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
-PJ=kettle &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
-PJ=ETL_Script &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
-PJ=azkaban &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=SSA_analyze &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=sdc_aus &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=kettle &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=ETL_Script &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=azkaban &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #solr数据导入服务
-PJ=iap_solr_dataimport &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=iap_solr_dataimport &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #策略分析服务
-PJ=iap_server &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
-PJ=work_order_audit &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
-PJ=SSAServer &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
-PJ=ssac &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=iap_server &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=work_order_audit &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=SSAServer &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=ssac &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #基础数据同步服务
-PJ=iap_syn &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=iap_syn &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #smp接口服务
-PJ=iap_smp_webservice &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=iap_smp_webservice &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #报表前台
-PJ=iap_report_flex_server &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=iap_report_flex_server &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #报表后台
-PJ=iap_report_analysis_server &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=iap_report_analysis_server &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #设备日志稽核
-PJ=iap_device_date_audit &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=iap_device_date_audit &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #aus相关组件
-PJ=iap_aus &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=iap_aus &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #标准化服务
-PJ=ap_standardize_server &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=ap_standardize_server &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #采集服务
-PJ=ap_gather_server &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=ap_gather_server &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #特殊绕行日志采集服务
-PJ=ap_gather_syslog &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+PJ=ap_gather_syslog &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 
 fi</command>
     </hudson.tasks.Shell>

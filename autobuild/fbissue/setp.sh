@@ -27,3 +27,6 @@ java -jar jenkins-cli.jar -s http://10.1.198.53:9081/jenkins/ update-job 6、【封
 
 sed "`awk '$1=="<name>VERNUM</name>"{print (NR+2)}' $jhome/6、【封版】创建本次版本发布的release分支/config.xml`s/<defaultValue>.*<\/defaultValue>/<defaultValue>$1<\/defaultValue>/g"  $jhome/6、【封版】创建本次版本发布的release分支/config.xml >6config.xml
 java -jar jenkins-cli.jar -s http://10.1.198.53:9081/jenkins/ update-job 6、【封版】创建本次版本发布的release分支 <6config.xml
+
+sed "`awk '$1=="<name>VER</name>"{print (NR+2)}' $jhome/7、【封版】将版本上传至发布平台/config.xml`s/<defaultValue>.*<\/defaultValue>/<defaultValue>$VER<\/defaultValue>/g"  $jhome/7、【封版】将版本上传至发布平台/config.xml >7config.xml
+java -jar jenkins-cli.jar -s http://10.1.198.53:9081/jenkins/ update-job 7、【封版】将版本上传至发布平台 <7config.xml

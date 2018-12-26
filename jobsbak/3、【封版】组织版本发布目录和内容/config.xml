@@ -26,6 +26,9 @@
     <hudson.tasks.Shell>
       <command>rm ~/package -fr</command>
     </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>sh /home/aiuap/autobuild/fbissue/setp.sh $MVER</command>
+    </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.plugins.parameterizedtrigger.BuildTrigger plugin="parameterized-trigger@2.35.2">
@@ -37,7 +40,7 @@
               <textParamValueOnNewLine>false</textParamValueOnNewLine>
             </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
           </configs>
-          <projects>ap_gather_serverrmpackage,ap_standardize_serverrmpackage,ap_validate_serverrmpackage,auditManagementrmpackage,data-monitorrmpackage,data-reportingrmpackage,data-upload-toolsrmpackage,dbscriptrmpackage,docrmpackage,elasticandkibanarmpackage,eureka-serverrmpackage,GFortrmpackage,iap_device_date_auditrmpackage,iap_serverrmpackage,iap_smp_webservicermpackage,iap_solr_dataimportrmpackage,iap_synrmpackage,iap_workflowrmpackage,iaprmpackage,jdbc2esrmpackage,report_execute_enginermpackage,reportcrmpackage,reportsrmpackage</projects>
+          <projects>ap_gather_serverrmpackage,ap_standardize_serverrmpackage,ap_validate_serverrmpackage,auditManagementrmpackage,data-monitorrmpackage,data-reportingrmpackage,data-upload-toolsrmpackage,dbscriptrmpackage,docrmpackage,elasticandkibanarmpackage,eureka-serverrmpackage,GFortrmpackage,iap_device_date_auditrmpackage,iap_serverrmpackage,iap_smp_webservicermpackage,iap_solr_dataimportrmpackage,iap_synrmpackage,iap_workflowrmpackage,iaprmpackage,jdbc2esrmpackage,report_execute_enginermpackage,reportcrmpackage,reportsrmpackage,jasypt-toolrmpackage,average_strategy_execute_enginermpackage</projects>
           <condition>SUCCESS</condition>
           <triggerWithNoParameters>false</triggerWithNoParameters>
           <triggerFromChildProjects>false</triggerFromChildProjects>

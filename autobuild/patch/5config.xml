@@ -14,13 +14,13 @@
         <hudson.model.StringParameterDefinition>
           <name>PATCHNAME</name>
           <description/>
-          <defaultValue>取数管理取数的时候excel生成数据量过大会造成oom_201811141800</defaultValue>
+          <defaultValue>审计范围页面卡顿以及审计管理页面查询需求_201812061425</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>PROJECTS</name>
           <description/>
-          <defaultValue/>
+          <defaultValue>auditManagement</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.TextParameterDefinition>

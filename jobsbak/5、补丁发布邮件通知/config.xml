@@ -8,19 +8,19 @@
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description/>
-          <defaultValue>aisiav04r05c02_20180820</defaultValue>
+          <defaultValue>aisiav04r06c00_20181017</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>PATCHNAME</name>
           <description/>
-          <defaultValue>敏感数据上报区分17年和18年的回执_201809191100</defaultValue>
+          <defaultValue>审计范围页面卡顿以及审计管理页面查询需求_201812061425</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>PROJECTS</name>
           <description/>
-          <defaultValue/>
+          <defaultValue>auditManagement</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.TextParameterDefinition>

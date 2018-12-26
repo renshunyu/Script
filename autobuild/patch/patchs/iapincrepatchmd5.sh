@@ -63,6 +63,7 @@ cd ${buildpath}
 
 
     svn update -r${nv}
+    rm -r WebRoot/WEB-INF/classes
     ant |tee build.log
     result=`cat build.log|grep -i "BUILD SUCCESSFUL"|wc -l`
     if [ $result != '1' ]
@@ -73,8 +74,10 @@ cd ${buildpath}
     cp target/dist/iap.war ../n
 
 
-    #svn update ${svnpath} -r${ov}  
+    #svn update ${svnpath} -r${ov} 
+    ant clean
     svn update -r${ov}
+    rm -r WebRoot/WEB-INF/classes
     ant|tee build.log
     result=`cat build.log|grep -i "BUILD SUCCESSFUL"|wc -l`
     if [ $result != '1' ]

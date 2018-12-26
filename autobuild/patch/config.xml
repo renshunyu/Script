@@ -9,19 +9,19 @@
         <hudson.model.TextParameterDefinition>
           <name>notincluded</name>
           <description></description>
-          <defaultValue></defaultValue>
+          <defaultValue>auditManagementincre,</defaultValue>
           <trim>false</trim>
         </hudson.model.TextParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>SVNTAG</name>
           <description></description>
-          <defaultValue>144852</defaultValue>
+          <defaultValue>145819</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>SVNBASE</name>
           <description></description>
-          <defaultValue>144494</defaultValue>
+          <defaultValue>145650</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
@@ -31,12 +31,7 @@
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
 	<hudson.model.BooleanParameterDefinition>
-          <name>iapincre</name>
-          <description></description>
-          <defaultValue>true</defaultValue>
-        </hudson.model.BooleanParameterDefinition>
-	<hudson.model.BooleanParameterDefinition>
-          <name>iapfull</name>
+          <name>auditManagementfull</name>
           <description></description>
           <defaultValue>true</defaultValue>
         </hudson.model.BooleanParameterDefinition>
@@ -62,29 +57,14 @@ sh /home/aiuap/autobuild/patch/organ.sh ${SVNTAG}</command>
         <hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
           <configs>
             <hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
-              <properties>ISBUILD=${iapincre}
+              <properties>ISBUILD=${auditManagementfull}
 VER=${VER}
 SVNTAG=${SVNTAG}
 SVNBASE=${SVNBASE}</properties>
               <textParamValueOnNewLine>false</textParamValueOnNewLine>
             </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
           </configs>
-          <projects>iapincre</projects>
-          <condition>SUCCESS</condition>
-          <triggerWithNoParameters>false</triggerWithNoParameters>
-          <triggerFromChildProjects>false</triggerFromChildProjects>
-        </hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
-        <hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
-          <configs>
-            <hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
-              <properties>ISBUILD=${iapfull}
-VER=${VER}
-SVNTAG=${SVNTAG}
-SVNBASE=${SVNBASE}</properties>
-              <textParamValueOnNewLine>false</textParamValueOnNewLine>
-            </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
-          </configs>
-          <projects>iapfull</projects>
+          <projects>auditManagementfull</projects>
           <condition>SUCCESS</condition>
           <triggerWithNoParameters>false</triggerWithNoParameters>
           <triggerFromChildProjects>false</triggerFromChildProjects>

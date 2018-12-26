@@ -1,6 +1,7 @@
-<?xml version="1.1" encoding="UTF-8"?><project>
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
   <actions/>
-  <description/>
+  <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.model.ParametersDefinitionProperty>
@@ -8,7 +9,7 @@
         <hudson.model.StringParameterDefinition>
           <name>MVER</name>
           <description>本次发布的版本号例如：v04r04c03</description>
-          <defaultValue>v04r06c04</defaultValue>
+          <defaultValue>v04r06c00</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
@@ -24,6 +25,9 @@
   <builders>
     <hudson.tasks.Shell>
       <command>rm ~/package -fr</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>sh /home/aiuap/autobuild/fbissue/setp.sh $MVER</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

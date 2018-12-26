@@ -14,7 +14,7 @@
         <hudson.model.StringParameterDefinition>
           <name>SVNTAG</name>
           <description/>
-          <defaultValue>144852</defaultValue>
+          <defaultValue>145819</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>

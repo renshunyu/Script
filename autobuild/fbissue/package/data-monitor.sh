@@ -41,6 +41,26 @@ then
   exit 1
 fi
 
+if [ -d ./web/report-to-monitoring ]
+then
+  cd ./web/report-to-monitoring
+  npm install
+  result=$?
+  if [ $result != '0' ]
+  then
+    echo "下载依赖错误"
+    exit 1
+  fi
+  npm run build
+  result=$?
+  if [ $result != '0' ]
+  then
+    echo "前台打包错误"
+    exit 1
+  fi
+  cd ../../
+
+fi 
 
 mvn clean package -Dmaven.test.skip=true >./build.log
 result=`cat build.log|grep -i "BUILD SUCCESS"|wc -l`

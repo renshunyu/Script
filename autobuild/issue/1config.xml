@@ -1,7 +1,6 @@
-<?xml version='1.1' encoding='UTF-8'?>
-<project>
+<?xml version="1.1" encoding="UTF-8"?><project>
   <actions/>
-  <description></description>
+  <description/>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.model.ParametersDefinitionProperty>
@@ -9,7 +8,7 @@
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description>上次发布的版本号，举例：aisiav04r04c02_20180509</description>
-          <defaultValue>aisiav04r05c03_20180913</defaultValue>
+          <defaultValue>aisiav04r07c00_20181218</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
@@ -35,7 +34,7 @@
           <reportDir>./</reportDir>
           <reportFiles>report.html</reportFiles>
           <alwaysLinkToLastBuild>false</alwaysLinkToLastBuild>
-          <reportTitles></reportTitles>
+          <reportTitles/>
           <keepAll>false</keepAll>
           <allowMissing>false</allowMissing>
           <includes>**/*</includes>
@@ -52,7 +51,7 @@
             <recipientProviders>
               <hudson.plugins.emailext.plugins.recipients.ListRecipientProvider/>
             </recipientProviders>
-            <attachmentsPattern></attachmentsPattern>
+            <attachmentsPattern/>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
             <replyTo>$PROJECT_DEFAULT_REPLYTO</replyTo>
@@ -67,7 +66,7 @@
           附件是release版本和program的版本对比，请核对有无预期之外的提交！
           也可通过下面链接查看：
        http://10.1.198.53:9081/jenkins/view/%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83%E6%B5%81%E7%A8%8B/job/1%E3%80%81%E5%AF%B9%E6%AF%94%E6%8C%87%E5%AE%9A%E7%89%88%E6%9C%ACprogram%E5%92%8Crelease%E7%9A%84%E6%8F%90%E4%BA%A4%E8%AE%B0%E5%BD%95/HTML_20Report/</defaultContent>
-      <attachmentsPattern></attachmentsPattern>
+      <attachmentsPattern/>
       <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
       <postsendScript>$DEFAULT_POSTSEND_SCRIPT</postsendScript>
       <attachBuildLog>true</attachBuildLog>

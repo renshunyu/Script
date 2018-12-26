@@ -8,7 +8,7 @@
         <hudson.model.StringParameterDefinition>
           <name>ISSUEVERSION</name>
           <description>本次发布的版本号例如：aisiav04r04c02_20180509</description>
-          <defaultValue>aisiav04r05c03_20180913</defaultValue>
+          <defaultValue>aisiav04r07c00_20181218</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
@@ -66,14 +66,16 @@ PJ='data-reporting' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/
 PJ='data-upload-tools' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #2018年新的数据上报监控后台
 PJ='data-monitor' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
-#2018年新的数据上报监控前台
-PJ='report-to-monitoring' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #2018年新的数据上报监控注册中心
 PJ='eureka-server' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #认证组件
 PJ='sso-plugin' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #审计管理
 PJ='auditManagement' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+#数据库连接组件
+PJ='multiDatasource' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+#日志组件
+PJ='auditInfoLog' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 
 elif [[ $createReleaseBranch = 'SSSSA发布' ]];then
 echo $createReleaseBranch

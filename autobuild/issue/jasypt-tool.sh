@@ -1,7 +1,7 @@
 #!bin/sh
 buildhome=/home/aiuap/svnproject/program30/builddir
-mkdir -p ~/package/sssia/安装包/iap
-cp $buildhome/iap/target/dist/iap.war ~/package/sssia/安装包/iap/
+mkdir -p ~/package/sssia/安装包/jasypt-tool
+cp $buildhome/jasypt-tool/target/*.jar ~/package/sssia/安装包/jasypt-tool/
 result=$?
 if [ $result != '0' ]
 then

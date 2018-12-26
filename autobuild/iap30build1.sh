@@ -6,7 +6,7 @@ export PATH=$JAVA_HOME/bin:$ANT_HOME/bin:$PATH
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 export LANG=zh_CN.UTF-8
 
-svnhome=/home/aiuap/svnproject/program30rm/iap
+svnhome=/home/aiuap/svnproject/program30/program/iap
 buildhome=/home/aiuap/svnproject/program30/builddir
 svn up $svnhome
 result=$?
