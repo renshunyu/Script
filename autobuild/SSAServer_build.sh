@@ -4,6 +4,7 @@ export M2_HOME=/usr/java/apache-maven-3.2.5
 export PATH=$M2_HOME/bin:$JAVA_HOME/bin:$PATH
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 
+ssa_client=$1
 SSAServerSvnhome=/home/aiuap/svnproject/program30/program/SSAServer
 SSAServerBuildhome=/home/aiuap/svnproject/program30/builddir/SSAServer
 SSACSvnhome=/home/aiuap/svnproject/program30/program/ssac
@@ -49,14 +50,18 @@ then
   exit 1
 fi
 
-cd $SSACBuildhome/local/jiangxi/ssa_client
+#cd $SSACBuildhome
+#cp -rf $SSACBuildhome/node_modules $SSACBuildhome/ssac/${ssa_client}/
+cd $SSACBuildhome/${ssa_client}
 npm install
 result=$?
 if [ $result != '0' ]
 then
-  echo "下载node依赖错误！"
+  echo "复制node依赖错误！"
   exit 1
 fi
+
+cd $SSACBuildhome/${ssa_client}
 npm run build
 result=$?
 if [ $result != '0' ]
@@ -67,11 +72,11 @@ fi
 #cp static/* ../viewServer/src/main/resources/static/ -r
 cd dist
 mkdir static-new
-mv mv index.html static ./static-new/
+mv index.html static ./static-new/
 mv static-new static
 
 cd $SSAServerBuildhome
-mv pom.xml ./SSAServer/
+cp pom.xml ./SSAServer/
 cd SSAServer
 mvn package -Dmaven.test.skip=true >./build.log
 result=`cat build.log|grep -i "BUILD SUCCESS"|wc -l`
@@ -85,7 +90,7 @@ echo "编译成功"
 cd target
 #将前台放进去，重新打包.war
 unzip SSAServer.war -d $SSAServerBuildhome/SSAServer/target/SSAServer-new
-cp -R $SSACBuildhome/local/jiangxi/ssa_client/dist/static ./SSAServer-new/
+cp -R $SSACBuildhome/${ssa_client}/dist/static ./SSAServer-new/
 cd SSAServer-new
 jar -cvfM0 SSAServer.war ./
 result=$?

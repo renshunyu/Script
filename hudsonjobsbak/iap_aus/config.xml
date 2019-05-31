@@ -17,7 +17,6 @@
               <string>iap_aus_adapter</string>
               <string>ori_log_parser/ori_log_parser_common</string>
               <string>ori_log_parser/ori_log_parser_syslog</string>
-              <string>iap_install_manage_platform</string>
               <string>solr8hours</string>
               <string>iap_ohter_log_mapping_solr</string>
               <string>iap_other_log_persistence_hdfs</string>

@@ -6,7 +6,7 @@ confpath=/home/aiuap/svnproject/program30/program/iap/src/main/resource/iap-busi
 function testKeynum()
 {
 v=`java readpro $confpath -s`
-assertEquals "330" "$v"
+assertEquals "336" "$v"
 
 }
 function testIsSendMessage()
@@ -263,6 +263,34 @@ assertEquals "off" "$v"
 function testAudit_on()
 {
 v=`java readpro $confpath -g audit-on`
+assertEquals "off" "$v"
+
+}
+
+function testIsExistOrgId()
+{
+v=`java readpro $confpath -g isExistOrgId`
+assertEquals "1" "$v"
+
+}
+
+function testTriggerGoldType()
+{
+v=`java readpro $confpath -g triggerGoldType`
+assertEquals "0" "$v"
+
+}
+
+function testTriggerGold_on()
+{
+v=`java readpro $confpath -g triggerGold-on`
+assertEquals "off" "$v"
+
+}
+
+function testGetdataAuth_on()
+{
+v=`java readpro $confpath -g getdataAuth-on`
 assertEquals "off" "$v"
 
 }

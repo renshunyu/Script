@@ -8,7 +8,7 @@
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description>release版本</description>
-          <defaultValue>aisiav04r06c00_20181017</defaultValue>
+          <defaultValue>aisiav04r07c00_20181218</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
@@ -48,7 +48,7 @@
     <hudson.tasks.Shell>
       <command>sh /home/aiuap/autobuild/patch/patchs/docpatch1.sh ${VER} ${PATCHNAME}
 sh /home/aiuap/autobuild/patch/patchs/dbpatch1.sh ${VER} ${PATCHNAME}
-sh /home/aiuap/autobuild/patch/uploadpatch.sh ${VER} ${PATCHNAME} ${FTPUSER} ${FTPPASSWORD}</command>
+sh /home/aiuap/autobuild/patch/uploadpatch1.sh ${VER} ${PATCHNAME} ${FTPUSER} ${FTPPASSWORD}</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

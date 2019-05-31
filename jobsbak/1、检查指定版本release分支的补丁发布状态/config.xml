@@ -11,6 +11,7 @@
           <description>大版本</description>
           <choices class="java.util.Arrays$ArrayList">
             <a class="string-array">
+              <string>aisiav04r07c00_20181218</string>
               <string>aisiav04r06c00_20181017</string>
               <string>aisiav04r05c02_20180820</string>
               <string>aisiav04r05c01_20180725</string>

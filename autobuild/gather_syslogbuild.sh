@@ -1,5 +1,5 @@
 #!bin/sh
-export JAVA_HOME=/usr/java/jdk1.5.0_17
+export JAVA_HOME=/usr/java/jdk1.6.0_31
 export ANT_HOME=/home/aiuap/tools/apache-ant-1.7.1
 export PATH=$ANT_HOME/bin:$PATH
 export LANG=zh_CN.UTF-8

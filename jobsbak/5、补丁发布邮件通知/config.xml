@@ -8,19 +8,19 @@
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description/>
-          <defaultValue>aisiav04r06c00_20181017</defaultValue>
+          <defaultValue>aisiav04r07c00_20181218</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>PATCHNAME</name>
           <description/>
-          <defaultValue>审计范围页面卡顿以及审计管理页面查询需求_201812061425</defaultValue>
+          <defaultValue>甘肃按照从帐号标准化补全信息错误_201904261500</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>PROJECTS</name>
           <description/>
-          <defaultValue>auditManagement</defaultValue>
+          <defaultValue>ETL_Script ap_standardize_server screen_data_provision</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.TextParameterDefinition>
