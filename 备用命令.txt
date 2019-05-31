@@ -354,3 +354,70 @@ awk 'ARGIND==1{a[$0]=$2;next}{if (!($0 in a)){print $2}}' b.txt a.txt
 awk自定义函数
 awk 'BEGIN{print "asd"}function getpath(fpath){split(fpath,a,"a");str="";for (i=1;i<length(a);i++ ){str= str a[i]"/"}return str}BEGIN{print getpath("sadaverfssdfasdfr")}'
 
+估算pi
+nohup hadoop jar hadoop-mapreduce-examples-2.6.0-cdh5.4.3.jar pi 1000 100000000 &
+hadoop jar hadoop-mapreduce-examples-2.6.0-cdh5.4.3.jar bbp 1 10000 10 hahsda
+
+启动flume
+nohup ./flume-ng agent --conf ../conf --conf-file ../conf/flume.conf -name agent -Dflume.root.logger=INFO,console &
+
+启动kafka
+nohup sh kafka-server-start.sh ../config/server.properties &
+查看kafka数据
+sh kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic flumeTopic --from-beginning
+nohup sh kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic flumeTopic --from-beginning &
+查询kafka的topic
+sh kafka-topics.sh  --list --zookeeper localhost:2181
+删除kafka的topic
+sh kafka-topics.sh  --delete  --zookeeper localhost:2181 --topic flumeTopic
+监控当前目录的进程
+top -b -n 1 -d 1 -p $(pwdx `jps -q`|grep `pwd`|awk -F: '{print $1}') |grep -E java
+top -b -n 720 -d 1 -p $(pwdx `jps -q`|grep `pwd`|awk -F: '{print $1}') |awk '{print systime()" "$0}'|grep java>jiangkong.txt
+指定输出分割符
+awk -v OFS="zhibiaofu" '{print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13}' jiangkong.txt
+
+
+启动filebeat
+nohup ./filebeat -e -c filebeat.yml &
+
+监控beat进程
+top -b -n 1 -d 1 -p $(ps -ef |grep filebeat|grep -v grep|awk '{print $2}') |grep -E filebeat
+top -b -n 720 -d 1 -p $(ps -ef |grep filebeat|grep -v grep|awk '{print $2}') |awk '{print systime()" "$0}'|grep filebeat>>jiangkong.txt
+
+安装kafka插件
+/opt/td-agent/embedded/bin/fluent-gem install fluent-plugin-kafka
+
+ftp下载文件
+ncftpget -u 'ai\rensy' -p '2wsx!QAZ' -R  10.1.252.239 . /ai4a30/aisia1.0/产品发布/aisiamv04r06c00_20190111/db脚本/audit
+
+for i in `ls`; do head -n 1 $i; done|awk '{a[$0]=NR}END{for (i in a) {print i" "a[i]}}'
+
+打war包是tmp空间不足，指定临时目录
+ mvn package -Dmaven.test.skip=true -Djava.io.tmpdir=/home/aiuap/tmp
+ 
+select TO_TIMESTAMP(substr(replace(t.timereported,'T',' '),0,19),'yyyy-mm-dd hh24:mi:ss.ff') from IAP_LINUX_SYSLOG t where t.timereported like '2019%';
+查询服务线程排序
+ps -o nlwp,pid,lwp,args -u aiuap|sort -n
+
+keytool -genkeypair -alias asia -keyalg RSA -validity 36500 -storepass 'ADadmin12!@' -keystore ./test.keystore -v
+keytool -genkeypair -alias audit -keyalg RSA -validity 36500 -keystore ./test.keystore -v
+keytool -genkeypair -alias 10.1.198.53:6030 -keyalg RSA -validity 36500 -keystore ./test.keystore -v
+keytool -genkeypair -alias 10.1.198.53 -keyalg RSA -validity 36500 -keystore ./test.keystore -v
+keytool -genkeypair -alias xxxxxx -keyalg RSA -validity 36500 -keystore ./test.keystore -v
+ 
+keytool -exportcert -alias asia -file ./asia.cer -storepass 'ADadmin12!@' -keystore ./test.keystore -v
+keytool -exportcert -alias audit -file ./audit.cer -storepass 'ADadmin12!@' -keystore ./test.keystore -v
+keytool -exportcert -alias 10.1.198.53:6030 -file ./10.1.198.53:6030.cer -storepass 'ADadmin12!@' -keystore ./test.keystore -v
+keytool -exportcert -alias 10.1.198.53 -file ./10.1.198.53.cer -storepass 'ADadmin12!@' -keystore ./test.keystore -v
+keytool -exportcert -alias xxxxxx -file ./xxxxxx.cer -storepass 'ADadmin12!@' -keystore ./test.keystore -v
+
+keytool -list -keystore ./test.keystore 
+keytool -list -keystore ./.keystore 
+
+keytool -genkeypair -alias asia -keyalg RSA -validity 36500 -storepass 'ADadmin12!@' -keystore keystore.jks   -v
+
+
+
+keytool -genkeypair -alias iap -keyalg RSA -validity 36500 -storepass 'ADadmin12!@' -keystore ./iap.keystore -v
+keytool -genkeypair -alias report -keyalg RSA -validity 36500 -storepass 'ADadmin12!@' -keystore ./report.keystore -v
+keytool -genkeypair -alias dac -keyalg RSA -validity 36500 -storepass 'ADadmin12!@' -keystore ./dac.keystore -v
