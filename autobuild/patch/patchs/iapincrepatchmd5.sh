@@ -92,13 +92,13 @@ cd ${buildpath}
 
   cd n
     jar -xvf iap.war
-    md5sum `find images jsp prototype scripts style styles WEB-INF -type f|grep -v business.properties|grep -v iap-shanghai.properties|grep -v iap-shanghai-workorder.properties|grep -v client.properties|grep -v elastic.properties |grep -v log4j2.xml|grep -v log4j.properties|grep -v iap-spring-base.xml` >../n.txt
+    md5sum `find images jsp prototype scripts style styles WEB-INF -type f|grep -v business.properties|grep -v iap-shanghai.properties|grep -v iap-shanghai-workorder.properties|grep -v client.properties|grep -v elastic.properties |grep -v log4j2.xml|grep -v log4j.properties` >../n.txt
 
   cd ..
 
   cd o
     jar -xvf iap.war
-    md5sum `find images jsp prototype scripts style styles WEB-INF -type f|grep -v business.properties|grep -v iap-shanghai.properties|grep -v iap-shanghai-workorder.properties|grep -v client.properties|grep -v elastic.properties |grep -v log4j2.xml|grep -v log4j.properties|grep -v iap-spring-base.xml` >../o.txt
+    md5sum `find images jsp prototype scripts style styles WEB-INF -type f|grep -v business.properties|grep -v iap-shanghai.properties|grep -v iap-shanghai-workorder.properties|grep -v client.properties|grep -v elastic.properties |grep -v log4j2.xml|grep -v log4j.properties` >../o.txt
 
   cd ..
 

@@ -421,3 +421,11 @@ keytool -genkeypair -alias asia -keyalg RSA -validity 36500 -storepass 'ADadmin1
 keytool -genkeypair -alias iap -keyalg RSA -validity 36500 -storepass 'ADadmin12!@' -keystore ./iap.keystore -v
 keytool -genkeypair -alias report -keyalg RSA -validity 36500 -storepass 'ADadmin12!@' -keystore ./report.keystore -v
 keytool -genkeypair -alias dac -keyalg RSA -validity 36500 -storepass 'ADadmin12!@' -keystore ./dac.keystore -v
+修改zookeeper里面的数据
+set /ausApp/web/dataprocess/tcp-xml/config.json {"host_Ip":"192.168.90.25","host_User":"lccy","runtime_memory":"2048","main.thread.num":"1","main.bitch.size":"5000","main.alarm.serverip":"127.0.0.1","main.master":"true","main.exception.exit":"false","read.event.general.interface":"com.ai.aus.dataprocess.kafka.GeneralEventFilter","read.characterSet":"utf-8","read.zookeeper.sync.time.ms":"1000","read.consumer.timeout.ms":"30000","read.group.id":"aus-group","read.topic":"aus","source.replication-factor":"1","source.partition":"1"}
+												 																						 
+set /ausApp/web/dataprocess/iap_linux_syslog/config.json {"host_Ip":"192.168.90.25","host_User":"lccy","runtime_memory":"2048","main.thread.num":"1","main.bitch.size":"5000","main.alarm.serverip":"127.0.0.1","main.master":"true","main.exception.exit":"false","read.event.general.interface":"com.ai.aus.dataprocess.kafka.GeneralEventFilter","read.characterSet":"utf-8","read.zookeeper.sync.time.ms":"1000","read.consumer.timeout.ms":"30000","read.group.id":"linuxsyslog","read.topic":"linuxsyslog","source.replication-factor":"1","source.partition":"1"}
+
+
+project = SSSIA AND issuetype = 故障 AND status in (Open, 已上线, 已发布, 待发布, 待测试, 测试中, 定位中, 待修复, 故障修复中) AND assignee in (wangsz, tanrq, rensy, chenxiang5, chendd, sunqc5, zhangjk, lizp, lusm, jingll)
+sed -i 's/http:\/\/.*\/iap/http:\/\/10.1.198.53:9030\/iap/g' `find local config -type f|xargs grep '"IAP'|awk -F: '{print $1}'`

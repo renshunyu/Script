@@ -38,21 +38,6 @@ mkdir -p $buildhome/iap_aus/dp/plugin_3dr
 #exit 0
 
 
-project=iap_aus_adapter
-cd $buildhome/iap_aus/${project}
-
-mvn clean install -Dmaven.test.skip=true |tee ./build.log
-
-#ant release >./build.log
-result=`cat build.log|grep -i "BUILD SUCCESS"|wc -l`
-if [ $result != '1' ]
-then
-  echo "${project}编译报错"
-  exit 1
-fi
-echo "${project}编译成功"
-cp $buildhome/iap_aus/${project}/package/*.jar $buildhome/iap_aus/dp/plugin_iap
-cp $buildhome/iap_aus/${project}/libs/*.jar $buildhome/iap_aus/dp/plugin_3dr
 
 projects='
 standardize/cache-server
@@ -69,13 +54,14 @@ iap_other_ori_log_persistence
 ori_log_persistence
 standardize/standardize-component
 data_syn
+std_aus_verification
 '
 for project in ${projects}
 do
 echo ${project}
 cd $buildhome/iap_aus/${project}
 
-mvn clean package -Dmaven.test.skip=true |tee ./build.log
+mvn clean install package -Dmaven.test.skip=true |tee ./build.log
 
 #ant release >./build.log
 result=`cat build.log|grep -i "BUILD SUCCESS"|wc -l`
@@ -88,6 +74,25 @@ echo "${project}编译成功"
 cp $buildhome/iap_aus/${project}/package/*.jar $buildhome/iap_aus/dp/plugin_iap
 cp $buildhome/iap_aus/${project}/libs/*.jar $buildhome/iap_aus/dp/plugin_3dr
 done
+
+
+project=iap_aus_adapter
+cd $buildhome/iap_aus/${project}
+
+mvn clean install -Dmaven.test.skip=true |tee ./build.log
+
+#ant release >./build.log
+result=`cat build.log|grep -i "BUILD SUCCESS"|wc -l`
+if [ $result != '1' ]
+then
+  echo "${project}编译报错"
+  exit 1
+fi
+echo "${project}编译成功"
+cp $buildhome/iap_aus/${project}/package/*.jar $buildhome/iap_aus/dp/plugin_iap
+cp $buildhome/iap_aus/${project}/libs/*.jar $buildhome/iap_aus/dp/plugin_3dr
+
+
 echo '所有包编译完成！'
 
 echo '移动配置文件开始。。。'

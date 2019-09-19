@@ -8,9 +8,19 @@
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description>最近一个发布的版本</description>
-          <defaultValue>aisiav04r06c00_20181017</defaultValue>
+          <defaultValue>aisiav04r09c00_20190905</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>MAIL</name>
+          <description/>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>rensy@asiainfo-sec.com</string>
+              <string>rensy@asiainfo-sec.com,zhangjy11@asiainfo-sec.com,yanglw3@asiainfo-sec.com,cc:ninggx@asiainfo-sec.com,cc:lusm@asiainfo-sec.com,cc:hejt@asiainfo-sec.com</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
   </properties>
@@ -42,7 +52,7 @@
       </reportTargets>
     </htmlpublisher.HtmlPublisher>
     <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.57">
-      <recipientList>rensy@asiainfo-sec.com,zhangjy11@asiainfo-sec.com,yanglw3@asiainfo-sec.com,liyy@asiainfo-sec.com,cc:ninggx@asiainfo-sec.com,cc:lusm@asiainfo-sec.com,cc:hejt@asiainfo-sec.com</recipientList>
+      <recipientList>${MAIL}</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.AlwaysTrigger>
           <email>

@@ -9,7 +9,7 @@
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description>发布版本，例如：aisiav04r04c02_20180509</description>
-          <defaultValue>aisiav04r07c00_20181218</defaultValue>
+          <defaultValue>aisiav04r08c00_20190804</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
@@ -18,7 +18,7 @@
           <choices class="java.util.Arrays$ArrayList">
             <a class="string-array">
               <string>rensy@asiainfo-sec.com</string>
-              <string>rensy@asiainfo-sec.com,yanglw3@asiainfo-sec.com</string>
+              <string>rensy@asiainfo-sec.com,yanglw3@asiainfo-sec.com,ninggx@asiainfo-sec.com,lusm@asiainfo-sec.com</string>
               <string>NSG-4A-AUDIT@asiainfo-sec.com,cc:NSG-SPRD2@asiainfo-sec.com,cc:NSG-4A-QC@asiainfo-sec.com,cc:NSG-4A-PM@asiainfo-sec.com,cc:wudong@asiainfo-sec.com,cc:wangyb@asiainfo-sec.com,cc:hejt@asiainfo-sec.com</string>
             </a>
           </choices>
@@ -66,40 +66,33 @@ xmlns=&quot;http://www.w3.org/TR/REC-html40&quot;&gt;
 &lt;meta name=ProgId content=Word.Document&gt;
 &lt;meta name=Generator content=&quot;Microsoft Word 15&quot;&gt;
 &lt;meta name=Originator content=&quot;Microsoft Word 15&quot;&gt;
-&lt;link rel=File-List href=&quot;hi.files/filelist.xml&quot;&gt;
-&lt;link rel=Edit-Time-Data href=&quot;hi.files/editdata.mso&quot;&gt;
-&lt;!--[if !mso]&gt;
-&lt;style&gt;
-v\:* {behavior:url(#default#VML);}
-o\:* {behavior:url(#default#VML);}
-w\:* {behavior:url(#default#VML);}
-.shape {behavior:url(#default#VML);}
-&lt;/style&gt;
-&lt;![endif]--&gt;&lt;!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;link rel=File-List href=&quot;大家好.files/filelist.xml&quot;&gt;
+&lt;!--[if gte mso 9]&gt;&lt;xml&gt;
  &lt;o:DocumentProperties&gt;
-  &lt;o:Author&gt;rensy&lt;/o:Author&gt;
+  &lt;o:Author&gt;Shunyu Ren&lt;/o:Author&gt;
   &lt;o:LastAuthor&gt;Shunyu Ren&lt;/o:LastAuthor&gt;
-  &lt;o:Revision&gt;96&lt;/o:Revision&gt;
-  &lt;o:TotalTime&gt;247&lt;/o:TotalTime&gt;
-  &lt;o:Created&gt;2018-05-31T03:26:00Z&lt;/o:Created&gt;
-  &lt;o:LastSaved&gt;2018-12-18T06:10:00Z&lt;/o:LastSaved&gt;
-  &lt;o:Pages&gt;2&lt;/o:Pages&gt;
-  &lt;o:Words&gt;204&lt;/o:Words&gt;
-  &lt;o:Characters&gt;1168&lt;/o:Characters&gt;
+  &lt;o:Revision&gt;11&lt;/o:Revision&gt;
+  &lt;o:TotalTime&gt;6&lt;/o:TotalTime&gt;
+  &lt;o:Created&gt;2019-08-04T13:57:00Z&lt;/o:Created&gt;
+  &lt;o:LastSaved&gt;2019-08-04T14:05:00Z&lt;/o:LastSaved&gt;
+  &lt;o:Pages&gt;1&lt;/o:Pages&gt;
+  &lt;o:Words&gt;182&lt;/o:Words&gt;
+  &lt;o:Characters&gt;1040&lt;/o:Characters&gt;
   &lt;o:Company&gt;Asiainfo-Linkage&lt;/o:Company&gt;
-  &lt;o:Lines&gt;9&lt;/o:Lines&gt;
+  &lt;o:Lines&gt;8&lt;/o:Lines&gt;
   &lt;o:Paragraphs&gt;2&lt;/o:Paragraphs&gt;
-  &lt;o:CharactersWithSpaces&gt;1370&lt;/o:CharactersWithSpaces&gt;
+  &lt;o:CharactersWithSpaces&gt;1220&lt;/o:CharactersWithSpaces&gt;
   &lt;o:Version&gt;15.00&lt;/o:Version&gt;
  &lt;/o:DocumentProperties&gt;
+ &lt;o:OfficeDocumentSettings&gt;
+  &lt;o:AllowPNG/&gt;
+ &lt;/o:OfficeDocumentSettings&gt;
 &lt;/xml&gt;&lt;![endif]--&gt;
-&lt;link rel=dataStoreItem href=&quot;hi.files/item0008.xml&quot;
-target=&quot;hi.files/props009.xml&quot;&gt;
-&lt;link rel=themeData href=&quot;hi.files/themedata.thmx&quot;&gt;
-&lt;link rel=colorSchemeMapping href=&quot;hi.files/colorschememapping.xml&quot;&gt;
+&lt;link rel=themeData href=&quot;大家好.files/themedata.thmx&quot;&gt;
+&lt;link rel=colorSchemeMapping href=&quot;大家好.files/colorschememapping.xml&quot;&gt;
 &lt;!--[if gte mso 9]&gt;&lt;xml&gt;
  &lt;w:WordDocument&gt;
-  &lt;w:View&gt;Print&lt;/w:View&gt;
+  &lt;w:DontDisplayPageBoundaries/&gt;
   &lt;w:TrackMoves&gt;false&lt;/w:TrackMoves&gt;
   &lt;w:TrackFormatting/&gt;
   &lt;w:PunctuationKerning/&gt;
@@ -127,11 +120,9 @@ target=&quot;hi.files/props009.xml&quot;&gt;
    &lt;w:UseAsianBreakRules/&gt;
    &lt;w:DontGrowAutofit/&gt;
    &lt;w:SplitPgBreakAndParaMark/&gt;
-   &lt;w:DontVertAlignCellWithSp/&gt;
-   &lt;w:DontBreakConstrainedForcedTables/&gt;
-   &lt;w:DontVertAlignInTxbx/&gt;
-   &lt;w:Word11KerningPairs/&gt;
-   &lt;w:CachedColBalance/&gt;
+   &lt;w:EnableOpenTypeKerning/&gt;
+   &lt;w:DontFlipMirrorIndents/&gt;
+   &lt;w:OverrideTableStyleHps/&gt;
    &lt;w:UseFELayout/&gt;
   &lt;/w:Compatibility&gt;
   &lt;w:BrowserLevel&gt;MicrosoftInternetExplorer4&lt;/w:BrowserLevel&gt;
@@ -454,7 +445,7 @@ target=&quot;hi.files/props009.xml&quot;&gt;
    Name=&quot;Table Web 3&quot;/&gt;
   &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
    Name=&quot;Balloon Text&quot;/&gt;
-  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;59&quot; Name=&quot;Table Grid&quot;/&gt;
+  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; Name=&quot;Table Grid&quot;/&gt;
   &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;
    Name=&quot;Table Theme&quot;/&gt;
   &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; Name=&quot;Placeholder Text&quot;/&gt;
@@ -752,13 +743,6 @@ target=&quot;hi.files/props009.xml&quot;&gt;
 	mso-font-pitch:variable;
 	mso-font-signature:-536870145 1073786111 1 0 415 0;}
 @font-face
-	{font-family:&quot;\@宋体&quot;;
-	panose-1:2 1 6 0 3 1 1 1 1 1;
-	mso-font-charset:134;
-	mso-generic-font-family:auto;
-	mso-font-pitch:variable;
-	mso-font-signature:3 680460288 22 0 262145 0;}
-@font-face
 	{font-family:微软雅黑;
 	panose-1:2 11 5 3 2 2 4 2 2 4;
 	mso-font-charset:134;
@@ -766,19 +750,19 @@ target=&quot;hi.files/props009.xml&quot;&gt;
 	mso-font-pitch:variable;
 	mso-font-signature:-2147483001 672087122 22 0 262175 0;}
 @font-face
+	{font-family:&quot;\@宋体&quot;;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 680460288 22 0 262145 0;}
+@font-face
 	{font-family:&quot;\@微软雅黑&quot;;
 	panose-1:2 11 5 3 2 2 4 2 2 4;
 	mso-font-charset:134;
 	mso-generic-font-family:swiss;
 	mso-font-pitch:variable;
 	mso-font-signature:-2147483001 672087122 22 0 262175 0;}
-@font-face
-	{font-family:Verdana;
-	panose-1:2 11 6 4 3 5 4 4 2 4;
-	mso-font-charset:0;
-	mso-generic-font-family:swiss;
-	mso-font-pitch:variable;
-	mso-font-signature:-1593833729 1073750107 16 0 415 0;}
  /* Style Definitions */
  p.MsoNormal, li.MsoNormal, div.MsoNormal
 	{mso-style-unhide:no;
@@ -792,41 +776,14 @@ target=&quot;hi.files/props009.xml&quot;&gt;
 	font-size:10.5pt;
 	mso-bidi-font-size:11.0pt;
 	font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
 	mso-fareast-font-family:宋体;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:&quot;Times New Roman&quot;;
-	mso-font-kerning:1.0pt;}
-p.MsoHeader, li.MsoHeader, div.MsoHeader
-	{mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-link:&quot;页眉 Char&quot;;
-	margin:0cm;
-	margin-bottom:.0001pt;
-	text-align:center;
-	mso-pagination:none;
-	tab-stops:center 207.65pt right 415.3pt;
-	layout-grid-mode:char;
-	border:none;
-	mso-border-bottom-alt:solid windowtext .75pt;
-	padding:0cm;
-	mso-padding-alt:0cm 0cm 1.0pt 0cm;
-	font-size:9.0pt;
-	font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;
-	mso-fareast-font-family:宋体;
-	mso-bidi-font-family:&quot;Times New Roman&quot;;
-	mso-font-kerning:1.0pt;}
-p.MsoFooter, li.MsoFooter, div.MsoFooter
-	{mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-link:&quot;页脚 Char&quot;;
-	margin:0cm;
-	margin-bottom:.0001pt;
-	mso-pagination:none;
-	tab-stops:center 207.65pt right 415.3pt;
-	layout-grid-mode:char;
-	font-size:9.0pt;
-	font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;
-	mso-fareast-font-family:宋体;
-	mso-bidi-font-family:&quot;Times New Roman&quot;;
+	mso-bidi-theme-font:minor-bidi;
 	mso-font-kerning:1.0pt;}
 a:link, span.MsoHyperlink
 	{mso-style-noshow:yes;
@@ -837,24 +794,10 @@ a:link, span.MsoHyperlink
 a:visited, span.MsoHyperlinkFollowed
 	{mso-style-noshow:yes;
 	mso-style-priority:99;
-	color:purple;
+	color:#954F72;
 	mso-themecolor:followedhyperlink;
 	text-decoration:underline;
 	text-underline:single;}
-p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
-	{mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-link:&quot;文档结构图 Char&quot;;
-	margin:0cm;
-	margin-bottom:.0001pt;
-	text-align:justify;
-	text-justify:inter-ideograph;
-	mso-pagination:none;
-	font-size:9.0pt;
-	font-family:宋体;
-	mso-hansi-font-family:Calibri;
-	mso-bidi-font-family:&quot;Times New Roman&quot;;
-	mso-font-kerning:1.0pt;}
 p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
 	{mso-style-priority:34;
 	mso-style-unhide:no;
@@ -867,40 +810,6 @@ p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
 	font-size:12.0pt;
 	font-family:宋体;
 	mso-bidi-font-family:宋体;}
-span.Char
-	{mso-style-name:&quot;页眉 Char&quot;;
-	mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-unhide:no;
-	mso-style-locked:yes;
-	mso-style-link:页眉;
-	mso-ansi-font-size:9.0pt;
-	mso-bidi-font-size:9.0pt;
-	mso-font-kerning:1.0pt;}
-span.Char0
-	{mso-style-name:&quot;页脚 Char&quot;;
-	mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-unhide:no;
-	mso-style-locked:yes;
-	mso-style-link:页脚;
-	mso-ansi-font-size:9.0pt;
-	mso-bidi-font-size:9.0pt;
-	mso-font-kerning:1.0pt;}
-span.Char1
-	{mso-style-name:&quot;文档结构图 Char&quot;;
-	mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-unhide:no;
-	mso-style-locked:yes;
-	mso-style-link:文档结构图;
-	mso-ansi-font-size:9.0pt;
-	mso-bidi-font-size:9.0pt;
-	font-family:宋体;
-	mso-ascii-font-family:宋体;
-	mso-fareast-font-family:宋体;
-	mso-hansi-font-family:宋体;
-	mso-font-kerning:1.0pt;}
 .MsoChpDefault
 	{mso-style-type:export-only;
 	mso-default-props:yes;
@@ -909,17 +818,14 @@ span.Char1
 	mso-bidi-font-size:10.0pt;
 	font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;
 	mso-ascii-font-family:Calibri;
-	mso-fareast-font-family:宋体;
 	mso-hansi-font-family:Calibri;
+	mso-bidi-font-family:&quot;Times New Roman&quot;;
+	mso-bidi-theme-font:minor-bidi;
 	mso-font-kerning:0pt;}
  /* Page Definitions */
  @page
 	{mso-page-border-surround-header:no;
-	mso-page-border-surround-footer:no;
-	mso-footnote-separator:url(&quot;hi.files/header.html&quot;) fs;
-	mso-footnote-continuation-separator:url(&quot;hi.files/header.html&quot;) fcs;
-	mso-endnote-separator:url(&quot;hi.files/header.html&quot;) es;
-	mso-endnote-continuation-separator:url(&quot;hi.files/header.html&quot;) ecs;}
+	mso-page-border-surround-footer:no;}
 @page WordSection1
 	{size:595.3pt 841.9pt;
 	margin:72.0pt 90.0pt 72.0pt 90.0pt;
@@ -929,100 +835,6 @@ span.Char1
 	layout-grid:15.6pt;}
 div.WordSection1
 	{page:WordSection1;}
- /* List Definitions */
- @list l0
-	{mso-list-id:27805736;
-	mso-list-type:hybrid;
-	mso-list-template-ids:-1303221674 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
-@list l0:level1
-	{mso-level-number-format:bullet;
-	mso-level-text:\F06C;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:69.0pt;
-	text-indent:-21.0pt;
-	font-family:Wingdings;}
-@list l0:level2
-	{mso-level-tab-stop:72.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l0:level3
-	{mso-level-tab-stop:108.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l0:level4
-	{mso-level-tab-stop:144.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l0:level5
-	{mso-level-tab-stop:180.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l0:level6
-	{mso-level-tab-stop:216.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l0:level7
-	{mso-level-tab-stop:252.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l0:level8
-	{mso-level-tab-stop:288.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l0:level9
-	{mso-level-tab-stop:324.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l1
-	{mso-list-id:1258908617;
-	mso-list-type:hybrid;
-	mso-list-template-ids:1729650880 1693887758 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
-@list l1:level1
-	{mso-level-text:%1）;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:85.5pt;
-	text-indent:-36.0pt;}
-@list l1:level2
-	{mso-level-tab-stop:72.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l1:level3
-	{mso-level-tab-stop:108.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l1:level4
-	{mso-level-tab-stop:144.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l1:level5
-	{mso-level-number-format:alpha-lower;
-	mso-level-text:&quot;%5\)&quot;;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:154.5pt;
-	text-indent:-21.0pt;}
-@list l1:level6
-	{mso-level-tab-stop:216.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l1:level7
-	{mso-level-tab-stop:252.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l1:level8
-	{mso-level-tab-stop:288.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l1:level9
-	{mso-level-tab-stop:324.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-ol
-	{margin-bottom:0cm;}
-ul
-	{margin-bottom:0cm;}
 --&gt;
 &lt;/style&gt;
 &lt;!--[if gte mso 10]&gt;
@@ -1043,315 +855,346 @@ ul
 	font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;}
 &lt;/style&gt;
 &lt;![endif]--&gt;&lt;!--[if gte mso 9]&gt;&lt;xml&gt;
- &lt;o:shapedefaults v:ext=&quot;edit&quot; spidmax=&quot;2049&quot;/&gt;
+ &lt;o:shapedefaults v:ext=&quot;edit&quot; spidmax=&quot;1026&quot;/&gt;
 &lt;/xml&gt;&lt;![endif]--&gt;&lt;!--[if gte mso 9]&gt;&lt;xml&gt;
  &lt;o:shapelayout v:ext=&quot;edit&quot;&gt;
   &lt;o:idmap v:ext=&quot;edit&quot; data=&quot;1&quot;/&gt;
  &lt;/o:shapelayout&gt;&lt;/xml&gt;&lt;![endif]--&gt;
 &lt;/head&gt;
 
-&lt;body bgcolor=&quot;#FFCC99&quot; background=&quot;hi.files/image001.jpg&quot; lang=ZH-CN
-link=blue vlink=purple style=&apos;tab-interval:21.0pt;text-justify-trim:punctuation&apos;&gt;
-&lt;!--[if gte mso 9]&gt;&lt;xml&gt;
- &lt;v:background id=&quot;_x0000_s1025&quot; o:bwmode=&quot;white&quot; fillcolor=&quot;#fc9&quot;&gt;
-  &lt;v:fill src=&quot;hi.files/image001.jpg&quot; o:title=&quot;纸莎草纸&quot; type=&quot;tile&quot;/&gt;
- &lt;/v:background&gt;&lt;/xml&gt;&lt;![endif]--&gt;
+&lt;body lang=ZH-CN link=blue vlink=&quot;#954F72&quot; style=&apos;tab-interval:21.0pt;
+text-justify-trim:punctuation&apos;&gt;
 
 &lt;div class=WordSection1 style=&apos;layout-grid:15.6pt&apos;&gt;
 
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;mso-pagination:widow-orphan&apos;&gt;&lt;span
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan;layout-grid-mode:char&apos;&gt;&lt;span
 style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
 0pt&apos;&gt;大家好：&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;mso-pagination:widow-orphan&apos;&gt;&lt;span
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan;layout-grid-mode:char&apos;&gt;&lt;span
 lang=EN-US style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;
 mso-font-kerning:0pt&apos;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:24.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;b style=&apos;mso-bidi-font-weight:normal&apos;&gt;&lt;span
-style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
-0pt&apos;&gt;大家好，审计&lt;span lang=EN-US&gt;aisiav04r07c00_20181218 &lt;/span&gt;版本发布&lt;span
-lang=EN-US&gt;!&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;text-indent:24.0pt;mso-pagination:widow-orphan;layout-grid-mode:
+char&apos;&gt;&lt;b style=&apos;mso-bidi-font-weight:normal&apos;&gt;&lt;span style=&apos;font-size:12.0pt;
+font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;大家好，审计&lt;span
+lang=EN-US&gt;aisiav04r08c00_20190804 &lt;/span&gt;版本&lt;span style=&apos;color:black;
+background:yellow&apos;&gt;发布&lt;/span&gt;&lt;span lang=EN-US&gt;!&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:24.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;b style=&apos;mso-bidi-font-weight:normal&apos;&gt;&lt;span
-lang=EN-US style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;
-mso-font-kerning:0pt&apos;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;text-indent:24.0pt;mso-pagination:widow-orphan;layout-grid-mode:
+char&apos;&gt;&lt;b style=&apos;mso-bidi-font-weight:normal&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:
+12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:24.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:12.0pt;
-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;text-indent:24.0pt;mso-pagination:widow-orphan;layout-grid-mode:
+char&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt&apos;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:24.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;b style=&apos;mso-bidi-font-weight:normal&apos;&gt;&lt;span
-style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
-0pt&apos;&gt;本次发布的功能列表：&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;text-indent:24.0pt;mso-pagination:widow-orphan;layout-grid-mode:
+char&apos;&gt;&lt;b style=&apos;mso-bidi-font-weight:normal&apos;&gt;&lt;span style=&apos;font-size:12.0pt;
+font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;本次&lt;span
+style=&apos;color:black;background:yellow&apos;&gt;发布&lt;/span&gt;的功能列表：&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:24.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:12.0pt;
-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;text-indent:24.0pt;mso-pagination:widow-orphan;layout-grid-mode:
+char&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt&apos;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
-mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
-lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
-mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;1）&lt;span
-style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span style=&apos;mso-bidi-font-size:10.5pt;
-font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;移动业支&lt;span
-lang=EN-US&gt;-&lt;/span&gt;统一查询支持&lt;span lang=EN-US&gt;ipv6&lt;/span&gt;；&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:99.0pt;text-align:left;text-indent:-36.0pt;mso-pagination:
+widow-orphan;mso-outline-level:1;layout-grid-mode:char&apos;&gt;&lt;span lang=EN-US
+style=&apos;font-size:12.0pt;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black;mso-font-kerning:0pt&apos;&gt;1&lt;/span&gt;&lt;span
+style=&apos;font-size:12.0pt;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black;mso-font-kerning:0pt&apos;&gt;）&lt;/span&gt;&lt;span
+lang=EN-US style=&apos;font-size:7.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:微软雅黑;color:black;mso-font-kerning:0pt&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;/span&gt;&lt;span style=&apos;font-size:12.0pt;mso-bidi-font-size:10.5pt;font-family:
+&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black;mso-font-kerning:
+0pt&apos;&gt;集团规范&lt;span lang=EN-US&gt;-&lt;/span&gt;脚本审计；&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
-mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
-lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
-mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;2）&lt;span
-style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span style=&apos;mso-bidi-font-size:10.5pt;
-font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;江西需求&lt;span
-lang=EN-US&gt;-&lt;/span&gt;统计报表支持&lt;span lang=EN-US&gt;ipv6&lt;/span&gt;；&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:99.0pt;text-align:left;text-indent:-36.0pt;mso-pagination:
+widow-orphan;mso-outline-level:1;layout-grid-mode:char&apos;&gt;&lt;span lang=EN-US
+style=&apos;font-size:12.0pt;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black;mso-font-kerning:0pt&apos;&gt;2&lt;/span&gt;&lt;span
+style=&apos;font-size:12.0pt;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black;mso-font-kerning:0pt&apos;&gt;）&lt;/span&gt;&lt;span
+lang=EN-US style=&apos;font-size:7.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:微软雅黑;color:black;mso-font-kerning:0pt&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span
+style=&apos;font-size:12.0pt;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:Calibri;color:black;mso-font-kerning:0pt&apos;&gt;集团规范&lt;span
+lang=EN-US&gt;-&lt;/span&gt;审计策略点管理；&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
-mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
-lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
-mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;3）&lt;span
-style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span style=&apos;mso-bidi-font-size:10.5pt;
-font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;甘肃个需&lt;span
-lang=EN-US&gt;-&lt;/span&gt;提取审计资源操作内容表名字段；&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:99.0pt;text-align:left;text-indent:-36.0pt;mso-pagination:
+widow-orphan;mso-outline-level:1;layout-grid-mode:char&apos;&gt;&lt;span lang=EN-US
+style=&apos;font-size:12.0pt;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black;mso-font-kerning:0pt&apos;&gt;3&lt;/span&gt;&lt;span
+style=&apos;font-size:12.0pt;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black;mso-font-kerning:0pt&apos;&gt;）&lt;/span&gt;&lt;span
+lang=EN-US style=&apos;font-size:7.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:微软雅黑;color:black;mso-font-kerning:0pt&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span
+style=&apos;font-size:12.0pt;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:Calibri;color:black;mso-font-kerning:0pt&apos;&gt;集团规范&lt;span
+lang=EN-US&gt;-&lt;/span&gt;全景视图；&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoListParagraph style=&apos;margin-left:85.5pt;text-indent:-36.0pt;
-mso-outline-level:1;mso-list:l1 level1 lfo2&apos;&gt;&lt;![if !supportLists]&gt;&lt;span
-lang=EN-US style=&apos;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
-mso-bidi-font-family:微软雅黑;color:black&apos;&gt;&lt;span style=&apos;mso-list:Ignore&apos;&gt;4）&lt;span
-style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span style=&apos;mso-bidi-font-size:10.5pt;
-font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:Calibri;color:black&apos;&gt;功能优化&lt;span
-lang=EN-US&gt;-&lt;/span&gt;敏感数据上报监控发送操作日志。&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:99.0pt;text-align:left;text-indent:-36.0pt;mso-pagination:
+widow-orphan;mso-outline-level:1;layout-grid-mode:char&apos;&gt;&lt;span lang=EN-US
+style=&apos;font-size:12.0pt;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black;mso-font-kerning:0pt&apos;&gt;4&lt;/span&gt;&lt;span
+style=&apos;font-size:12.0pt;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:微软雅黑;color:black;mso-font-kerning:0pt&apos;&gt;）&lt;/span&gt;&lt;span
+lang=EN-US style=&apos;font-size:7.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:微软雅黑;color:black;mso-font-kerning:0pt&apos;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span
+style=&apos;font-size:12.0pt;mso-bidi-font-size:10.5pt;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:Calibri;color:black;mso-font-kerning:0pt&apos;&gt;集团规范&lt;span
+lang=EN-US&gt;-&lt;/span&gt;策略中心。&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal style=&apos;mso-outline-level:1&apos;&gt;&lt;span lang=EN-US
-style=&apos;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;&apos;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan;mso-outline-level:1;
+layout-grid-mode:char&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:12.0pt;font-family:
+&quot;微软雅黑&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:24.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;b style=&apos;mso-bidi-font-weight:normal&apos;&gt;&lt;span
-style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
-0pt&apos;&gt;本次发布同时在发布平台和&lt;span lang=EN-US&gt;ftp&lt;/span&gt;发布&lt;span lang=EN-US&gt;,&lt;/span&gt;下面分别提供下载路径下载路径：&lt;span
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;text-indent:24.0pt;mso-pagination:widow-orphan;layout-grid-mode:
+char&apos;&gt;&lt;b style=&apos;mso-bidi-font-weight:normal&apos;&gt;&lt;span style=&apos;font-size:12.0pt;
+font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;本次&lt;span
+style=&apos;color:black;background:yellow&apos;&gt;发布&lt;/span&gt;同时在&lt;span style=&apos;color:black;
+background:yellow&apos;&gt;发布&lt;/span&gt;平台和&lt;span lang=EN-US&gt;ftp&lt;/span&gt;&lt;span
+style=&apos;color:black;background:yellow&apos;&gt;发布&lt;/span&gt;&lt;span lang=EN-US&gt;,&lt;/span&gt;下面分别提供下载路径下载路径：&lt;span
 lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:48.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:12.0pt;
-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;text-indent:48.0pt;mso-pagination:widow-orphan;layout-grid-mode:
+char&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt&apos;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:48.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;span style=&apos;font-size:12.0pt;font-family:宋体;
-mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;发布平台&lt;span lang=EN-US&gt;:&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;text-indent:48.0pt;mso-pagination:widow-orphan;layout-grid-mode:
+char&apos;&gt;&lt;span style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;
+color:black;background:yellow;mso-font-kerning:0pt&apos;&gt;发布&lt;/span&gt;&lt;span
+style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
+0pt&apos;&gt;平台&lt;span lang=EN-US&gt;:&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:48.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:12.0pt;
-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;text-indent:48.0pt;mso-pagination:widow-orphan;layout-grid-mode:
+char&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt&apos;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal align=left style=&apos;margin-left:47.25pt;mso-para-margin-left:
-4.5gd;text-align:left;mso-pagination:widow-orphan&apos;&gt;&lt;u&gt;&lt;span style=&apos;font-family:
-宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri&apos;&gt;亚信安全管理平台&lt;/span&gt;&lt;span
-lang=EN-US&gt;:
-http://10.21.37.164:8080/productReleasePlatform/productDownload/index&lt;/span&gt;&lt;/u&gt;&lt;span
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:47.25pt;mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+mso-para-margin-left:4.5gd;text-align:left;mso-pagination:widow-orphan;
+layout-grid-mode:char&apos;&gt;&lt;u&gt;&lt;span style=&apos;font-size:12.0pt;font-family:宋体;
+mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt&apos;&gt;亚信安全管理平台&lt;/span&gt;&lt;/u&gt;&lt;u&gt;&lt;span lang=EN-US
+style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
+0pt&apos;&gt;: http://10.21.37.164:8080/productReleasePlatform/productDownload/index&lt;/span&gt;&lt;/u&gt;&lt;span
 lang=EN-US style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;
 mso-font-kerning:0pt&apos;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoListParagraph style=&apos;margin-left:69.0pt;text-indent:-21.0pt;
-mso-list:l0 level1 lfo4&apos;&gt;&lt;![if !supportLists]&gt;&lt;span lang=EN-US
-style=&apos;font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:Wingdings;
-mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings&apos;&gt;&lt;span
-style=&apos;mso-list:Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
-style=&apos;font-size:11.0pt;mso-bidi-font-size:12.0pt&apos;&gt;文档路径：&lt;u&gt;亚信安全管理平台&lt;span
-lang=EN-US&gt;/&lt;/span&gt;版本下载&lt;span lang=EN-US&gt;/&lt;/span&gt;审计发布版本&lt;span lang=EN-US&gt;/AISIAV04R07c00_20181218
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:82.5pt;text-align:left;text-indent:-21.0pt;mso-pagination:
+widow-orphan;layout-grid-mode:char&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings;mso-font-kerning:0pt&apos;&gt;l&lt;/span&gt;&lt;span lang=EN-US
+style=&apos;font-size:7.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
+Wingdings;mso-font-kerning:0pt&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;span style=&apos;font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
+0pt&apos;&gt;文档路径：&lt;u&gt;亚信安全管理平台&lt;span lang=EN-US&gt;/&lt;/span&gt;版本下载&lt;span lang=EN-US&gt;/&lt;/span&gt;审计&lt;span
+style=&apos;color:black;background:yellow&apos;&gt;发布&lt;/span&gt;版本&lt;span lang=EN-US&gt;/AISIAV04R08c00_20190804
 VER/&lt;/span&gt;&lt;/u&gt;用户手册&lt;span lang=EN-US&gt;/&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoListParagraph style=&apos;margin-left:69.0pt;text-indent:-21.0pt;
-mso-list:l0 level1 lfo4&apos;&gt;&lt;![if !supportLists]&gt;&lt;span lang=EN-US
-style=&apos;font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:Wingdings;
-mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings&apos;&gt;&lt;span
-style=&apos;mso-list:Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
-style=&apos;font-size:11.0pt;mso-bidi-font-size:12.0pt&apos;&gt;安装包路径：&lt;u&gt;亚信安全管理平台&lt;span
-lang=EN-US&gt;/&lt;/span&gt;版本下载&lt;span lang=EN-US&gt;/&lt;/span&gt;审计发布版本&lt;span lang=EN-US&gt;/AISIAV04R07c00_20181218
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:82.5pt;text-align:left;text-indent:-21.0pt;mso-pagination:
+widow-orphan;layout-grid-mode:char&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings;mso-font-kerning:0pt&apos;&gt;l&lt;/span&gt;&lt;span lang=EN-US
+style=&apos;font-size:7.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
+Wingdings;mso-font-kerning:0pt&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;span style=&apos;font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
+0pt&apos;&gt;安装包路径：&lt;u&gt;亚信安全管理平台&lt;span lang=EN-US&gt;/&lt;/span&gt;版本下载&lt;span lang=EN-US&gt;/&lt;/span&gt;审计&lt;span
+style=&apos;color:black;background:yellow&apos;&gt;发布&lt;/span&gt;版本&lt;span lang=EN-US&gt;/AISIAV04R08c00_20190804
 VER&lt;/span&gt;&lt;/u&gt;&lt;span lang=EN-US&gt;/&lt;/span&gt;安装包&lt;span lang=EN-US&gt;/&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoListParagraph style=&apos;margin-left:69.0pt;text-indent:-21.0pt;
-mso-list:l0 level1 lfo4&apos;&gt;&lt;![if !supportLists]&gt;&lt;span lang=EN-US
-style=&apos;font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:Wingdings;
-mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings&apos;&gt;&lt;span
-style=&apos;mso-list:Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
-lang=EN-US style=&apos;font-size:11.0pt;mso-bidi-font-size:12.0pt&apos;&gt;db&lt;/span&gt;&lt;span
-style=&apos;font-size:11.0pt;mso-bidi-font-size:12.0pt&apos;&gt;变更路径：&lt;u&gt;亚信安全管理平台&lt;span
-lang=EN-US&gt;/&lt;/span&gt;版本下载&lt;span lang=EN-US&gt;/&lt;/span&gt;审计发布版本&lt;span lang=EN-US&gt;/AISIAV04R07c00_20181218
-VER/&lt;/span&gt;&lt;/u&gt;变更说明&lt;span lang=EN-US&gt;/&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:82.5pt;text-align:left;text-indent:-21.0pt;mso-pagination:
+widow-orphan;layout-grid-mode:char&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings;mso-font-kerning:0pt&apos;&gt;l&lt;/span&gt;&lt;span lang=EN-US
+style=&apos;font-size:7.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
+Wingdings;mso-font-kerning:0pt&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;span lang=EN-US
+style=&apos;font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:宋体;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt&apos;&gt;db&lt;/span&gt;&lt;span style=&apos;font-size:11.0pt;mso-bidi-font-size:
+12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;变更路径：&lt;u&gt;亚信安全管理平台&lt;span
+lang=EN-US&gt;/&lt;/span&gt;版本下载&lt;span lang=EN-US&gt;/&lt;/span&gt;审计&lt;span style=&apos;color:black;
+background:yellow&apos;&gt;发布&lt;/span&gt;版本&lt;span lang=EN-US&gt;/AISIAV04R08c00_20190804 VER/&lt;/span&gt;&lt;/u&gt;变更说明&lt;span
+lang=EN-US&gt;/&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;mso-pagination:widow-orphan&apos;&gt;&lt;span
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan;layout-grid-mode:char&apos;&gt;&lt;span
 lang=EN-US style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;
 mso-font-kerning:0pt&apos;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:48.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:12.0pt;
-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;text-indent:48.0pt;mso-pagination:widow-orphan;layout-grid-mode:
+char&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt&apos;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:48.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:12.0pt;
-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;text-indent:48.0pt;mso-pagination:widow-orphan;layout-grid-mode:
+char&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt&apos;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:48.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:12.0pt;
-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;ftp:&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;text-indent:48.0pt;mso-pagination:widow-orphan;layout-grid-mode:
+char&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt&apos;&gt;ftp:&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoListParagraph style=&apos;margin-left:69.0pt;text-indent:-21.0pt;
-mso-list:l0 level1 lfo4&apos;&gt;&lt;![if !supportLists]&gt;&lt;span lang=EN-US
-style=&apos;font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:Wingdings;
-mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings&apos;&gt;&lt;span
-style=&apos;mso-list:Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
-style=&apos;font-size:11.0pt;mso-bidi-font-size:12.0pt&apos;&gt;文档路径：&lt;span lang=EN-US&gt;&lt;a
-href=&quot;ftp://10.1.252.239/ai4a30/aisia1.0/&quot;&gt;ftp://10.1.252.239/ai4a30/aisia1.0/&lt;/a&gt;&lt;/span&gt;产品发布&lt;span
-lang=EN-US&gt;/aisiav04r07c00_20181218/doc/&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:82.5pt;text-align:left;text-indent:-21.0pt;mso-pagination:
+widow-orphan;layout-grid-mode:char&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings;mso-font-kerning:0pt&apos;&gt;l&lt;/span&gt;&lt;span lang=EN-US
+style=&apos;font-size:7.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
+Wingdings;mso-font-kerning:0pt&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;span style=&apos;font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
+0pt&apos;&gt;文档路径：&lt;span lang=EN-US&gt;&lt;a href=&quot;ftp://10.1.252.239/ai4a30/aisia1.0/&quot;&gt;ftp://10.1.252.239/ai4a30/aisia1.0/&lt;/a&gt;&lt;/span&gt;产品&lt;span
+style=&apos;color:black;background:yellow&apos;&gt;发布&lt;/span&gt;&lt;span lang=EN-US&gt;/aisiav04r08c00_&lt;u&gt;20190804&lt;/u&gt;/doc/&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoListParagraph style=&apos;margin-left:69.0pt;text-indent:-21.0pt;
-mso-list:l0 level1 lfo4&apos;&gt;&lt;![if !supportLists]&gt;&lt;span lang=EN-US
-style=&apos;font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:Wingdings;
-mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings&apos;&gt;&lt;span
-style=&apos;mso-list:Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
-style=&apos;font-size:11.0pt;mso-bidi-font-size:12.0pt&apos;&gt;安装包路径：&lt;span lang=EN-US&gt;&lt;a
-href=&quot;ftp://10.1.252.239/ai4a30/aisia1.0/&quot;&gt;ftp://10.1.252.239/ai4a30/aisia1.0/&lt;/a&gt;&lt;/span&gt;产品发布&lt;span
-lang=EN-US&gt;/aisiav04r07c00_20181218/&lt;/span&gt;安装包&lt;span lang=EN-US&gt;/&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:82.5pt;text-align:left;text-indent:-21.0pt;mso-pagination:
+widow-orphan;layout-grid-mode:char&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings;mso-font-kerning:0pt&apos;&gt;l&lt;/span&gt;&lt;span lang=EN-US
+style=&apos;font-size:7.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
+Wingdings;mso-font-kerning:0pt&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;span style=&apos;font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
+0pt&apos;&gt;安装包路径：&lt;span lang=EN-US&gt;&lt;a href=&quot;ftp://10.1.252.239/ai4a30/aisia1.0/&quot;&gt;ftp://10.1.252.239/ai4a30/aisia1.0/&lt;/a&gt;&lt;/span&gt;产品&lt;span
+style=&apos;color:black;background:yellow&apos;&gt;发布&lt;/span&gt;&lt;span lang=EN-US&gt;/aisiav04r08c00_&lt;u&gt;20190804&lt;/u&gt;/&lt;/span&gt;安装包&lt;span
+lang=EN-US&gt;/&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoListParagraph style=&apos;margin-left:69.0pt;text-indent:-21.0pt;
-mso-list:l0 level1 lfo4&apos;&gt;&lt;![if !supportLists]&gt;&lt;span lang=EN-US
-style=&apos;font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:Wingdings;
-mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings&apos;&gt;&lt;span
-style=&apos;mso-list:Ignore&apos;&gt;l&lt;span style=&apos;font:7.0pt &quot;Times New Roman&quot;&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span
-lang=EN-US style=&apos;font-size:11.0pt;mso-bidi-font-size:12.0pt&apos;&gt;db&lt;/span&gt;&lt;span
-style=&apos;font-size:11.0pt;mso-bidi-font-size:12.0pt&apos;&gt;变更路径：&lt;span lang=EN-US&gt;&lt;a
-href=&quot;ftp://10.1.252.239/ai4a30/aisia1.0/&quot;&gt;ftp://10.1.252.239/ai4a30/aisia1.0/&lt;/a&gt;&lt;/span&gt;产品发布&lt;span
-lang=EN-US&gt;/aisiav04r07c00_20181218/db&lt;/span&gt;脚本&lt;span lang=EN-US&gt;/&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:82.5pt;text-align:left;text-indent:-21.0pt;mso-pagination:
+widow-orphan;layout-grid-mode:char&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings;mso-font-kerning:0pt&apos;&gt;l&lt;/span&gt;&lt;span lang=EN-US
+style=&apos;font-size:7.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
+Wingdings;mso-font-kerning:0pt&apos;&gt;&amp;nbsp; &lt;/span&gt;&lt;span lang=EN-US
+style=&apos;font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:宋体;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt&apos;&gt;db&lt;/span&gt;&lt;span style=&apos;font-size:11.0pt;mso-bidi-font-size:
+12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;变更路径：&lt;span
+lang=EN-US&gt;&lt;a href=&quot;ftp://10.1.252.239/ai4a30/aisia1.0/&quot;&gt;ftp://10.1.252.239/ai4a30/aisia1.0/&lt;/a&gt;&lt;/span&gt;产品&lt;span
+style=&apos;color:black;background:yellow&apos;&gt;发布&lt;/span&gt;&lt;span lang=EN-US&gt;/aisiav04r08c00_&lt;u&gt;20190804&lt;/u&gt;/db&lt;/span&gt;脚本&lt;span
+lang=EN-US&gt;/&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:48.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:12.0pt;
-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;text-indent:48.0pt;mso-pagination:widow-orphan;layout-grid-mode:
+char&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt&apos;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:24.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;b style=&apos;mso-bidi-font-weight:normal&apos;&gt;&lt;span
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;text-indent:24.0pt;mso-pagination:widow-orphan;layout-grid-mode:
+char&apos;&gt;&lt;b style=&apos;mso-bidi-font-weight:normal&apos;&gt;&lt;span style=&apos;font-size:12.0pt;
+font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;本次&lt;span
+style=&apos;color:black;background:yellow&apos;&gt;发布&lt;/span&gt;升级方式：&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;text-indent:24.0pt;mso-pagination:widow-orphan;layout-grid-mode:
+char&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt&apos;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;text-indent:48.0pt;mso-pagination:widow-orphan;layout-grid-mode:
+char&apos;&gt;&lt;span style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;
+mso-font-kerning:0pt&apos;&gt;按照《移动&lt;span lang=EN-US&gt;4A&lt;/span&gt;项目审计&lt;span
+style=&apos;color:black;background:yellow&apos;&gt;发布&lt;/span&gt;说明&lt;span lang=EN-US&gt;v04r08c00.docx&lt;/span&gt;》描述的升级即可&lt;span
+lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;text-indent:48.0pt;mso-pagination:widow-orphan;layout-grid-mode:
+char&apos;&gt;&lt;span style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;
+color:black;background:yellow;mso-font-kerning:0pt&apos;&gt;发布&lt;/span&gt;&lt;span
 style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
-0pt&apos;&gt;本次发布升级方式：&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+0pt&apos;&gt;平台路径&lt;span lang=EN-US&gt;:&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:24.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:12.0pt;
-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:48.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;span style=&apos;font-size:12.0pt;font-family:宋体;
-mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;按照《移动&lt;span lang=EN-US&gt;4A&lt;/span&gt;项目审计发布说明&lt;span
-lang=EN-US&gt;v04r07c00.docx&lt;/span&gt;》描述的升级即可&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:48.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;span style=&apos;font-size:12.0pt;font-family:宋体;
-mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;发布平台路径&lt;span lang=EN-US&gt;:&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:48.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;u&gt;&lt;span style=&apos;font-size:11.0pt;mso-bidi-font-size:
-12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;亚信安全管理平台&lt;span
-lang=EN-US&gt;/&lt;/span&gt;版本下载&lt;span lang=EN-US&gt;/&lt;/span&gt;审计发布版本&lt;span lang=EN-US&gt;/aisiav04r07c00_20181218
-VER/&lt;/span&gt;&lt;/span&gt;&lt;/u&gt;&lt;span style=&apos;font-size:11.0pt;mso-bidi-font-size:12.0pt;
-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;用户手册&lt;span
-lang=EN-US&gt;/&lt;/span&gt;移动&lt;span lang=EN-US&gt;4A&lt;/span&gt;项目审计发布说明&lt;span lang=EN-US&gt;v04r07c00.docx
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;text-indent:48.0pt;mso-pagination:widow-orphan;layout-grid-mode:
+char&apos;&gt;&lt;u&gt;&lt;span style=&apos;font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:
+宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;亚信安全管理平台&lt;span lang=EN-US&gt;/&lt;/span&gt;版本下载&lt;span
+lang=EN-US&gt;/&lt;/span&gt;审计&lt;span style=&apos;color:black;background:yellow&apos;&gt;发布&lt;/span&gt;版本&lt;span
+lang=EN-US&gt;/aisiav04r08c00_20190804 VER/&lt;/span&gt;&lt;/span&gt;&lt;/u&gt;&lt;span
+style=&apos;font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:宋体;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt&apos;&gt;用户手册&lt;span lang=EN-US&gt;/&lt;/span&gt;移动&lt;span lang=EN-US&gt;4A&lt;/span&gt;项目审计&lt;span
+style=&apos;color:black;background:yellow&apos;&gt;发布&lt;/span&gt;说明&lt;span lang=EN-US&gt;v04r08c00.docx
 &lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:48.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:12.0pt;
-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;ftp&lt;/span&gt;&lt;span
-style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
-0pt&apos;&gt;路径&lt;span lang=EN-US&gt;:&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;text-indent:48.0pt;mso-pagination:widow-orphan;layout-grid-mode:
+char&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt&apos;&gt;ftp&lt;/span&gt;&lt;span style=&apos;font-size:12.0pt;font-family:
+宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;路径&lt;span lang=EN-US&gt;:&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:48.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:11.0pt&apos;&gt;&lt;a
-href=&quot;ftp://10.1.252.239/ai4a30/aisia1.0/&quot;&gt;ftp://10.1.252.239/ai4a30/aisia1.0/&lt;/a&gt;&lt;/span&gt;&lt;span
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;text-indent:48.0pt;mso-pagination:widow-orphan;layout-grid-mode:
+char&apos;&gt;&lt;span lang=EN-US style=&apos;font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt&apos;&gt;&lt;a href=&quot;ftp://10.1.252.239/ai4a30/aisia1.0/&quot;&gt;ftp://10.1.252.239/ai4a30/aisia1.0/&lt;/a&gt;&lt;/span&gt;&lt;span
 style=&apos;font-size:11.0pt;font-family:宋体;mso-ascii-font-family:Calibri;
-mso-hansi-font-family:Calibri&apos;&gt;产品发布&lt;/span&gt;&lt;span lang=EN-US style=&apos;font-size:
-11.0pt&apos;&gt;/aisiav04r07c00_20181218/doc/&lt;/span&gt;&lt;span style=&apos;font-size:11.0pt;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;产品&lt;span
+style=&apos;color:black;background:yellow&apos;&gt;发布&lt;/span&gt;&lt;/span&gt;&lt;span lang=EN-US
+style=&apos;font-size:11.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
+0pt&apos;&gt;/aisiav04r08c00_&lt;/span&gt;&lt;u&gt;&lt;span lang=EN-US style=&apos;font-size:11.0pt;
 mso-bidi-font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
-0pt&apos;&gt;移动&lt;span lang=EN-US&gt;4A&lt;/span&gt;项目审计发布说明&lt;span lang=EN-US&gt;v04r07c00.docx&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+0pt&apos;&gt;20190804&lt;/span&gt;&lt;/u&gt;&lt;span lang=EN-US style=&apos;font-size:11.0pt;font-family:
+宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;/doc/&lt;/span&gt;&lt;span
+style=&apos;font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:宋体;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt&apos;&gt;移动&lt;span lang=EN-US&gt;4A&lt;/span&gt;项目审计&lt;span
+style=&apos;color:black;background:yellow&apos;&gt;发布&lt;/span&gt;说明&lt;span lang=EN-US&gt;v04r08c00.docx&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal&gt;&lt;span lang=EN-US&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:24.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;b style=&apos;mso-bidi-font-weight:normal&apos;&gt;&lt;span
-style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
-0pt&apos;&gt;开发人员：&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
-
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:24.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;span style=&apos;font-size:12.0pt;font-family:宋体;
-mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;卢双明，谭荣强，王栓柱，陈相，谭荣强，宁桂鑫，张晋恺，李振鹏，陈豆豆&lt;span
-lang=EN-US&gt;,&lt;/span&gt;景林龙&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:24.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;b style=&apos;mso-bidi-font-weight:normal&apos;&gt;&lt;span
-style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
-0pt&apos;&gt;测试人员：&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
-
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:24.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;span style=&apos;font-size:12.0pt;font-family:宋体;
-mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;任顺禹，张佳燕，杨柳微&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:24.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;b style=&apos;mso-bidi-font-weight:normal&apos;&gt;&lt;span
-style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
-0pt&apos;&gt;发布人：&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
-
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;text-indent:24.0pt;
-mso-pagination:widow-orphan&apos;&gt;&lt;span style=&apos;font-size:12.0pt;font-family:宋体;
-mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;任顺禹&lt;span lang=EN-US&gt; 18210964425&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;mso-pagination:widow-orphan&apos;&gt;&lt;span
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan;layout-grid-mode:char&apos;&gt;&lt;span
 lang=EN-US style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;
 mso-font-kerning:0pt&apos;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;div class=MsoNormal align=left style=&apos;text-align:left;mso-pagination:widow-orphan&apos;&gt;&lt;span
-lang=EN-US style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;
-mso-font-kerning:0pt&apos;&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;text-indent:24.0pt;mso-pagination:widow-orphan;layout-grid-mode:
+char&apos;&gt;&lt;b style=&apos;mso-bidi-font-weight:normal&apos;&gt;&lt;span style=&apos;font-size:12.0pt;
+font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;开发人员：&lt;span
+lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
 
-&lt;hr size=1 width=175 style=&apos;width:131.25pt&apos; noshade style=&apos;color:#B5C4DF&apos;
-align=left&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;text-indent:24.0pt;mso-pagination:widow-orphan;layout-grid-mode:
+char&apos;&gt;&lt;span style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;
+mso-font-kerning:0pt&apos;&gt;谭荣强，陈相，谭荣强，张晋恺，李振鹏，陈豆豆&lt;span lang=EN-US&gt;,&lt;/span&gt;景林龙&lt;span
+lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;/span&gt;&lt;/div&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;text-indent:24.0pt;mso-pagination:widow-orphan;layout-grid-mode:
+char&apos;&gt;&lt;b style=&apos;mso-bidi-font-weight:normal&apos;&gt;&lt;span style=&apos;font-size:12.0pt;
+font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt&apos;&gt;测试人员：&lt;span
+lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal align=left style=&apos;margin-bottom:12.0pt;text-align:left;
-mso-pagination:widow-orphan&apos;&gt;&lt;span style=&apos;font-size:10.0pt;font-family:宋体;
-mso-ascii-font-family:Verdana;mso-hansi-font-family:Verdana;mso-bidi-font-family:
-宋体;color:#999999;mso-font-kerning:0pt&apos;&gt;任順禹&lt;/span&gt;&lt;span lang=EN-US
-style=&apos;font-size:9.0pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:
-宋体;color:black;mso-font-kerning:0pt&apos;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;text-indent:24.0pt;mso-pagination:widow-orphan;layout-grid-mode:
+char&apos;&gt;&lt;span style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;
+mso-font-kerning:0pt&apos;&gt;任顺禹&lt;span lang=EN-US&gt;,&lt;/span&gt;孙秋成&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;mso-pagination:widow-orphan&apos;&gt;&lt;span
-style=&apos;font-size:10.0pt;font-family:宋体;mso-bidi-font-family:宋体;color:#999999;
-mso-font-kerning:0pt&apos;&gt;亚信科技（成都）有限公司&lt;/span&gt;&lt;span lang=EN-US style=&apos;font-size:
-9.0pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:宋体;color:black;
-mso-font-kerning:0pt&apos;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class=MsoNormal align=left style=&apos;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;text-indent:24.0pt;mso-pagination:widow-orphan;layout-grid-mode:
+char&apos;&gt;&lt;b style=&apos;mso-bidi-font-weight:normal&apos;&gt;&lt;span style=&apos;font-size:12.0pt;
+font-family:宋体;mso-bidi-font-family:宋体;color:black;background:yellow;
+mso-font-kerning:0pt&apos;&gt;发布&lt;/span&gt;&lt;/b&gt;&lt;b style=&apos;mso-bidi-font-weight:normal&apos;&gt;&lt;span
+style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
+0pt&apos;&gt;人：&lt;span lang=EN-US&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
 
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;mso-pagination:widow-orphan&apos;&gt;&lt;span
-style=&apos;font-size:10.0pt;font-family:宋体;mso-bidi-font-family:宋体;color:#999999;
-mso-font-kerning:0pt&apos;&gt;手机：&lt;span lang=EN-US&gt;18210964425&lt;/span&gt;&lt;/span&gt;&lt;span
-lang=EN-US style=&apos;font-size:9.0pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
-mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt&apos;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;mso-pagination:widow-orphan&apos;&gt;&lt;span
-style=&apos;font-size:10.0pt;font-family:宋体;mso-bidi-font-family:宋体;color:#999999;
-mso-font-kerning:0pt&apos;&gt;邮件：&lt;/span&gt;&lt;u&gt;&lt;span lang=EN-US style=&apos;font-size:10.0pt;
-font-family:宋体;mso-bidi-font-family:宋体;color:#0066CC;mso-font-kerning:0pt&apos;&gt;rensy&lt;/span&gt;&lt;/u&gt;&lt;span
-lang=EN-US style=&apos;font-size:10.0pt;font-family:宋体;mso-bidi-font-family:宋体;
-color:#999999;mso-font-kerning:0pt&apos;&gt;&lt;a href=&quot;mailto:rensy@asiainfo-sec.com&quot;
-target=&quot;_blank&quot;&gt;&lt;span style=&apos;mso-bidi-font-size:11.0pt&apos;&gt;@asiainfo-sec.com&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;span
-lang=EN-US style=&apos;font-size:9.0pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
-mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt&apos;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p class=MsoNormal align=left style=&apos;text-align:left;mso-pagination:widow-orphan&apos;&gt;&lt;span
-style=&apos;font-size:10.0pt;font-family:宋体;mso-bidi-font-family:宋体;color:#999999;
-mso-font-kerning:0pt&apos;&gt;地址：北京市海淀区中关村软件园二期西北旺东路&lt;span lang=EN-US&gt;10&lt;/span&gt;号院东区亚信总部研发中心大厦&lt;span
-lang=EN-US&gt;6&lt;/span&gt;层&lt;/span&gt;&lt;span lang=EN-US style=&apos;font-size:9.0pt;font-family:
-&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
-0pt&apos;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class=MsoNormal&gt;&lt;span style=&apos;font-size:12.0pt;font-family:宋体;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt&apos;&gt;任顺禹&lt;span lang=EN-US&gt; 18210964425&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;/div&gt;
 

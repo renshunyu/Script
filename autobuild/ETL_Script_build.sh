@@ -21,3 +21,6 @@ then
   echo "¿½±´Ä¿Â¼´íÎó"
   exit 1
 fi
+rm -fr `find $buildhome/ETL_Script -name '.svn*'|grep -v '^.$'|grep -v '^..$'`
+cd $buildhome/
+tar -zcvf ETL_Script.tar.gz ETL_Script

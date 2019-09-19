@@ -8,19 +8,19 @@
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description/>
-          <defaultValue>aisiav04r07c00_20181218</defaultValue>
+          <defaultValue>aisiav04r08c00_20190804</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>PATCHNAME</name>
           <description/>
-          <defaultValue>甘肃按照从帐号标准化补全信息错误_201904261500</defaultValue>
+          <defaultValue>审计任务月任务时间临界点判断有误_201909041600</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>PROJECTS</name>
           <description/>
-          <defaultValue>ETL_Script ap_standardize_server screen_data_provision</defaultValue>
+          <defaultValue>reportc iap_aus iap jdbc2es average_strategy_execute_engine AuditInernalService ap_standardize_server hiveloader</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.TextParameterDefinition>
@@ -48,7 +48,7 @@
   <builders/>
   <publishers>
     <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.57">
-      <recipientList>NSG-4A-AUDIT@asiainfo-sec.com,cc:NSG-SPRD2@asiainfo-sec.com,cc:NSG-4A-QC@asiainfo-sec.com,cc:NSG-4A-PM@asiainfo-sec.com,cc:wangyb@asiainfo-sec.com,cc:hejt@asiainfo-sec.com</recipientList>
+      <recipientList>NSG-4A-AUDIT@asiainfo-sec.com,cc:NSG-SPRD2@asiainfo-sec.com,cc:NSG-4A-QC@asiainfo-sec.com,cc:NSG-4A-PM@asiainfo-sec.com,cc:lusm@asiainfo-sec.com,cc:hejt@asiainfo-sec.com</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.AlwaysTrigger>
           <email>

@@ -8,7 +8,7 @@
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description/>
-          <defaultValue>v04r06c00</defaultValue>
+          <defaultValue>v04r09c00</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
@@ -60,18 +60,34 @@ PJ=reports &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRA
 PJ=reportc &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VER/$PJ
 #2018年新的数据上报
 PJ='data-reporting' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VER/$PJ
+
+#kettle工具
+PJ='data_integration' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VER/$PJ
+#hdfs导入hive
+PJ='hiveloader' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/iap_aus/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VER/$PJ
+#dac脚本
+PJ='DAC_Script' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VER/$PJ
+#均值分析
+PJ='average_strategy_execute_engine' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VER/$PJ
+
 #2017年敏感数据上报
 PJ='data-upload-tools' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VER/$PJ
 #2018年新的数据上报监控后台
 PJ='data-monitor' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VER/$PJ
-#2018年新的数据上报监控前台
-PJ='report-to-monitoring' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VER/$PJ
 #2018年新的数据上报监控注册中心
 PJ='eureka-server' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VER/$PJ
 #认证组件
 PJ='sso-plugin' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VER/$PJ
 #审计管理
 PJ='auditManagement' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VER/$PJ
+#数据库连接组件
+PJ='multiDatasource' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VER/$PJ
+#日志组件
+PJ='auditInfoLog' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VER/$PJ
+#加密工具
+PJ='jasypt-tool' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VER/$PJ
+
+
 
 elif [[ $createRmBranch = 'SSSSA封版' ]];then
 echo $createRmBranch

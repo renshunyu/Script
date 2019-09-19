@@ -5,6 +5,7 @@ export PATH=$JAVA_HOME/bin:$ANT_HOME/bin:$PATH
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 
 
+
 svnhome=/home/aiuap/dameng/program/reportc
 buildhome=/home/aiuap/dameng/builddir
 svn up $svnhome

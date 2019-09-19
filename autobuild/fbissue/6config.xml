@@ -8,13 +8,13 @@
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description/>
-          <defaultValue>aisiav04r06c00_20181115</defaultValue>
+          <defaultValue>aisiav04r09c00_20190905</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>VERNUM</name>
           <description/>
-          <defaultValue>v04r06c00</defaultValue>
+          <defaultValue>v04r09c00</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
@@ -71,14 +71,16 @@ PJ='data-reporting' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/
 PJ='data-upload-tools' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
 #2018年新的数据上报监控
 PJ='data-monitor' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
-#2018年新的数据上报监控前台
-PJ='report-to-monitoring' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
 #注册中心
 PJ='eureka-server' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
 #认证组件
 PJ='sso-plugin' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
 #审计管理
 PJ='auditManagement' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ  http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
+#数据库连接组件
+PJ='multiDatasource' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ  http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
+#日志组件
+PJ='auditInfoLog' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ  http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
 
 elif [[ $createReleaseBranch = 'SSSSA发布' ]];then
 echo $createReleaseBranch
