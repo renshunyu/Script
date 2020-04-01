@@ -22,7 +22,7 @@
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>
       <spec></spec>
-      <upstreamProjects>3、【封版】组织版本发布目录和内容, </upstreamProjects>
+      <upstreamProjects>3、【封版】组织版本发布目录和内容</upstreamProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

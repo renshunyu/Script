@@ -38,4 +38,7 @@ sed "`awk '$1=="<name>PATCHNAME</name>"{print (NR+2)}' config.xml.gb2312`s/<defa
 iconv -f gb2312 -t UTF-8 -c config.xml.gb2312.new -o 7config.xml
 java -jar jenkins-cli.jar -s http://10.1.198.53:9081/jenkins/ update-job 7、将补丁上传至发布平台 <7config.xml
 
+echo "ftp空间满！暂停上传ftp！"
+exit 0
+
 ncftpput -u $3 -p $4 -P 21 -m -R 10.1.252.239 ./ai4a30/aisia1.0/产品发布/ $patchpath/$1

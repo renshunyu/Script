@@ -14,19 +14,19 @@
         <hudson.model.StringParameterDefinition>
           <name>SVNTAG</name>
           <description/>
-          <defaultValue>159303</defaultValue>
+          <defaultValue>168396</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>SVNBASE</name>
           <description/>
-          <defaultValue>159127</defaultValue>
+          <defaultValue>168186</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description/>
-          <defaultValue>aisiav04r08c00_20190804</defaultValue>
+          <defaultValue>aisiav04r09c00_20190905</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
 	<hudson.model.BooleanParameterDefinition>

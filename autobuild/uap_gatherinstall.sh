@@ -18,7 +18,7 @@ then
   exit 1
 fi
 echo "±‡“Î≥…π¶"
-
+exit 0
 cd $buildhome/uap_gather/target/dist/
 echo 'open 10.1.198.60
 user aus aus

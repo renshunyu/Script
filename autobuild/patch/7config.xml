@@ -8,13 +8,13 @@
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description>本次发布的版本号例如：aisiav04r04c02_20180509</description>
-          <defaultValue>aisiav04r08c00_20190804</defaultValue>
+          <defaultValue>aisiav04r09c00_20190905</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>PATCHNAME</name>
           <description/>
-          <defaultValue>审计任务月任务时间临界点判断有误_201909041600</defaultValue>
+          <defaultValue>解决审计周任务结束时间临界点判断有误问题及下派短信手机号网段非法问题_202003311600</defaultValue>
           <trim>true</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>

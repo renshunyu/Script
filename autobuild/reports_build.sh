@@ -1,41 +1,46 @@
 #!/bin/sh
-export JAVA_HOME=/usr/java/jdk1.7.0_80
-#export JAVA_HOME=/usr/java/jdk1.8.0_121
-export M2_HOME=/usr/java/apache-maven-3.3.9
+export JAVA_HOME=/usr/java/jdk1.8.0_121
+export M2_HOME=/usr/java/apache-maven-3.2.5
 export PATH=$JAVA_HOME/bin:$M2_HOME/bin:$PATH
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 
-svnhome=/home/aiuap/svnproject/program30/program/reports
-buildhome=/home/aiuap/svnproject/program30/builddir
-svn up $svnhome
+
+packagepath=/home/aiuap/svnproject/program30/builddir
+svnurl=/home/aiuap/svnproject/program30/program/reports
+svn up $svnurl
+cd $packagepath
 result=$?
 if [ $result != '0' ]
 then
-  echo "¸üÐÂsvnÄ¿Â¼´íÎó"
+  echo "ÇÐ»»Ä¿Â¼´íÎó"
   exit 1
 fi
 
-
-rm -rf  $buildhome/reports
-
-
-if [ $result != '0' ]
-then
-  echo "É¾³ý±àÒëÄ¿Â¼´íÎó"
-  exit 1
+if [ -d reports ]; then
+  rm -fr reports
 fi
-cp -rf $svnhome $buildhome/reports
+
+
+cp -rf $svnurl $packagepath/reports
 result=$?
 if [ $result != '0' ]
 then
-  echo "¿½±´Ä¿Â¼´íÎó"
+  echo "Ç©³öÄ¿Â¼´íÎó"
   exit 1
 fi
-cd $buildhome/reports
+
+
+
+cd reports
+result=$?
+if [ $result != '0' ]
+then
+  echo "ÇÐ»»Ä¿Â¼´íÎó"
+  exit 1
+fi
+
 
 mvn clean package -Dmaven.test.skip=true >./build.log
-
-#ant release >./build.log
 result=`cat build.log|grep -i "BUILD SUCCESS"|wc -l`
 if [ $result != '1' ]
 then

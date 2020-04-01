@@ -1,6 +1,6 @@
 #!bin/sh
 export LANG=zh_CN.gb18030
-export JAVA_HOME=/usr/java/jdk1.7.0_80
+export JAVA_HOME=/usr/java/jdk1.8.0_121
 export M2_HOME=/usr/java/apache-maven-3.2.5
 export HUDSON_HOME=/home/aiuap/ci/hudson_work
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
@@ -10,11 +10,13 @@ export PATH
 #deployhome=/home/aiuap30/data-upload-tools
 deployhome=/home/aiuap30/tomcat_reportcs
 buildhome=/home/aiuap/svnproject/program30/builddir
+
+
 sudo su - aiuap30 -c "cd $deployhome/bin && sh shutdown.sh"
 
 while  [ 1 ]
 do
-result=`ps -ef|grep tomcat_reportcs|grep -v grep|awk '{print $2}'|sudo pwdx|grep $deployhome/bin |wc -l`
+result=`ps -ef|grep tomcat_reportcs_dm|grep -v grep|awk '{print $2}'|sudo pwdx|grep $deployhome/bin |wc -l`
 if [ $result = '0' ]
 then
   echo "data-monitorÍ£Ö¹Íê±Ï"

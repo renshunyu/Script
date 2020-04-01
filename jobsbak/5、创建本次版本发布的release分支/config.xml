@@ -110,6 +110,8 @@ PJ=iap_device_date_audit &amp;&amp; svn cp -m &quot;create branch&quot; http://1
 PJ=iap_aus &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #标准化服务
 PJ=ap_standardize_server &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+#基础数据变更接口
+PJ=realtime_standardize_server &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #采集服务
 PJ=ap_gather_server &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #特殊绕行日志采集服务

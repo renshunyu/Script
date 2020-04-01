@@ -8,13 +8,13 @@
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description>本次发布的版本号例如：aisiav04r04c02_20180509</description>
-          <defaultValue>aisiav04r08c00_20190804</defaultValue>
+          <defaultValue>aisiav04r09c00_20190905</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>PATCHNAME</name>
           <description/>
-          <defaultValue>手工下派任务上传的文件含有下划线问题_201909041130</defaultValue>
+          <defaultValue>移动总部审计权限范围分配无法保存历史范围_202003281500</defaultValue>
           <trim>true</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>

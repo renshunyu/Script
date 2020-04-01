@@ -1,34 +1,45 @@
-#!bin/sh
+#!/bin/sh
 export JAVA_HOME=/usr/java/jdk1.8.0_121
 export ANT_HOME=/home/aiuap/tools/apache-ant-1.7.1
 export PATH=$JAVA_HOME/bin:$ANT_HOME/bin:$PATH
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 
 
-svnhome=/home/aiuap/svnproject/program30/program/reportc
-buildhome=/home/aiuap/svnproject/program30/builddir
-svn up $svnhome
+packagepath=/home/aiuap/svnproject/program30/builddir
+svnurl=/home/aiuap/svnproject/program30/program/reportc
+svn up $svnurl
+cd $packagepath
 result=$?
 if [ $result != '0' ]
 then
-  echo "∏¸–¬svnƒø¬º¥ÌŒÛ"
+  echo "«–ªªƒø¬º¥ÌŒÛ"
   exit 1
 fi
-echo "∏¸–¬svnƒø¬º≥…π¶"
-rm -rf  $buildhome/reportc
-if [ $result != '0' ]
-then
-  echo "…æ≥˝±‡“Îƒø¬º¥ÌŒÛ"
-  exit 1
+
+if [ -d reportc ]; then
+  rm -fr reportc
 fi
-cp -rf $svnhome $buildhome/reportc
+
+
+cp -rf $svnurl $packagepath/reportc
 result=$?
 if [ $result != '0' ]
 then
-  echo "øΩ±¥ƒø¬º¥ÌŒÛ"
+  echo "«©≥ˆƒø¬º¥ÌŒÛ"
   exit 1
 fi
-cd $buildhome/reportc
+
+
+cd reportc
+result=$?
+if [ $result != '0' ]
+then
+  echo "«–ªªƒø¬º¥ÌŒÛ"
+  exit 1
+fi
+
+svn update 
+
 ant >./build.log
 result=`cat build.log|grep -i "BUILD SUCCESSFUL"|wc -l`
 if [ $result != '1' ]
@@ -37,3 +48,4 @@ then
   exit 1
 fi
 echo "±‡“Î≥…π¶"
+

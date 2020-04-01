@@ -27,15 +27,16 @@
               <string>std_log_persistence/std_log_persistence_oracle</string>
               <string>std_log_persistence/std_log_persistence_mysql</string>
               <string>iap_other_ori_log_persistence</string>
-              <string>data_syn</string>
               <string>data_syn_mysql</string>
               <string>crmep_whitelist_interface</string>
               <string>bigdata_hiveloader</string>
               <string>ori_log_persistence</string>
+              <string>ori_log_persistence_mysql</string>
               <string>iap_log_persistence_ftp</string>
               <string>standardize/cache-server</string>
-              <string>standardize</string>
               <string>standardize/standardize-component</string>
+              <string>standardize/standardize-component_mysql</string>
+              <string>std_aus_verification</string>
             </a>
           </choices>
         </hudson.model.ChoiceParameterDefinition>

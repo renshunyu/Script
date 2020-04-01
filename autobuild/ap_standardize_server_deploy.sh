@@ -1,10 +1,9 @@
 #!bin/sh
 export LANG=zh_CN.gb18030
 export JAVA_HOME=/usr/java/jdk1.8.0_121
-export ANT_HOME=/home/aiuap/tools/apache-ant-1.7.1
-export CLASSPATH=.:/usr/java/jdk1.8.0_121/lib:$CLASSPATH
-PATH=$JAVA_HOME/bin:$PATH:$HOME/bin:/home/aiuap/tools/apache-ant-1.7.1/bin:
-export PATH
+export ANT_HOME=/home/aiuap/tools/apache-ant-1.10.7
+export PATH=$ANT_HOME/bin:$JAVA_HOME/bin:$PATH
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 
 deployhome=/home/aiuap30/gather30/ap_standardize_server
 buildhome=/home/aiuap/svnproject/program30/builddir/ap_standardize_server
@@ -40,6 +39,7 @@ then
   echo "拷贝标准化包错误"
   exit 1
 fi
+#exit 0
 cd $deployhome/
 sudo su aiuap30 -c "pwd"
 sudo su aiuap30 -c "tar -zxvf ap_standardize_server.tar.gz"
