@@ -1,0 +1,19 @@
+#-w指定所要监控的文件或命令
+#-p指定监控属性，如x执行、w修改
+#-k是设置一个关键词用于查询
+auditctl -w /bin/rm -p x -k removefile  
+auditctl -w /bin/ls -p x -k lsfile  
+
+
+#监控文件的增删改查
+auditctl -w /bin/ls -p x -k opfile
+
+
+#监控网络连接
+auditctl -a always,exit -F arch=b64 -S socket
+auditctl -a always,exit -F arch=b64 -S connect
+auditctl -a always,exit -F arch=b64 -S sendmmsg
+auditctl -a always,exit -F arch=b64 -S sendmsg
+auditctl -a always,exit -F arch=b64 -S bind
+auditctl -a always,exit -F arch=b64 -S recvmsg
+auditctl -a always,exit -F arch=b64 -S close

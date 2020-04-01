@@ -85,6 +85,14 @@ zhichiweixin
 rizhi  shiijanzhuangfa
 
 
+es删除历史数据
+POST app-log/app-log-2016-11/_delete_by_query?conflicts=proceed
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
 export JAVA_HOME=/usr/java/jdk1.8.0_121
 export CLASSPATH=$(echo $CLASSPATH|sed 's/jdk1.6.0_31/jdk1.8.0_121/g')
 export PATH=$(echo $PATH:$HOME/bin:/home/aiuap/tools/apache-ant-1.7.1/bin|sed 's/jdk1.6.0_31/jdk1.8.0_121/g')
@@ -427,5 +435,197 @@ set /ausApp/web/dataprocess/tcp-xml/config.json {"host_Ip":"192.168.90.25","host
 set /ausApp/web/dataprocess/iap_linux_syslog/config.json {"host_Ip":"192.168.90.25","host_User":"lccy","runtime_memory":"2048","main.thread.num":"1","main.bitch.size":"5000","main.alarm.serverip":"127.0.0.1","main.master":"true","main.exception.exit":"false","read.event.general.interface":"com.ai.aus.dataprocess.kafka.GeneralEventFilter","read.characterSet":"utf-8","read.zookeeper.sync.time.ms":"1000","read.consumer.timeout.ms":"30000","read.group.id":"linuxsyslog","read.topic":"linuxsyslog","source.replication-factor":"1","source.partition":"1"}
 
 
-project = SSSIA AND issuetype = 故障 AND status in (Open, 已上线, 已发布, 待发布, 待测试, 测试中, 定位中, 待修复, 故障修复中) AND assignee in (wangsz, tanrq, rensy, chenxiang5, chendd, sunqc5, zhangjk, lizp, lusm, jingll)
+project = SSSIA AND issuetype = 故障 AND status in (Open, 已上线, 已发布, 待发布, 待测试, 测试中, 定位中, 待修复, 故障修复中) AND assignee in (wangsz, tanrq, rensy, chenxiang5, chendd, sunqc5, zhangjk, lizp, lusm, jingll,zhanghy18)
 sed -i 's/http:\/\/.*\/iap/http:\/\/10.1.198.53:9030\/iap/g' `find local config -type f|xargs grep '"IAP'|awk -F: '{print $1}'`
+
+
+for i in 268 273 264 228 229 231 265 266 267 269 270 271 272 274 275 276 277 100040 100300 999999 ; do sed "s/ORGID/$i/g" orgid.sql >> qqqqqqq.sql; done
+
+for i in 201908 201909 201910 201911 201912 ; do sed "s/YYYYMM/$i/g" qqqqqqq.sql >> xxxx.sql; done
+#linux合并行
+sed ':a;N;$!ba;s/\n//g'  acct.txt 
+sed '/^<LOG4A>$/{:a;N;/<\/LOG4A>/!ba;s/\n//g}' BOSS111_4.XML 
+#按照标签拆分行
+sed ':a;N;$!ba;s/<\/\([0-9a-zA-Z_]*\)>/<\/\1>\n/g' BOMC_Audit_2019-11-13-23-00.xml
+
+grep -E '<.*>.*<.*>' BOSS30_1.XML  |awk -F '<|>' '{print $2" "$3}' > testdata
+grep -E '<.*>.*<.*>' BOSS30_1.XML  |awk -F '<|>' -v OFS='|' '{print $2,$3}' > testdata
+./pulsar-admin topics peek-messages -s hah -n 100 persistent://test/test/boss-ftp-flume-app|grep 'fileName'|awk '!a[$0]++{print}'
+./pulsar-admin topics peek-messages -s hah -n 100 persistent://test/test/boss-ftp-flume-app|grep 'fileName'|awk '{a[$0]++}END{for(i in a){print i}}'
+#windows获取cpu序列号
+wmic cpu get processorid
+#linux挂载iso镜像
+mount -o loop ubuntu-18.04.2-live-server-amd64.iso /mnt/
+
+
+Downloading: http://nexus.pentaho.org/content/groups/omni/pentaho/pentaho-big-data-plugin/8.0.0.0-28/pentaho-big-data-plugin-8.0.0.0-28.zip
+
+mvn install:install-file -DgroupId=pentaho -DartifactId=pentaho-big-data-plugin -Dversion=8.0.0.0-28 -Dpackaging=zip -Dfile=pentaho-big-data-plugin-8.0.0.0-28.zip
+
+Downloading: http://nexus.pentaho.org/content/groups/omni/pentaho/pentaho-karaf-assembly/8.0.0.0-28/pentaho-karaf-assembly-8.0.0.0-28-client.zip
+
+mvn install:install-file -DgroupId=pentaho -DartifactId=pentaho-karaf-assembly -Dversion=8.0.0.0-28 -Dclassifier=client -Dpackaging=zip -Dfile=pentaho-karaf-assembly-8.0.0.0-28-client.zip
+
+
+jdbc-16.jar
+
+mvn install:install-file -Dfile=jdbc-16.jar -DgroupId=com.dameng -DartifactId=jdbc -Dversion=16 -Dpackaging=jar
+mvn package -Dmaven.test.skip=true
+mvn install:install-file -Dfile=3des.jar -DgroupId=com.asiainfo -DartifactId=3des -Dversion=1.1 -Dpackaging=jar
+
+#linux远程执行命令
+expect -c "
+spawn ssh aiiap@10.21.171.47  ls
+expect {
+    \"*assword:\" 
+                {
+                    set timeout 300; 
+                    send \"aiiap\r\";
+                }
+				}
+expect eof"
+
+
+expect -c "
+spawn ssh aiiap@10.21.171.47  ls
+expect \"*assword:\" {set timeout 300;  send \"aiiap\r\";}
+expect eof"
+
+# 查询命令所在的安装包
+yum search netstat
+#对数据的时间统一改造
+update iap_ori_dev_session_cmd_201911 t set t.ori_create_time = t.ori_create_time - rownum*5/1440
+#标准化日志报错去重
+grep ERROR err.log |awk '{a[$5]=$0}END{for(i in a){print a[i]}}'|sort
+
+#oracle导入dmp文件
+imp audit30testa/audit30testa#@iap file = ori_cmd_201911.dmp log = ori_cmd_201911.log full = y
+
+cd /opt/pulsar/pulsar-2.4.0/bin/
+./pulsar-client consume -s hah persistent://test/test/boss-ftp-flume-app
+./pulsar-client consume -s hah persistent://test/test/boss-ftp-ori-app
+./pulsar-client consume -s hah persistent://test/test/boss-ftp-errlog-app
+./pulsar-client consume -s hah persistent://test/test/boss-ftp-exception-app
+./pulsar-client produce -m asdasdfasdf persistent://test/test/boss-ftp-flume-app
+./pulsar-admin topics stats-internal persistent://test/test/boss-ftp-flume-app
+./pulsar-admin topics delete persistent://test/test/boss-ftp-flume-app
+./pulsar-admin topics create persistent://test/test/boss-ftp-ori-app
+./pulsar-admin topics create persistent://test/test/boss-ftp-errlog-app
+./pulsar-admin topics create persistent://test/test/boss-ftp-exception-app
+iconv -f utf-8 -t gb2312 /server_test/reports/software_.txt > /server_test/reports/software_asserts.txt
+./pulsar-admin persistent stats persistent://test/test/boss-ftp-ori-app
+./pulsar-admin persistent stats persistent://test/test/boss-ftp-flume-app
+./pulsar-admin topics stats persistent://test/test/boss-ftp-ori-app
+./pulsar-admin topics stats persistent://test/test/boss-ftp-errlog-app
+./pulsar-admin topics stats persistent://test/test/boss-ftp-exception-app
+./pulsar-admin topics peek-messages -s hah -n 100 persistent://test/test/boss-ftp-flume-app|grep 'fileName'
+
+
+./pulsar-admin topics create persistent://test/test/boss-ftp-flume-boss
+./pulsar-admin topics create persistent://test/test/boss-ftp-ori-boss-log
+./pulsar-admin topics create persistent://test/test/boss-ftp-ori-boss-errlog
+./pulsar-admin topics create persistent://test/test/boss-ftp-ori-boss-exception
+./pulsar-admin topics create persistent://test/test/boss-ftp-mysql-boss-errlog
+./pulsar-admin topics create persistent://test/test/boss-ftp-mysql-boss-exception
+
+
+
+
+./pulsar-daemon stop broker
+./pulsar-daemon start broker
+
+bin/pulsar-admin functions create \
+--jar test/xml-parse-function-1.0-SNAPSHOT-jar-with-dependencies.jar \
+--classname com.asiainfo.dap.XmlParseFunction \
+--inputs persistent://test/test/boss-ftp-flume-boss \
+--output persistent://test/test/boss-ftp-ori-boss-log \
+--user-config '{"errorTopic":"persistent://test/test/boss-ftp-ori-boss-errlog","exceptionTopic":"persistent://test/test/boss-ftp-ori-boss-exception","record-tag-name":"LOG4A"}' \
+--tenant test \
+--namespace test \
+--name xml-parse \
+--processing-guarantees EFFECTIVELY_ONCE \
+--cpu 4 \
+--ram 1073741824 \
+--disk 68719476736 \
+--parallelism 1
+
+
+bin/pulsar-admin functions update \
+--jar test/xml-parse-function-1.0-SNAPSHOT-jar-with-dependencies.jar \
+--classname com.asiainfo.dap.XmlParseFunction \
+--inputs persistent://test/test/boss-ftp-flume-boss \
+--output persistent://test/test/boss-ftp-ori-boss-log \
+--user-config '{"errorTopic":"persistent://test/test/boss-ftp-ori-boss-errlog","exceptionTopic":"persistent://test/test/boss-ftp-ori-boss-exception","record-tag-name":"LOG4A"}' \
+--tenant test \
+--namespace test \
+--name xml-parse \
+--processing-guarantees EFFECTIVELY_ONCE \
+--cpu 4 \
+--ram 1073741824 \
+--disk 68719476736 \
+--parallelism 6
+
+
+bin/pulsar-admin sinks create \
+--classname com.asiainfo.dap.JdbcAutoSchemaSink \
+--archive test/pulsar-mysql-sink-2.4.0.nar \
+--inputs persistent://test/test/boss-ftp-ori-boss-log \
+--tenant test \
+--namespace test \
+--name test-mysql-sink \
+--sink-config-file test/conf/pulsar-mysql-sink/pulsar-mysql-sink-two.yaml \
+--cpu 1 \
+--ram 2147483648 \
+--disk 25769803776 \
+--parallelism 1
+
+./pulsar-admin functions delete --name xml-parse --tenant test --namespace test
+./pulsar-admin sinks delete --name test-mysql-sink --tenant test --namespace test
+
+
+
+
+
+cd /data/ &&
+cat /etc/redhat-release &&
+echo '---------------------------------------------------------------' &&
+cat /proc/version &&
+echo '---------------------------------------------------------------' &&
+awk -F: '{a[$1]=$0}END{for(i in a){print a[i]}}' /proc/cpuinfo |grep -E 'processor|model name' &&
+echo '---------------------------------------------------------------' &&
+free -g &&
+echo '---------------------------------------------------------------' &&
+dd if=/dev/zero bs=1024 count=1000000 of=1Gb.file &&
+echo '---------------------------------------------------------------' &&
+dd if=1Gb.file bs=64k |dd of=/dev/null &&
+echo '---------------------------------------------------------------' &&
+rm -f 1Gb.file &&
+ping 10.21.171.60 -c 10|tail -n 1
+echo '---------------------------------------------------------------' &&
+iperf -c 10.21.171.60
+
+
+
+
+sed -i 's/audit30dev1/audit30testa/g' `find . -type f |grep .ktr`
+sed -i 's/Encrypted 2be98afc86ac68780a20dfd20da97b98b/Encrypted 2be98afa91fc39b90f849ba75cd86ae99/g' `find . -type f |grep .ktr`
+sed -i 's/10.15.42.37/10.21.171.220/g' `find . -type f |grep .ktr`
+sed -i 's/10.15.42.37/10.21.171.220/g' `find . -type f |grep -E 'c3p0.properties|business.properties|application.yml'`
+
+mysqldump -u iap -h 127.0.0.1 -p --databases iap iap_dev > backdb.sql
+mysql -u iap -p  < backdb.sql
+
+select * from information_schema.columns where table_schema='iap' and column_comment <>''
+
+select distinct COLUMN_NAME,column_comment  from information_schema.columns where table_schema='iap' and column_comment <>'' ORDER BY COLUMN_NAME
+
+select CONCAT('alter table ',TABLE_NAME,' modify column ',COLUMN_NAME,' int comment ','\'\';') from information_schema.columns where table_schema='iap' and column_comment ='' order by COLUMN_NAME
+
+select CONCAT('alter table ',TABLE_NAME,' modify column ',COLUMN_NAME,' int comment ','\'\';') from information_schema.columns where table_schema='iap' and column_comment ='' and TABLE_NAME not like '%20%' and TABLE_NAME not like '%yyyymm%' order by COLUMN_NAME
+
+select CONCAT('alter table ',TABLE_NAME,' modify column ',COLUMN_NAME,' int comment ','\'\';') from information_schema.columns where table_schema='iap' and column_comment ='' and TABLE_NAME  like '%202001%' order by COLUMN_NAME
+
+
+select count(*) from information_schema.columns where table_schema='iap' and column_comment ='' and TABLE_NAME not like '%20%';
+select count(*) from information_schema.columns where table_schema='iap' and column_comment ='' and TABLE_NAME  like '%202001%';
+alter table test1 modify column field_name int comment '修改后的字段注释';

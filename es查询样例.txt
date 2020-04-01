@@ -1,4 +1,4 @@
-GET app-log/_search
+﻿GET app-log/_search
 {
   "size":0,
   "aggs": {
@@ -259,3 +259,11 @@ GET app-log-v1/_search
 
 查询主机的索引
 curl -XGET http://10.1.245.55:8990/_cat/indices
+
+es删除历史数据
+POST app-log/app-log-2016-11/_delete_by_query?conflicts=proceed
+{
+  "query": {
+    "match_all": {}
+  }
+}
