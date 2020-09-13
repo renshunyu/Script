@@ -1,5 +1,5 @@
 #!/bin/sh
-buildhome=/home/aiuap/svnproject/aisiac01/program/builddir
+buildhome=/home/aiuap/svnproject/aisiac01/programrm/builddirrm
 deployhome=/home/aiiap/standardize
 
 cd $buildhome/dap/$1/target

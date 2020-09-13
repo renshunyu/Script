@@ -6,9 +6,9 @@
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
         <hudson.model.StringParameterDefinition>
-          <name>VER</name>
+          <name>EDT</name>
           <description>最近一个发布的版本</description>
-          <defaultValue>aisiav04r09c00_20190905</defaultValue>
+          <defaultValue>aisiacv01r00c02_20200413</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
@@ -16,8 +16,7 @@
           <description/>
           <choices class="java.util.Arrays$ArrayList">
             <a class="string-array">
-              <string>rensy@asiainfo-sec.com</string>
-              <string>rensy@asiainfo-sec.com,zhangjy11@asiainfo-sec.com,yanglw3@asiainfo-sec.com,cc:ninggx@asiainfo-sec.com,cc:lusm@asiainfo-sec.com,cc:hejt@asiainfo-sec.com</string>
+              <string>sunqc5@asiainfo-sec.com</string>
             </a>
           </choices>
         </hudson.model.ChoiceParameterDefinition>
@@ -33,7 +32,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>sh /home/aiuap/autobuild/fbissue/compare2html.sh ${VER}</command>
+      <command>sh /home/aiuap/autobuild/cfbissue/compare2html.sh ${EDT}</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
@@ -73,11 +72,9 @@
       <defaultSubject>核对release和program的提交记录</defaultSubject>
       <defaultContent>hi：
 
-          附件是release版本和program的版本对比，请核对有无预期之外的提交！
-          也可通过下面链接查看：
-       http://10.1.198.53:9081/jenkins/view/%E5%B0%81%E7%89%88%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83%E6%B5%81%E7%A8%8B/job/2%E3%80%81%E3%80%90%E5%B0%81%E7%89%88%E3%80%91%E5%AF%B9%E6%AF%94%E6%8C%87%E5%AE%9A%E7%89%88%E6%9C%ACprogram%E5%92%8Crelease%E7%9A%84%E6%8F%90%E4%BA%A4%E8%AE%B0%E5%BD%95/HTML_20Report/
-
-</defaultContent>
+        附件是release版本和program的版本对比，请核对有无预期之外的提交！
+也可点击下面链接查看，
+      http://10.1.198.53:9081/jenkins/view/%E9%9B%86%E4%B8%AD%E5%8C%96%E5%B0%81%E6%9D%BF%E5%8F%91%E5%B8%83%E6%B5%81%E7%A8%8B/job/2%E3%80%81%E5%AF%B9%E6%AF%94%E9%9B%86%E4%B8%AD%E5%8C%96%E6%8C%87%E5%AE%9A%E7%89%88%E6%9C%ACprogram%E5%92%8Crelease%E7%9A%84%E6%8F%90%E4%BA%A4%E8%AE%B0%E5%BD%95/HTML_20Report/</defaultContent>
       <attachmentsPattern/>
       <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
       <postsendScript>$DEFAULT_POSTSEND_SCRIPT</postsendScript>

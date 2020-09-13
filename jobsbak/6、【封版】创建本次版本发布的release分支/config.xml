@@ -9,13 +9,13 @@
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description></description>
-          <defaultValue>aisiav04r09c00_20190905</defaultValue>
+          <defaultValue>aisiav01r03c00_20200703</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>VERNUM</name>
           <description></description>
-          <defaultValue>v04r09c00</defaultValue>
+          <defaultValue>v01r03c00</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
@@ -130,6 +130,16 @@ PJ=realtime_standardize_server &amp;&amp; svn cp -m &quot;create branch&quot; ht
 PJ=ap_gather_server &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
 #特殊绕行日志采集服务
 PJ=ap_gather_syslog &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
+#绕行审计
+PJ=filecollector &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
+#外挂识别
+PJ=SSA_analyze_dbscan &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
+#帐号时事同步接口
+PJ=acct_realtime_sync_interface &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
+#BOMC内审接口改造
+PJ=AuditInernalService &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
+#审计自监控
+PJ=grafana_template &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
 
 fi
 

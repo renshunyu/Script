@@ -16,7 +16,7 @@
       <command>sh /home/aiuap/autobuildaisiac01/dap_build.sh persistence/pulsar-es-sink</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
-      <command>sh /home/aiuap/autobuildaisiac01/persistence-es_deploy.sh  persistence/pulsar-mysql-sink</command>
+      <command>sh /home/aiuap/autobuildaisiac01/persistence-es_deploy.sh  persistence/pulsar-es-sink</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

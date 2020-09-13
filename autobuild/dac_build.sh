@@ -30,6 +30,9 @@ cd $buildhome/kettle
 if [ -d ./kettle_client/workflow ]
 then
   cd ./kettle_client/workflow
+  npm cache clean --force
+  #rm '~/.node-gyp' -fr
+  npm config set registry https://registry.npm.taobao.org
   npm install
   result=$?
   if [ $result != '0' ]

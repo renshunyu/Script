@@ -8,13 +8,13 @@
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description>本次发布的版本号例如：aisiav04r04c02_20180509</description>
-          <defaultValue>aisiav04r09c00_20190905</defaultValue>
+          <defaultValue>aisiav05r00c00_20200831</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>PATCHNAME</name>
           <description/>
-          <defaultValue>移动总部审计权限范围分配无法保存历史范围_202003281500</defaultValue>
+          <defaultValue>审计前台structs漏洞CVE20190230安全问题修复_202008160000</defaultValue>
           <trim>true</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>

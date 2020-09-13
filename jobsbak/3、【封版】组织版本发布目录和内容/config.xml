@@ -9,7 +9,7 @@
         <hudson.model.StringParameterDefinition>
           <name>MVER</name>
           <description>本次发布的版本号例如：v04r04c03</description>
-          <defaultValue>v04r09c00</defaultValue>
+          <defaultValue>v01r03c00</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
@@ -40,7 +40,7 @@
               <textParamValueOnNewLine>false</textParamValueOnNewLine>
             </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
           </configs>
-          <projects>ap_gather_serverrmpackage,ap_standardize_serverrmpackage,ap_validate_serverrmpackage,auditManagementrmpackage,data-monitorrmpackage,data-reportingrmpackage,data-upload-toolsrmpackage,dbscriptrmpackage,docrmpackage,elasticandkibanarmpackage,eureka-serverrmpackage,GFortrmpackage,iap_device_date_auditrmpackage,iap_serverrmpackage,iap_smp_webservicermpackage,iap_solr_dataimportrmpackage,iap_synrmpackage,iap_workflowrmpackage,iaprmpackage,jdbc2esrmpackage,report_execute_enginermpackage,reportcrmpackage,reportsrmpackage,jasypt-toolrmpackage,average_strategy_execute_enginermpackage,azkabanrmpackage,dacrmpackage,data_integrationrmpackage,azkabanrmpackage,DAC_Scriptrmpackage,data_integrationrmpackage,iap_ausrmpackageiap,dacrmpackage,hiveloaderrmpackage,realtime_standardize_serverrmpackage</projects>
+          <projects>ap_gather_serverrmpackage,ap_standardize_serverrmpackage,ap_validate_serverrmpackage,auditManagementrmpackage,data-monitorrmpackage,data-reportingrmpackage,data-upload-toolsrmpackage,dbscriptrmpackage,docrmpackage,elasticandkibanarmpackage,eureka-serverrmpackage,GFortrmpackage,iap_device_date_auditrmpackage,iap_serverrmpackage,iap_smp_webservicermpackage,iap_solr_dataimportrmpackage,iap_synrmpackage,iap_workflowrmpackage,iaprmpackage,jdbc2esrmpackage,report_execute_enginermpackage,reportcrmpackage,reportsrmpackage,jasypt-toolrmpackage,average_strategy_execute_enginermpackage,azkabanrmpackage,dacrmpackage,data_integrationrmpackage,azkabanrmpackage,DAC_Scriptrmpackage,data_integrationrmpackage,iap_ausrmpackageiap,dacrmpackage,hiveloaderrmpackage,realtime_standardize_serverrmpackage,SSA_analyze_dbscanrmpackage,filecollectorrmpackage,acct_realtime_sync_interfacermpackage,AuditInernalServicermpackage</projects>
           <condition>SUCCESS</condition>
           <triggerWithNoParameters>false</triggerWithNoParameters>
           <triggerFromChildProjects>false</triggerFromChildProjects>

@@ -1,5 +1,5 @@
 #!/bin/sh
-buildhome=/home/aiuap/svnproject/aisiac01/program/builddir
+buildhome=/home/aiuap/svnproject/aisiac01/programrm/builddirrm
 
 #sudo su - aiuap30 -c "cp $buildhome/dap/$1/target/*.jar $deployhome"
 #sudo su - aiuap30 -c "cp $buildhome/dap/$1/libs/*.jar $deployhome"

@@ -1,44 +1,17 @@
 <?xml version='1.1' encoding='UTF-8'?>
-<project>
-  <actions/>
+<flow-definition plugin="workflow-job@2.10">
   <description></description>
   <keepDependencies>false</keepDependencies>
-  <properties/>
-  <scm class="hudson.scm.NullSCM"/>
-  <canRoam>true</canRoam>
-  <disabled>false</disabled>
-  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
-  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <properties>
+    <org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+      <triggers/>
+    </org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.29">
+    <script>node {
+   echo &apos;Hello World&apos;
+}</script>
+    <sandbox>true</sandbox>
+  </definition>
   <triggers/>
-  <concurrentBuild>false</concurrentBuild>
-  <builders>
-    <hudson.tasks.Maven>
-      <targets>compile findbugs:findbugs site</targets>
-      <mavenName>(Default)</mavenName>
-      <pom>/home/aiuap/rensy/ap_validate_server/pom.xml</pom>
-      <properties>maven.test.skip=true</properties>
-      <usePrivateRepository>false</usePrivateRepository>
-      <settings class="jenkins.mvn.DefaultSettingsProvider"/>
-      <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
-      <injectBuildVariables>false</injectBuildVariables>
-    </hudson.tasks.Maven>
-    <hudson.tasks.Shell>
-      <command>#cp -r /home/aiuap/rensy/ap_validate_server/target/site /home/aiuap/.jenkins/workspace/test/
-#cp -r /home/aiuap/rensy/ap_validate_server/target/findbugs* /home/aiuap/.jenkins/workspace/test/
-#for i in {1..49}; do echo -e &quot;\e[${i}masdfad\e[0m&quot;; done 
-echo 哈哈哈哈哈哈</command>
-    </hudson.tasks.Shell>
-  </builders>
-  <publishers>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>iap</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
-  </publishers>
-  <buildWrappers/>
-</project>
+</flow-definition>

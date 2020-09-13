@@ -2,7 +2,7 @@
 
 result=$?
 cd /home/aiuap/autobuild/db_deploy/
-sqlplus audit30testd/audit30testd#@10.15.42.37:1521/iap << EOF
+sqlplus audit30testd/audit30testd#@10.21.171.220:1521/iap << EOF
 set pages 0
 set feed off 
 set heading off 
@@ -20,14 +20,14 @@ exit
 EOF
 sed -i 1d temp.sql
 sed -i '/SQL>/'d temp.sql
-sqlplus audit30testd/audit30testd#@10.15.42.37:1521/iap >dropTable.log<< EOF
+sqlplus audit30testd/audit30testd#@10.21.171.220:1521/iap >dropTable.log<< EOF
 @/home/aiuap/autobuild/db_deploy/temp.sql
 exit
 EOF
 grep "IAP_POLICY_LOG_BASE" /home/aiuap/autobuild/db_deploy/dropTable.log>1.log
 if [ $result == 0 ]
 then
-sqlplus audit30testd/audit30testd#@10.15.42.37:1521/iap<< EOF
+sqlplus audit30testd/audit30testd#@10.21.171.220:1521/iap<< EOF
 drop table IAP_POLICY_LOG_BASE;
 exit
 EOF

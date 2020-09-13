@@ -1,0 +1,38 @@
+#!bin/sh
+export JAVA_HOME=/usr/java/jdk1.8.0_121
+export M2_HOME=/usr/java/apache-maven-3.2.5
+export PATH=$M2_HOME/bin:$JAVA_HOME/bin:$PATH
+svnhome=/home/aiuap/svnproject/program30/program/SSA_analyze_dbscan
+buildhome=/home/aiuap/svnproject/program30/builddir
+svn up $svnhome
+result=$?
+if [ $result != '0' ]
+then
+  echo "∏¸–¬svnƒø¬º¥ÌŒÛ"
+  exit 1
+fi
+rm -rf $buildhome/filecollector
+if [ $result != '0' ]
+then
+  echo "…æ≥˝±‡“Îƒø¬º¥ÌŒÛ"
+  exit 1
+fi
+cp -rf $svnhome $buildhome/SSA_analyze_dbscan
+result=$?
+if [ $result != '0' ]
+then
+  echo "øΩ±¥ƒø¬º¥ÌŒÛ"
+  exit 1
+fi
+cd $buildhome/SSA_analyze_dbscan
+
+mvn clean package -Dmaven.test.skip=true >./build.log
+
+#ant release >./build.log
+result=`cat build.log|grep -i "BUILD SUCCESS"|wc -l`
+if [ $result != '1' ]
+then
+  echo "±‡“Î±®¥Ì"
+  exit 1
+fi
+echo "±‡“Î≥…π¶"

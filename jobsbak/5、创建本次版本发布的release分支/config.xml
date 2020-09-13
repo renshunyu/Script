@@ -9,7 +9,7 @@
         <hudson.model.StringParameterDefinition>
           <name>ISSUEVERSION</name>
           <description>本次发布的版本号例如：aisiav04r04c02_20180509</description>
-          <defaultValue>aisiav04r08c00_20190804</defaultValue>
+          <defaultValue>aisiav05r00c00_20200831</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
@@ -120,6 +120,18 @@ PJ=ap_gather_syslog &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.1
 PJ=&apos;hiveloader&apos; &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/iap_aus/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 #均值分析
 PJ=&apos;average_strategy_execute_engine&apos; &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+#主机绕行审计
+PJ=filecollector &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+#外挂识别
+PJ=SSA_analyze_dbscan &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+#加密工具
+PJ=&apos;jasypt-tool&apos; &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+#帐号实时同步接口
+PJ=acct_realtime_sync_interface &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+#BOMC内审接口
+PJ=AuditInernalService &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
+#审计自监控配置
+PJ=grafana_template &amp;&amp; svn cp -m &quot;create branch&quot; http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$ISSUEVERSION/$PJ
 
 fi</command>
     </hudson.tasks.Shell>

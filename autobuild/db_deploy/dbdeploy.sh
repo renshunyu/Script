@@ -14,7 +14,7 @@ sed -i '/\/\*/'d 05_audita_基础数据.sql
 sed -i '/\/\*/'d 06_audita_view.sql
 sed -i '/\/\*/'d 08_audita_sequence.sql
 sed -i '/\/\*/'d iap_app_operate_type.sql
-sqlplus audit30testd/audit30testd#@10.15.42.37:1521/iap >/home/aiuap/autobuild/db_deploy/dbdeploy.log << EOF
+sqlplus audit30testd/audit30testd#@10.21.171.220:1521/iap >/home/aiuap/autobuild/db_deploy/dbdeploy.log << EOF
 @01_audita_普通表（3.0-3.5）.sql
 @02_audita_month_table.sql
 @03_audita_month_table_partition.sql
@@ -29,7 +29,7 @@ EOF
 cd $buildhome/rsd/oracle/全量
 sed -i '/\/\*/'d 01-基础表.sql
 sed -i '/\/\*/'d 08_audita_sequence.sql
-sqlplus audit30testd/audit30testd#@10.15.42.37:1521/iap >>/home/aiuap/autobuild/db_deploy/dbdeploy.log << EOF
+sqlplus audit30testd/audit30testd#@10.21.171.220:1521/iap >>/home/aiuap/autobuild/db_deploy/dbdeploy.log << EOF
 @01-基础表.sql
 @08_audita_sequence.sql
 exit

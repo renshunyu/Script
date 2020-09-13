@@ -41,8 +41,8 @@ then
   exit 1
 fi
 sudo su - aiuap30 -c "cd $deployhome/ && tar -zxvf azkaban-0.1.0-SNAPSHOT.tar.gz  && rm azkaban-0.1.0-SNAPSHOT.tar.gz "
-sudo su - aiuap30 -c "cd $deployhome/azkaban-0.1.0-SNAPSHOT && tar -zxvf azkaban-exec-server-0.1.0-SNAPSHOT.tar.gz  && rm azkaban-exec-server-0.1.0-SNAPSHOT.tar.gz"
-sudo su - aiuap30 -c "cd $deployhome/azkaban-0.1.0-SNAPSHOT && tar -zxvf azkaban-web-server-0.1.0-SNAPSHOT.tar.gz  && rm azkaban-web-server-0.1.0-SNAPSHOT.tar.gz"
+sudo su - aiuap30 -c "cd $deployhome/azkaban-0.1.0-SNAPSHOT && tar -zxvf azkaban-exec-server-0.1.0-SNAPSHOT.tar.gz"
+sudo su - aiuap30 -c "cd $deployhome/azkaban-0.1.0-SNAPSHOT && tar -zxvf azkaban-web-server-0.1.0-SNAPSHOT.tar.gz"
 result=$?
 if [ $result != '0' ]
 then
@@ -56,7 +56,9 @@ then
   echo "拷贝配置文件错误"
   exit 1    
 fi
-sudo su - aiuap30 -c "cd $deployhome/azkaban-0.1.0-SNAPSHOT/azkaban-exec-server-0.1.0-SNAPSHOT/bin && nohup sh azkaban-executor-start.sh &"  
-sudo su - aiuap30 -c "cd $deployhome/azkaban-0.1.0-SNAPSHOT/azkaban-web-server-0.1.0-SNAPSHOT/bin && nohup sh azkaban-web-start.sh &"        
+sudo su - aiuap30 -c "cd $deployhome/azkaban-0.1.0-SNAPSHOT/azkaban-exec-server-0.1.0-SNAPSHOT/bin && nohup sh azkaban-executor-start.sh &" 
+sleep 5 
+sudo su - aiuap30 -c "cd $deployhome/azkaban-0.1.0-SNAPSHOT/azkaban-web-server-0.1.0-SNAPSHOT/bin && nohup sh azkaban-web-start.sh &"
+sleep 5
 echo "dac项目已经部署成功"
 exit 0

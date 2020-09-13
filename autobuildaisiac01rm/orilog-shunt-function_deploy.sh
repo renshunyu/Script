@@ -1,5 +1,5 @@
 #!/bin/sh
-buildhome=/home/aiuap/svnproject/aisiac01/program/builddir
+buildhome=/home/aiuap/svnproject/aisiac01/programrm/builddirrm
 deployhome=/opt/pulsar/pulsar-2.4.0/test
 
 cd $buildhome/dap/$1/orilog-shunt-function/target

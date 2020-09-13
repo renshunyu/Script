@@ -5,7 +5,7 @@ deployhome=/home/aiiap/standardize
 cd $buildhome/dap/$1/target
 #echo 'open 10.1.198.60
 echo 'open 10.21.171.59
-user pulsar pulsar
+user pulsar 1qaz!QAZ
 cd /opt/pulsar/pulsar-2.4.0/connectors
 bin
 prompt

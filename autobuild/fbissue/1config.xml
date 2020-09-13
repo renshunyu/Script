@@ -8,7 +8,7 @@
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description/>
-          <defaultValue>v04r09c00</defaultValue>
+          <defaultValue>v01r03c00</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
@@ -117,6 +117,8 @@ PJ=iap_device_date_audit &amp;&amp; svn cp -m "create branch" http://10.1.198.30
 PJ=iap_aus &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VER/$PJ
 #标准化服务
 PJ=ap_standardize_server &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VER/$PJ
+#基础数据变更接口
+PJ=realtime_standardize_server &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VER/$PJ
 #采集服务
 PJ=ap_gather_server &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/program/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VER/$PJ
 #特殊绕行日志采集服务

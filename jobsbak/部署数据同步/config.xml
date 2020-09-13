@@ -13,19 +13,10 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>sh /home/aiuap/autobuildaisiac01/dap_build.sh standardize</command>
-    </hudson.tasks.Shell>
-    <hudson.tasks.Shell>
-      <command>sh /home/aiuap/autobuildaisiac01/data_syn_mysql_build.sh</command>
-    </hudson.tasks.Shell>
-    <hudson.tasks.Shell>
-      <command>sh /home/aiuap/autobuildaisiac01/data_syn_mysql_deploy.sh standardize/cache-server</command>
+      <command>sh /home/aiuap/autobuildaisiac01/dap_build.sh standardize/data_syn_mysql</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>sh /home/aiuap/autobuildaisiac01/data_syn_mysql_deploy.sh standardize/data_syn_mysql</command>
-    </hudson.tasks.Shell>
-    <hudson.tasks.Shell>
-      <command>sh /home/aiuap/autobuildaisiac01/uap_gather_mysql_deploy.sh standardize/Uap_Gather_Mysql</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

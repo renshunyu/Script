@@ -8,13 +8,13 @@
         <hudson.model.StringParameterDefinition>
           <name>VER</name>
           <description/>
-          <defaultValue>aisiav04r09c00_20190905</defaultValue>
+          <defaultValue>aisiav01r03c00_20200703</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>VERNUM</name>
           <description/>
-          <defaultValue>v04r09c00</defaultValue>
+          <defaultValue>v01r03c00</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
@@ -82,6 +82,18 @@ PJ='multiDatasource' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn
 #日志组件
 PJ='auditInfoLog' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ  http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
 
+#kettle工具
+PJ='data_integration' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
+#hdfs导入hive
+PJ='hiveloader' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
+#dac脚本
+PJ='DAC_Script' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
+#均值分析
+PJ='average_strategy_execute_engine' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
+#加密工具
+PJ='jasypt-tool' &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
+
+
 elif [[ $createReleaseBranch = 'SSSSA发布' ]];then
 echo $createReleaseBranch
 
@@ -111,6 +123,8 @@ PJ=iap_device_date_audit &amp;&amp; svn cp -m "create branch" http://10.1.198.30
 PJ=iap_aus &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
 #标准化服务
 PJ=ap_standardize_server &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
+#基础数据变更接口
+PJ=realtime_standardize_server &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
 #采集服务
 PJ=ap_gather_server &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/programrm/$VERNUM/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/ailkiap30/release/$VER/$PJ
 #特殊绕行日志采集服务

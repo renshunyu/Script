@@ -1,0 +1,66 @@
+<?xml version="1.1" encoding="UTF-8"?><project>
+  <actions/>
+  <description/>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>EDT</name>
+          <description/>
+          <defaultValue>v01r03c00</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>createRmBranch</name>
+          <description/>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>只更新后续步骤的参数</string>
+              <string>创建rm封版目录</string>
+              <string>AISIAC封版</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>if [[ $createRmBranch = '创建rm封版目录' ]];then
+echo $createRmBranch
+svn mkdir http://10.1.198.30/svn/UAPPROGRAM/products/aisiac01/programrm/$EDT -m "$EDT版本封版"
+elif [[ $createRmBranch = 'AISIAC封版' ]];then
+echo $createRmBranch
+#采集 
+PJ=gather &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/aisiac01/program/dap/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/aisiac01/programrm/$EDT/$PJ
+#解析
+PJ=parser &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/aisiac01/program/dap/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/aisiac01/programrm/$EDT/$PJ
+#数据持久化
+PJ=persistence &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/aisiac01/program/dap/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/aisiac01/programrm/$EDT/$PJ
+#标准化
+PJ=standardize &amp;&amp; svn cp -m "create branch" http://10.1.198.30/svn/UAPPROGRAM/products/aisiac01/program/dap/$PJ http://10.1.198.30/svn/UAPPROGRAM/products/aisiac01/programrm/$EDT/$PJ
+
+
+
+
+elif [[ $createRmBranch = 'SSSSA封版' ]];then
+echo $createRmBranch
+
+fi
+</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>sh /home/aiuap/autobuild/cfbissue/setp.sh $EDT</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>
