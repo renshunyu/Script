@@ -267,3 +267,841 @@ POST app-log/app-log-2016-11/_delete_by_query?conflicts=proceed
     "match_all": {}
   }
 }
+curl -XPOST http://127.0.0.1:8990/app-log/app-log-2016-11/_delete_by_query?conflicts=proceed -H 'Content-Type: application/json' -d '{"query": {"match_all": {}}}'
+
+
+get app-log-v2/_search
+{
+   "query": {
+       "match_all": {}
+    }
+  
+}
+
+get _cat/indices
+
+PUT /app-log-v2/app-log-2020-05/rensy05126
+ {
+    "subAcctOrgId": null,
+    "isWorkTime": "0",
+    "appImportLevel": null,
+    "clientMac": "04-ed-33-59-a3-cb",
+    "operateTime": "2020-05-11 12:58:25.0",
+    "moduleName": null,
+    "subAcctStatus": null,
+    "isAuthorOthers": "0",
+    "fromProvincesName": null,
+    "actionTypeId": "4",
+    "subAcctTypeId": null,
+    "isWorkDay": "1",
+    "bankFaiedCheckCount": null,
+    "oriGatherTimeDate": "2020-04-09 07:36:50.0",
+    "operateObjectType": null,
+    "clientNetworkAddress": "10.1.56.92,FE80::B846:9CA7:60C3:1B30",
+    "operateResult": "0",
+    "auditTypeName": null,
+    "acctType": "6",
+    "bankIsneed": "1",
+    "subAcctStatusId": null,
+    "clientName": null,
+    "oriCreateTime": null,
+    "level2OrgId": null,
+    "ownPersonName": null,
+    "appMaintainer": null,
+    "ownMainAcctId": null,
+    "operateContent": "主帐号为yx_wangbb的用户登录金库组件管理平台！#[#appcode=AIGOLDBANK#]#",
+    "operateTimeDate": "2020-04-09 19:58:25.0",
+    "taskNo": "",
+    "logId": "05980713-cae2-4389-9004-99d8672f8cfa1586432294025",
+    "roundType": null,
+    "moduleId": null,
+    "goldApprPersonName": null,
+    "auditLevelId": "2",
+    "isLoginByfoura": null,
+    "auditTypeId": null,
+    "personStatusId": "1",
+    "logSource": "UAP",
+    "personAreaId": "2",
+    "mainAcctName": "yx_wangbb",
+    "personOrgName": null,
+    "personDutyName": "工号管理员",
+    "ownMainAcctName": null,
+    "auditSubTypeId": "1",
+    "clientIpSectionName": null,
+    "stdCreateTime": null,
+    "sectionIds": null,
+    "personAreaName": "上海",
+    "personOrgId": "100264",
+    "clientIpSectionId": null,
+    "clientIp": "10.1.56.92",
+    "oriFileRownum": "0",
+    "subAcctOrgName": null,
+    "level2OrgName": null,
+    "stdBeginTimeDate": "2020-04-09 07:38:14.0",
+    "personStatus": "在职",
+    "toProvincesId": null,
+    "auditLevelName": "重要",
+    "bankflag": "",
+    "mainAcctStatus": "正常",
+    "bankLastCheckTime": null,
+    "clientAreaName": null,
+    "objTypeId": "3",
+    "bankApprove": "",
+    "bankSceneName": "应用金库账号访问",
+    "acctTypeName": "合作伙伴",
+    "stdBeginTime": "2020-04-09 07:38:14.0",
+    "domainId": "UAP",
+    "sectionNames": null,
+    "mainAcctId": "10011922",
+    "subAcctName": "10011922",
+    "oriGatherTime": "2020-04-09 07:36:50.0",
+    "auditSubTypeName": "4A系统审计",
+    "subAcctId": null,
+    "fromProvincesId": null,
+    "oriCreateTimeDate": null,
+    "stdCreateTimeDate": null,
+    "appMaintainerId": null,
+    "oriFileName": "1586432294025.dat",
+    "bankApplyType": null,
+    "bankProof": null,
+    "mainAcctStatusId": "0",
+    "bankSceneId": "15060",
+    "serverIpSectionId": null,
+    "objTypeName": "数据表",
+    "isbinding": null,
+    "goldApprMainAcctId": null,
+    "recheckDataId": "21344b98-b725-40df-8a59-814b628b0c8d",
+    "personDutyId": "1",
+    "toProvincesName": null,
+    "clientCpuSerial": "BFEBFBFF000806EC",
+    "operateTypeName": "应用资源访问",
+    "bankLastCheckStatus": null,
+    "subAcctTypeName": null,
+    "serverIpSectionName": null,
+    "operateTypeId": "1-AIUAP-10012",
+    "personName": "王兵兵",
+    "clientAreaId": null,
+    "bankIsopen": "1",
+    "actionTypeName": "修改",
+    "bankLastCheckTimeDate": null,
+    "serverIp": "10.21.171.217"
+  }
+  
+  
+PUT /session-cmd-log-v2/session-cmd-log-2020-05/rensy05061
+{
+    "deviceIp": "10.1.198.96",
+    "isWorkTime": "0",
+    "deviceImportLevel": null,
+    "clientMac": null,
+    "sessionEndTime": null,
+    "subAcctStatus": null,
+    "deviceId": "132437",
+    "sessionEndTimeDate": null,
+    "createTimeDate": null,
+    "actionTypeId": null,
+    "operateSummary": null,
+    "subAcctTypeId": null,
+    "isWorkDay": "1",
+    "action": null,
+    "bankFaiedCheckCount": null,
+    "deviceType": "2",
+    "oriGatherTimeDate": "2020-04-09 08:22:59.0",
+    "dataTypeId": null,
+    "operateObjectType": null,
+    "objTables": null,
+    "isExcute": "1",
+    "logoutTime": null,
+    "operateResult": "0",
+    "auditTypeName": null,
+    "acctType": "6",
+    "cmd": ";s",
+    "sensitivity": null,
+    "bankIsneed": null,
+    "subAcctStatusId": null,
+    "passtype": null,
+    "clientName": null,
+    "oriCreateTime": null,
+    "level2OrgId": null,
+    "logoutTimeDate": null,
+    "cmdId": "fd5b16e8a0a8483aa475d42c6ea62558",
+    "loginTime": "2020-04-09 20:44:01.0",
+    "deviceMaintainer": null,
+    "taskNo": "",
+    "sessionType": null,
+    "bankTriggerType": "",
+    "goldApprPersonName": null,
+    "auditLevelId": null,
+    "auditTypeId": null,
+    "dataTypeName": null,
+    "personStatusId": "1",
+    "logSource": "4AFortLog",
+    "personAreaId": "2",
+    "mainAcctName": "yx_wangbb",
+    "sessionId": "dbb25683cc414b3595c41823227ba56c",
+    "personOrgName": null,
+    "personDutyName": "工号管理员",
+    "auditSubTypeId": null,
+    "clientIpSectionName": null,
+    "retain10": null,
+    "objFiles": null,
+    "stdCreateTime": null,
+    "sectionIds": null,
+    "personAreaName": "上海",
+    "createTime": null,
+    "personOrgId": "100264",
+    "clientIpSectionId": null,
+    "clientIp": "10.1.56.92",
+    "devicePort": "22",
+    "oriFileRownum": "0",
+    "loginTimeDate": "2020-04-09 20:44:01.0",
+    "level2OrgName": null,
+    "stdBeginTimeDate": "2020-04-09 08:23:40.0",
+    "personStatus": "在职",
+    "deviceName": "club-vm-app9",
+    "auditLevelName": null,
+    "bankflag": "",
+    "mainAcctStatus": "正常",
+    "protocol": "SSH2",
+    "bankLastCheckTime": null,
+    "clientAreaName": null,
+    "retain5": null,
+    "retain6": null,
+    "retain7": null,
+    "identityName": null,
+    "retain8": null,
+    "objTypeId": null,
+    "retain9": null,
+    "bankApprove": "",
+    "bankSceneName": null,
+    "acctTypeName": "合作伙伴",
+    "stdBeginTime": "2020-04-09 08:23:40.0",
+    "sectionNames": null,
+    "mainAcctId": "10011922",
+    "subAcctName": "testlcc",
+    "oriGatherTime": "2020-04-09 08:22:59.0",
+    "auditSubTypeName": null,
+    "oriCreateTimeDate": null,
+    "subAcctId": null,
+    "retain1": null,
+    "stdCreateTimeDate": null,
+    "retain2": null,
+    "retain3": null,
+    "retain4": null,
+    "oriFileName": "1586435019655.dat",
+    "bankApplyType": null,
+    "dbInstanceName": null,
+    "dataTypeIds": null,
+    "deviceOsVersion": "RedHatLinux7.3",
+    "content": ";s",
+    "resourceKind": null,
+    "opDirectory": "/home/lcc",
+    "opTimeDate": "2020-05-06 20:44:06.0",
+    "mainAcctStatusId": "0",
+    "bankSceneId": null,
+    "deviceMaintainerId": null,
+    "objTypeName": null,
+    "serverIpSectionId": null,
+    "clientDevicePort": null,
+    "goldApprMainAcctId": null,
+    "recheckDataId": "7d15fbf9-5e12-4e62-9822-5d0369556f44",
+    "personDutyId": "1",
+    "clientCpuSerial": null,
+    "operateTypeName": null,
+    "bankLastCheckStatus": null,
+    "subAcctTypeName": null,
+    "serverIpSectionName": null,
+    "operateTypeId": null,
+    "personName": "王兵兵",
+    "bankIsopen": null,
+    "clientAreaId": null,
+    "cmdSummary": null,
+    "actionTypeName": null,
+    "bankLastCheckTimeDate": null,
+    "opTime": "2020-05-06 20:44:06.0"
+  }
+
+
+
+
+get session-cmd-log-v2/_count
+
+get app-log-v1
+
+
+delete session-cmd-log-v2
+PUT session-cmd-log-v2
+{
+
+	"settings": {
+		"index": {
+			"refresh_interval": "5s",
+			"analysis" : {
+				"analyzer" : {
+					"ik" : {
+						"tokenizer" : "ik_max_word",
+						"filter": [
+							"stemmer"
+						]
+					}
+				}
+			}
+		}
+	},
+	"mappings": {
+		"session-cmd-log-*": {
+			"_all": {
+				"analyzer": "ik",
+				"search_analyzer": "ik",
+				"term_vector": "no",
+				"store": "false"
+			},
+			"properties": {
+
+				"@timestamp": {
+					"include_in_all": false,
+					"type": "date",
+					"format": "yyyy-MM-dd HH:mm:ss.SSSSSS"
+				},
+				"cmdId":    { "type":  "keyword", "include_in_all": false, "null_value": "NULL" },
+				"sessionId":     { "type":  "keyword", "include_in_all": false, "null_value": "NULL" },
+				"cmd":      {
+					"type": "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"content":      {
+					"type": "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"opTime":    { "type":  "date", "include_in_all": false, "format": "yyyy-MM-dd HH:mm:ss.SSSSSS" },
+				"opTimeDate":    { "type":  "date", "include_in_all": false, "format": "yyyy-MM-dd HH:mm:ss.SSSSSS" },
+				"opDirectory":     {
+					"type": "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"isExcute":     { "type":  "keyword", "include_in_all": false, "null_value": "NULL" },
+				"auditLevelId":     { "type":  "keyword", "include_in_all": false, "null_value": "NULL" },
+				"auditLevelName":     { "type":  "keyword", "null_value": "NULL" },
+				"auditTypeId":     { "type":  "keyword", "include_in_all": false, "null_value": "NULL" },
+				"auditTypeName": {
+					"type": "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"actionTypeId":     { "type":  "keyword", "include_in_all": false, "null_value": "NULL" },
+				"actionTypeName":      {
+					"type": "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"objTypeId":      { "type":  "keyword", "include_in_all": false, "null_value": "NULL" },
+				"objTypeName":      {
+					"type": "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"dataTypeId":      { "type":  "keyword", "include_in_all": false, "null_value": "NULL" },
+				"dataTypeName":     { "type":  "keyword", "null_value": "NULL" },
+				"operateTypeId":      {
+					"type":     "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"operateTypeName":      {
+					"type": "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"sensitivity":      { "type":  "keyword", "include_in_all": false, "null_value": "NULL" },
+				"createTime":      { "type":  "date", "include_in_all": false, "format": "yyyy-MM-dd HH:mm:ss.SSSSSS" },
+				"createTimeDate":      { "type":  "date", "include_in_all": false, "format": "yyyy-MM-dd HH:mm:ss.SSSSSS" },
+				"bankApprove":      { "type":  "keyword", "include_in_all": false, "null_value": "NULL" },
+				"bankflag":      { "type":  "keyword", "include_in_all": false, "null_value": "NULL" },
+				"bankIsneed":      { "type":  "keyword", "include_in_all": false, "null_value": "NULL" },
+				"goldApprMainAcctId":      { "type":  "keyword", "include_in_all": false, "null_value": "NULL" },
+				"goldApprPersonName":      {
+					"type": "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"bankIsopen":      { "type":  "keyword", "include_in_all": false, "null_value": "NULL" },
+				"bankSceneId":      { "type":  "keyword", "include_in_all": false, "null_value": "NULL" },
+				"bankSceneName":      {
+					"type": "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"bankApplyType":      { "type":  "keyword", "include_in_all": false, "null_value": "NULL" },
+				"bankLastCheckStatus":      { "type":  "keyword", "include_in_all": false, "null_value": "NULL" },
+				"bankLastCheckTime":      { "type":  "date", "include_in_all": false, "format": "yyyy-MM-dd HH:mm:ss.SSSSSS" },
+				"bankLastCheckTimeDate":      { "type":  "date", "include_in_all": false, "format": "yyyy-MM-dd HH:mm:ss.SSSSSS" },
+				"bankFaiedCheckCount":      { "type":  "keyword", "include_in_all": false, "null_value": "NULL" },
+				"bankTriggerType":      { "type":  "keyword", "include_in_all": false, "null_value": "NULL" },
+				"auditSubTypeId":      { "type":  "keyword", "include_in_all": false, "null_value": "NULL" },
+				"auditSubTypeName":      {
+					"type": "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"operateObjectType":      { "type":  "keyword", "include_in_all": false, "null_value": "NULL" },
+				"stdCreateTime": { "type": "date", "include_in_all": false, "format": "yyyy-MM-dd HH:mm:ss.SSSSSS" },
+				"stdCreateTimeDate": { "type": "date", "include_in_all": false, "format": "yyyy-MM-dd HH:mm:ss.SSSSSS" },
+				"level2OrgId": { "type": "keyword", "include_in_all": false, "null_value": "NULL" },
+				"level2OrgName":      {
+					"type": "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"oriFileName":        {
+					"type": "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"oriFileRownum":      { "type":  "keyword", "include_in_all": false, "null_value": "NULL" },
+				"oriGatherTime":        {"type": "date", "include_in_all": false, "format": "yyyy-MM-dd HH:mm:ss.SSSSSS"},
+				"oriGatherTimeDate":        {"type": "date", "include_in_all": false, "format": "yyyy-MM-dd HH:mm:ss.SSSSSS"},
+				"recheckDataId":        {"type": "keyword", "include_in_all": false, "null_value": "NULL"},
+				"oriCreateTime":        {"type": "date", "include_in_all": false, "format": "yyyy-MM-dd HH:mm:ss.SSSSSS"},
+				"oriCreateTimeDate":        {"type": "date", "include_in_all": false, "format": "yyyy-MM-dd HH:mm:ss.SSSSSS"},
+				"stdBeginTime":        {"type": "date", "include_in_all": false, "format": "yyyy-MM-dd HH:mm:ss.SSSSSS"},
+				"stdBeginTimeDate":        {"type": "date", "include_in_all": false, "format": "yyyy-MM-dd HH:mm:ss.SSSSSS"},
+				"objTables":      { "type": "keyword", "include_in_all": false, "null_value": "NULL" },
+				"objFiles": { "type": "keyword", "include_in_all": false, "null_value": "NULL" },
+				"deviceType":        {"type": "keyword", "include_in_all": false, "null_value": "NULL"},
+				"personName":      {
+					"type": "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik",
+					"boost": 8
+				},
+				"personAreaId": {"type": "keyword", "include_in_all": false, "null_value": "NULL"},
+				"personAreaName":        {"type": "keyword", "null_value": "NULL"},
+				"personOrgId": {"type": "keyword", "include_in_all": false, "null_value": "NULL"},
+				"personOrgName":        {
+					"type": "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"personStatusId":        { "type": "keyword", "include_in_all": false, "null_value": "NULL" },
+				"personStatus":        {
+					"type": "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"mainAcctId": { "type": "keyword", "include_in_all": false, "null_value": "NULL" },
+				"mainAcctName":       {
+					"type": "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"mainAcctStatusId":       {"type": "keyword", "include_in_all": false, "null_value": "NULL"},
+				"mainAcctStatus":       {
+					"type": "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"subAcctId":       {"type": "keyword", "include_in_all": false, "null_value": "NULL"},
+				"subAcctName":       {
+					"type": "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"subAcctStatusId":       {"type": "keyword", "include_in_all": false, "null_value": "NULL"},
+				"subAcctStatus": {
+					"type": "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"subAcctTypeId":       {"type": "keyword", "include_in_all": false, "null_value": "NULL"},
+				"subAcctTypeName": {
+					"type": "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"clientName": {
+					"type": "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"clientIp":       {
+					"type":  "text",
+					"include_in_all": false
+				},
+				"clientAreaId":       {"type": "keyword", "include_in_all": false, "null_value": "NULL"},
+				"clientAreaName":       {"type": "keyword", "null_value": "NULL"},
+				"clientIpSectionId":       {"type": "keyword", "include_in_all": false, "null_value": "NULL"},
+				"clientIpSectionName":   {"type": "keyword", "null_value": "NULL"},
+				"clientMac" :       {"type": "keyword", "include_in_all": false, "null_value": "NULL"},
+				"clientCpuSerial":       {"type": "keyword", "include_in_all": false, "null_value": "NULL"},
+				"protocol":       {"type": "keyword", "include_in_all": false, "null_value": "NULL"},
+				"deviceId":       {"type": "keyword", "include_in_all": false, "null_value": "NULL"},
+				"deviceIp":       {
+					"type":  "text",
+					"include_in_all": false
+				},
+				"deviceName": {
+					"type": "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"devicePort":       {"type": "keyword", "include_in_all": false, "null_value": "NULL"},
+				"serverIpSectionId":       {"type": "keyword", "include_in_all": false, "null_value": "NULL"},
+				"serverIpSectionName": {"type": "keyword", "null_value": "NULL"},
+				"deviceOsVersion":       {"type": "text"},
+				"cmdSummary":       {
+					"type":     "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"loginTime": {"type": "date", "include_in_all": false, "format": "yyyy-MM-dd HH:mm:ss.SSSSSS"},
+				"loginTimeDate": {"type": "date", "include_in_all": false, "format": "yyyy-MM-dd HH:mm:ss.SSSSSS"},
+				"logoutTime": {"type": "date", "include_in_all": false, "format": "yyyy-MM-dd HH:mm:ss.SSSSSS"},
+				"logoutTimeDate": {"type": "date", "include_in_all": false, "format": "yyyy-MM-dd HH:mm:ss.SSSSSS"},
+				"isWorkTime": {"type": "keyword", "include_in_all": false, "null_value": "NULL"},
+				"isWorkDay":       {"type": "keyword", "include_in_all": false, "null_value": "NULL"},
+				"personDutyId":       {"type": "keyword", "include_in_all": false, "null_value": "NULL"},
+				"personDutyName": {
+					"type":     "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"taskNo":       {"type": "keyword", "include_in_all": false, "null_value": "NULL"},
+				"logSource":      {"type": "keyword", "null_value": "NULL"},
+				"dbInstanceName":       {"type": "keyword", "null_value": "NULL"},
+				"operateResult":      { "type":  "keyword", "include_in_all": false, "null_value": "NULL" },
+				"clientDevicePort":       {"type": "keyword", "null_value": "NULL"},
+				"action": {
+					"type":     "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"passtype": {"type": "text"},
+				"deviceMaintainer": {
+					"type":     "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"deviceImportLevel":       {"type": "keyword", "include_in_all": false, "null_value": "NULL"},
+				"operateSummary":       {"type": "keyword", "include_in_all": false, "null_value": "NULL"},
+				"sessionEndTime": {"type": "date", "include_in_all": false, "format": "yyyy-MM-dd HH:mm:ss.SSSSSS"},
+				"sessionEndTimeDate": {"type": "date", "include_in_all": false, "format": "yyyy-MM-dd HH:mm:ss.SSSSSS"},
+				"sectionNames":       {"type": "keyword", "include_in_all": false, "null_value": "NULL"},
+				"dataTypeIds":       {"type": "keyword", "include_in_all": false, "null_value": "NULL"},
+				"acctType": {"type": "keyword", "include_in_all": false, "null_value": "NULL"},
+				"acctTypeName": {
+					"type":     "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"retain1":       {
+					"type":     "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"retain2":       {
+					"type":     "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"retain3":       {
+					"type":     "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"retain4":       {
+					"type":     "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"retain5":       {
+					"type":     "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"retain6":       {
+					"type":     "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"retain7":       {
+					"type":     "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"retain8":       {
+					"type":     "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"retain9":       {
+					"type":     "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				},
+				"retain10":       {
+					"type":     "text",
+					"analyzer": "ik",
+					"search_analyzer": "ik"
+				}
+			}
+		}
+	}
+}
+
+
+
+get _cat/shards
+
+
+PUT /app-log-v2/app-log-2020-05/rensy05126
+ {
+    "subAcctOrgId": null,
+    "isWorkTime": "0",
+    "appImportLevel": null,
+    "clientMac": "04-ed-33-59-a3-cb",
+    "operateTime": "2020-05-11 12:58:25.0",
+    "moduleName": null,
+    "subAcctStatus": null,
+    "isAuthorOthers": "0",
+    "fromProvincesName": null,
+    "actionTypeId": "4",
+    "subAcctTypeId": null,
+    "isWorkDay": "1",
+    "bankFaiedCheckCount": null,
+    "oriGatherTimeDate": "2020-04-09 07:36:50.0",
+    "operateObjectType": null,
+    "clientNetworkAddress": "10.1.56.92,FE80::B846:9CA7:60C3:1B30",
+    "operateResult": "0",
+    "auditTypeName": null,
+    "acctType": "6",
+    "bankIsneed": "1",
+    "subAcctStatusId": null,
+    "clientName": null,
+    "oriCreateTime": null,
+    "level2OrgId": null,
+    "ownPersonName": null,
+    "appMaintainer": null,
+    "ownMainAcctId": null,
+    "operateContent": "主帐号为yx_wangbb的用户登录金库组件管理平台！#[#appcode=AIGOLDBANK#]#",
+    "operateTimeDate": "2020-04-09 19:58:25.0",
+    "taskNo": "",
+    "logId": "05980713-cae2-4389-9004-99d8672f8cfa1586432294025",
+    "roundType": null,
+    "moduleId": null,
+    "goldApprPersonName": null,
+    "auditLevelId": "2",
+    "isLoginByfoura": null,
+    "auditTypeId": null,
+    "personStatusId": "1",
+    "logSource": "UAP",
+    "personAreaId": "2",
+    "mainAcctName": "yx_wangbb",
+    "personOrgName": null,
+    "personDutyName": "工号管理员",
+    "ownMainAcctName": null,
+    "auditSubTypeId": "1",
+    "clientIpSectionName": null,
+    "stdCreateTime": null,
+    "sectionIds": null,
+    "personAreaName": "上海",
+    "personOrgId": "100264",
+    "clientIpSectionId": null,
+    "clientIp": "10.1.56.92",
+    "oriFileRownum": "0",
+    "subAcctOrgName": null,
+    "level2OrgName": null,
+    "stdBeginTimeDate": "2020-04-09 07:38:14.0",
+    "personStatus": "在职",
+    "toProvincesId": null,
+    "auditLevelName": "重要",
+    "bankflag": "",
+    "mainAcctStatus": "正常",
+    "bankLastCheckTime": null,
+    "clientAreaName": null,
+    "objTypeId": "3",
+    "bankApprove": "",
+    "bankSceneName": "应用金库账号访问",
+    "acctTypeName": "合作伙伴",
+    "stdBeginTime": "2020-04-09 07:38:14.0",
+    "domainId": "UAP",
+    "sectionNames": null,
+    "mainAcctId": "10011922",
+    "subAcctName": "10011922",
+    "oriGatherTime": "2020-04-09 07:36:50.0",
+    "auditSubTypeName": "4A系统审计",
+    "subAcctId": null,
+    "fromProvincesId": null,
+    "oriCreateTimeDate": null,
+    "stdCreateTimeDate": null,
+    "appMaintainerId": null,
+    "oriFileName": "1586432294025.dat",
+    "bankApplyType": null,
+    "bankProof": null,
+    "mainAcctStatusId": "0",
+    "bankSceneId": "15060",
+    "serverIpSectionId": null,
+    "objTypeName": "数据表",
+    "isbinding": null,
+    "goldApprMainAcctId": null,
+    "recheckDataId": "21344b98-b725-40df-8a59-814b628b0c8d",
+    "personDutyId": "1",
+    "toProvincesName": null,
+    "clientCpuSerial": "BFEBFBFF000806EC",
+    "operateTypeName": "应用资源访问",
+    "bankLastCheckStatus": null,
+    "subAcctTypeName": null,
+    "serverIpSectionName": null,
+    "operateTypeId": "1-AIUAP-10012",
+    "personName": "王兵兵",
+    "clientAreaId": null,
+    "bankIsopen": "1",
+    "actionTypeName": "修改",
+    "bankLastCheckTimeDate": null,
+    "serverIp": "10.21.171.217"
+  }
+  
+  PUT /session-cmd-log-v2/session-cmd-log-2020-05/rensy05061
+{
+    "deviceIp": "10.1.198.96",
+    "isWorkTime": "0",
+    "deviceImportLevel": null,
+    "clientMac": null,
+    "sessionEndTime": null,
+    "subAcctStatus": null,
+    "deviceId": "132437",
+    "sessionEndTimeDate": null,
+    "createTimeDate": null,
+    "actionTypeId": null,
+    "operateSummary": null,
+    "subAcctTypeId": null,
+    "isWorkDay": "1",
+    "action": null,
+    "bankFaiedCheckCount": null,
+    "deviceType": "2",
+    "oriGatherTimeDate": "2020-04-09 08:22:59.0",
+    "dataTypeId": null,
+    "operateObjectType": null,
+    "objTables": null,
+    "isExcute": "1",
+    "logoutTime": null,
+    "operateResult": "0",
+    "auditTypeName": null,
+    "acctType": "6",
+    "cmd": ";s",
+    "sensitivity": null,
+    "bankIsneed": null,
+    "subAcctStatusId": null,
+    "passtype": null,
+    "clientName": null,
+    "oriCreateTime": null,
+    "level2OrgId": null,
+    "logoutTimeDate": null,
+    "cmdId": "fd5b16e8a0a8483aa475d42c6ea62558",
+    "loginTime": "2020-04-09 20:44:01.0",
+    "deviceMaintainer": null,
+    "taskNo": "",
+    "sessionType": null,
+    "bankTriggerType": "",
+    "goldApprPersonName": null,
+    "auditLevelId": null,
+    "auditTypeId": null,
+    "dataTypeName": null,
+    "personStatusId": "1",
+    "logSource": "4AFortLog",
+    "personAreaId": "2",
+    "mainAcctName": "yx_wangbb",
+    "sessionId": "dbb25683cc414b3595c41823227ba56c",
+    "personOrgName": null,
+    "personDutyName": "工号管理员",
+    "auditSubTypeId": null,
+    "clientIpSectionName": null,
+    "retain10": null,
+    "objFiles": null,
+    "stdCreateTime": null,
+    "sectionIds": null,
+    "personAreaName": "上海",
+    "createTime": null,
+    "personOrgId": "100264",
+    "clientIpSectionId": null,
+    "clientIp": "10.1.56.92",
+    "devicePort": "22",
+    "oriFileRownum": "0",
+    "loginTimeDate": "2020-04-09 20:44:01.0",
+    "level2OrgName": null,
+    "stdBeginTimeDate": "2020-04-09 08:23:40.0",
+    "personStatus": "在职",
+    "deviceName": "club-vm-app9",
+    "auditLevelName": null,
+    "bankflag": "",
+    "mainAcctStatus": "正常",
+    "protocol": "SSH2",
+    "bankLastCheckTime": null,
+    "clientAreaName": null,
+    "retain5": null,
+    "retain6": null,
+    "retain7": null,
+    "identityName": null,
+    "retain8": null,
+    "objTypeId": null,
+    "retain9": null,
+    "bankApprove": "",
+    "bankSceneName": null,
+    "acctTypeName": "合作伙伴",
+    "stdBeginTime": "2020-04-09 08:23:40.0",
+    "sectionNames": null,
+    "mainAcctId": "10011922",
+    "subAcctName": "testlcc",
+    "oriGatherTime": "2020-04-09 08:22:59.0",
+    "auditSubTypeName": null,
+    "oriCreateTimeDate": null,
+    "subAcctId": null,
+    "retain1": null,
+    "stdCreateTimeDate": null,
+    "retain2": null,
+    "retain3": null,
+    "retain4": null,
+    "oriFileName": "1586435019655.dat",
+    "bankApplyType": null,
+    "dbInstanceName": null,
+    "dataTypeIds": null,
+    "deviceOsVersion": "RedHatLinux7.3",
+    "content": ";s",
+    "resourceKind": null,
+    "opDirectory": "/home/lcc",
+    "opTimeDate": "2020-05-06 20:44:06.0",
+    "mainAcctStatusId": "0",
+    "bankSceneId": null,
+    "deviceMaintainerId": null,
+    "objTypeName": null,
+    "serverIpSectionId": null,
+    "clientDevicePort": null,
+    "goldApprMainAcctId": null,
+    "recheckDataId": "7d15fbf9-5e12-4e62-9822-5d0369556f44",
+    "personDutyId": "1",
+    "clientCpuSerial": null,
+    "operateTypeName": null,
+    "bankLastCheckStatus": null,
+    "subAcctTypeName": null,
+    "serverIpSectionName": null,
+    "operateTypeId": null,
+    "personName": "王兵兵",
+    "bankIsopen": null,
+    "clientAreaId": null,
+    "cmdSummary": null,
+    "actionTypeName": null,
+    "bankLastCheckTimeDate": null,
+    "opTime": "2020-05-06 20:44:06.0"
+  }
+  
+  
+  
+put session-cmd-log-v1/_settings
+{
+"index.max_result_window":100000000
+}
+
+
+

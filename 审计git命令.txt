@@ -1,0 +1,17 @@
+356  git clone "ssh://rensy@10.1.198.135:29418/AISIA/share/demo"
+357  cd demo
+358  ls
+359  touch ddm.txt
+360  vi ddm.txt
+361  git commit -a -m 'test'
+362  git add ddm.txt
+363  git commit -a -m 'test'
+364  git push origin head:refs/for/master
+365  gitdir=$(git rev-parse --git-dir); scp -p -P 29418 rensy@10.1.198.135:hooks/commit-msg ${gitdir}/hooks/
+366  git commit --amend
+367  git push origin head:refs/for/master
+368  git push origin head:refs/for/master
+369  vi ddm.txt
+370  git add ddm.txt
+371  git commit -a -m 'test1'
+372  git push origin head:refs/for/master

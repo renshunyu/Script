@@ -447,6 +447,8 @@ sed ':a;N;$!ba;s/\n//g'  acct.txt
 sed '/^<LOG4A>$/{:a;N;/<\/LOG4A>/!ba;s/\n//g}' BOSS111_4.XML 
 #按照标签拆分行
 sed ':a;N;$!ba;s/<\/\([0-9a-zA-Z_]*\)>/<\/\1>\n/g' BOMC_Audit_2019-11-13-23-00.xml
+删除空行
+sed -i /^[[:space:]]*$/d   xxxxxxxx.dat 
 
 grep -E '<.*>.*<.*>' BOSS30_1.XML  |awk -F '<|>' '{print $2" "$3}' > testdata
 grep -E '<.*>.*<.*>' BOSS30_1.XML  |awk -F '<|>' -v OFS='|' '{print $2,$3}' > testdata
@@ -503,11 +505,16 @@ imp audit30testa/audit30testa#@iap file = ori_cmd_201911.dmp log = ori_cmd_20191
 
 cd /opt/pulsar/pulsar-2.4.0/bin/
 ./pulsar-client consume -s hah persistent://test/test/boss-ftp-flume-app
+./pulsar-client consume -s rensy persistent://test/test/canalSinkPulsar-sunqc
 ./pulsar-client consume -s hah persistent://test/test/boss-ftp-ori-app
 ./pulsar-client consume -s hah persistent://test/test/boss-ftp-errlog-app
 ./pulsar-client consume -s hah persistent://test/test/boss-ftp-exception-app
 ./pulsar-client produce -m asdasdfasdf persistent://test/test/boss-ftp-flume-app
+
+./pulsar-client produce -m '{"SERVER_PORT":"8020","fileName":"BASS_AUDIT_2020-05-13-17-23-53-hhhtsjzx-zhhbase-master-212-30.COMPLETED","RESOURCE_CODE":"JTNGSYHUZHJQS","SUB_ACCOUNT_NAME":"hbase","CLIENT_ADDRESS":"10.252.216.143","OP_TYPE_NAME":"rpc","RESOURCE_KIND":"1","SERVER_ADDRESS":"10.252.212.30","filePath":"/data/aiiap/rensy/new","IDENTITY_NAME":"JTNGSYHUZHJQS","OP_TYPE_ID":"1-JTNGSYHUZHJQS-10001","OPERATE_TIME":"2020-04-28 18:37:02","OBJECT_ID":"1","OPERATE_CONTENT":"HDFSAudit_getfileinfo","IDR_CREATION_TIME":"2020-05-13 17:26:20","OBJECT_NAME":"/apps/hbase/data/data/szfms/Ht_ALL_CDR_RULE_SINGLE/71003834c088c143cb3c85a6fbb37aab/c/b69a0b2e8f94464086f86f700ad1153d","OPERATE_RESULT":"1","gatherTime":"1590063065479","timestamp":"1590063065417"}' persistent://test/test/par-rensy-tcp
+
 ./pulsar-admin topics stats-internal persistent://test/test/boss-ftp-flume-app
+./pulsar-admin topics delete persistent://test/test/canalSinkPulsar-test513
 ./pulsar-admin topics delete persistent://test/test/boss-ftp-flume-app
 ./pulsar-admin topics create persistent://test/test/boss-ftp-ori-app
 ./pulsar-admin topics create persistent://test/test/boss-ftp-errlog-app
@@ -528,11 +535,81 @@ iconv -f utf-8 -t gb2312 /server_test/reports/software_.txt > /server_test/repor
 ./pulsar-admin topics create persistent://test/test/boss-ftp-mysql-boss-errlog
 ./pulsar-admin topics create persistent://test/test/boss-ftp-mysql-boss-exception
 
+./pulsar-client consume -s flume-rensy persistent://test/test/flume-rensy-tcp -n 100
+./pulsar-client consume -s par-rensy persistent://test/test/par-rensy-tcp -n 100
+./pulsar-client consume -s par-diea-rensy persistent://test/test/par-diea-rensy -n 100
+./pulsar-client consume -s par-error-rensy persistent://test/test/par-error-rensy -n 100
+
+./pulsar-client consume -s par-unIdentity-rensy persistent://test/test/unIdentityNameTopic-rensy -n 100
+
+
+./pulsar-client consume -s UnInsert-rensy persistent://test/test/apporiUnInsertTopic-rensy -n 100
+
+
+./pulsar-client consume -s std-rensy persistent://test/test/apps718-rensy -n 100
+./pulsar-client consume -s std-gold-rensy persistent://test/test/appgold-rensy -n 100
+./pulsar-client consume -s std-round-rensy persistent://test/test/appround-rensy -n 100
+./pulsar-client consume -s std-fail-rensy persistent://test/test/standardizeFailTopic-rensy -n 100
+./pulsar-client consume -s std-error-rensy persistent://test/test/errorTopic-rensy  -n 100
+
+bin/pulsar-admin topics list test/test
+
+persistent://test/test/canalSinkPulsar-error513
+./pulsar-client consume -s diea-rensy persistent://test/test/canalSinkPulsar-diea513 -n 100
+
+./pulsar-client consume -s rensy persistent://test/test/canalSinkPulsar-test513 -n 10000|grep uap_main_acct|awk -F'uap_main_acct' '{print NF}'
+./pulsar-client consume -s rensy persistent://test/test/canalSinkPulsar-test513 -n 2|grep uap_main_acct|awk '{print "\{"$0}'|jq .
+./pulsar-client consume -s rensy persistent://test/test/canalSinkPulsar-test513 -n 2|grep uap_main_acct|awk '{print "\{"$0}'
+./pulsar-client consume -s std-rensy1 persistent://test/test/apps718-rensy -n 100 |grep CTBOSS|jq .AUDIT_LEVEL_ID,.AUDIT_TYPE_ID,.ACTION_TYPE_ID,.OBJ_TYPE_ID,.APP_IMPORT_LEVEL,.LEVEL2_ORG_ID,.CLIENT_IP_SECTION_ID,.CLIENT_IP_SECTION_NAME,.SERVER_IP_SECTION_ID,.SERVER_IP_SECTION_NAME
+./pulsar-client consume -s par-unIdentity-rensy persistent://test/test/unIdentityNameTopic-rensy -n 100000|grep IDENTITY_NAME|awk '{a[$0]++}END{for(i in a){print i}}
+grep -Eo '<OPERATE_TIME>2019-.*</OPERATE_TIME>' *|awk -F'COMPLETED:' '{print $2}'|awk -F'>| ' '{print $2}'|awk '{a[$0]++}END{for(i in a){print i" "a[i]}}'
+grep -Eo '<OPERATE_TIME>.*</OPERATE_TIME>' *|awk -F'COMPLETED:' '{print $2}'|awk -F'>| ' '{print $2}'|awk -F'-' '{print $1"-"$2}'|awk '{a[$0]++}END{for(i in a){print i" "a[i]}}'
+
+grep -Po '<OPERATE_TIME>.*?</OPERATE_TIME>' *.COMPLETED|awk -F'COMPLETED:' '{print $2}'|awk -F'>| ' '{print $2}'|awk -F'-' '{print $1"-"$2}'|awk '{a[$0]++}END{for(i in a){print i" "a[i]}}'
+
+grep -Po '<IDENTITY_NAME>.*?</IDENTITY_NAME>' *.COMPLETED|awk -F'<|>' '{a[$3]++}END{for(i in a){print i" "a[i]}}'
+
+for i in `grep '&' *.COMPLETED|awk -F: '{print $1}'|awk '{a[$1]++}END{for(i in a){print i}}'` ;do mv $i $i.geshi;done
+for i in `grep '</OPERATE_RESULT>成功' *.COMPLETED|awk -F: '{print $1}'|awk '{a[$1]++}END{for(i in a){print i}}'` ;do mv $i $i.chenggong;done
+for i in `grep 'JTNGDQAP4' *.COMPLETED|awk -F: '{print $1}'|awk '{a[$1]++}END{for(i in a){print i}}'` ;do mv $i $i.JTNGDQAP4;done
+for i in `grep '</ROOT><' *.COMPLETED|awk -F: '{print $1}'|awk '{a[$1]++}END{for(i in a){print i}}'` ;do mv $i $i.root;done
+for i in `grep -Po '<OPERATE_TIME>.*?</OPERATE_TIME>' *.COMPLETED|awk -F: 'length($2)>27{print $1}'|awk '{a[$1]++}END{for(i in a){print i}}'` ;do mv $i $i.shijian;done
+xmllint  *.*>/dev/null 2>h || for i in `awk -F: '{print $1}' h|grep COMPLETED|awk '{a[$0]++}END{for(i in a){print i}}'` ;do mv $i $i.geshi;done;rm h
+for i in `ls *.COMPLETED` ;do mv $i ${i/.COMPLETED/};done
+
+
+for i in `bin/pulsar-admin topics list 4a/audit`;do echo $i;bin/pulsar-admin topics info-internal $i|jq .ledgers[].size|grep -v null|awk '{a+=$1}END{print a}';done >log2
+
+
+grep -Po '<OPERATE_TIME>.*?</OPERATE_TIME>' *.COMPLETED|awk -F'COMPLETED:' '{print $2}'|awk -F'>| ' '{print $2}'|awk -F'-' '{print $1"-"$2}'|awk '{a[$0]++}END{for(i in a){print i" "a[i]}}'
+grep -Po '<OPERATE_TIME>.*?</OPERATE_TIME>' *.COMPLETED|wc -l
+
+./redis-cli --raw -h 10.21.171.181 -p 6379 keys *rrrrr*
+./redis-cli --raw -h 10.21.171.181 -p 6379 get main.acct.name.namespace:MAINACCTNAME_rrrrr12|base64 -d|awk -F'|' '{print $0}'
+cmdkey='keys *qianfang*' && ./redis-cli -h 10.21.171.181 -p 6379 $cmdkey && ./redis-cli -h 10.21.171.181 -p 6380 $cmdkey && ./redis-cli -h 10.21.171.182 -p 6379 $cmdkey && ./redis-cli -h 10.21.171.182 -p 6380 $cmdkey && ./redis-cli -h 10.21.171.183 -p 6379 $cmdkey && ./redis-cli -h 10.21.171.183 -p 6380 $cmdkey
+for i in `./redis-cli --raw -h 10.21.171.181 -p 6379 keys app.subacct.author*` ;do ./redis-cli --raw -h 10.21.171.181 -p 6379 ttl $i;done|awk '{a[$0]++}END{for(i in a){print i" "a[i]}}'
 
 
 
-./pulsar-daemon stop broker
+sed -e 's/<?xml version="1.0" encoding="UTF-8"?><ROOT>//g' -e 's/<\/ROOT>//g' -e 's/IDLE//g'20200520/* >xxxxxxxx.dat 
+
+./redis-cli --raw -h 10.21.171.181 -p 6379 flushall
+
+du -sb *|awk '$1<100{print $2}'|xargs cat
+xmllint  *.*>/dev/null 2>h || awk -F: '{print $1}' h|grep COMPLETED ;rm h
+
+xmllint  *.*>/dev/null 2>h || awk -F: '{print $1}' h|grep COMPLETED.and|awk '{a[$0]++}END{for(i in a){print i}}'|wc -l ;rm h
+xmllint  *.*>/dev/null 2>h || for i in `awk -F: '{print $1}' h|grep COMPLETED.and|awk '{a[$0]++}END{for(i in a){print i}}'` ;do mv $i $i.geshi;done;rm h
+
+bin/bookkeeper shell simpletest --ensemble 3 --writeQuorum 3 --ackQuorum 3 --numEntries 3
+./pulsar-daemon start zookeeper
 ./pulsar-daemon start broker
+./pulsar-daemon start bookie
+./pulsar-daemon stop broker
+./pulsar-daemon stop bookie
+./pulsar-daemon stop zookeeper
+ps -ef |grep -E 'broker|bookie'
+
 
 bin/pulsar-admin functions create \
 --jar test/xml-parse-function-1.0-SNAPSHOT-jar-with-dependencies.jar \
@@ -586,7 +663,7 @@ bin/pulsar-admin sinks create \
 
 
 
-cd /data/ &&
+cd /opt/ &&
 cat /etc/redhat-release &&
 echo '---------------------------------------------------------------' &&
 cat /proc/version &&
@@ -608,13 +685,17 @@ iperf -c 10.21.171.60
 
 
 sed -i 's/audit30dev1/audit30testa/g' `find . -type f |grep .ktr`
+sed -i 's/AUDIT30DEV1/audit30testa/g' `find . -type f |grep .ktr`
 sed -i 's/Encrypted 2be98afc86ac68780a20dfd20da97b98b/Encrypted 2be98afa91fc39b90f849ba75cd86ae99/g' `find . -type f |grep .ktr`
 sed -i 's/10.15.42.37/10.21.171.220/g' `find . -type f |grep .ktr`
 sed -i 's/10.15.42.37/10.21.171.220/g' `find . -type f |grep -E 'c3p0.properties|business.properties|application.yml'`
 
+sed -i 's/10.15.42.37/10.21.171.220/g' `find . -type f |grep -E '.properties'`
+
 mysqldump -u iap -h 127.0.0.1 -p --databases iap iap_dev > backdb.sql
 mysql -u iap -p  < backdb.sql
 
+MYSQL
 select * from information_schema.columns where table_schema='iap' and column_comment <>''
 
 select distinct COLUMN_NAME,column_comment  from information_schema.columns where table_schema='iap' and column_comment <>'' ORDER BY COLUMN_NAME
@@ -629,3 +710,128 @@ select CONCAT('alter table ',TABLE_NAME,' modify column ',COLUMN_NAME,' int comm
 select count(*) from information_schema.columns where table_schema='iap' and column_comment ='' and TABLE_NAME not like '%20%';
 select count(*) from information_schema.columns where table_schema='iap' and column_comment ='' and TABLE_NAME  like '%202001%';
 alter table test1 modify column field_name int comment '修改后的字段注释';
+
+ORACLE
+select 'comment on column "' || a.table_name || '"."' || a.column_name ||
+       '" is ''' || b.comments || ''';'
+  from (select *
+          from user_col_comments d
+         where (d.comments is null or d.comments like '%?%')
+           and d.table_name not like '%=%'
+           and d.table_name not like '%20%') a
+  left join (select t.column_name, max(t.comments) as comments
+               from user_col_comments t
+              where t.comments is not null
+                and t.comments not like '%?%'
+                and t.table_name not like '%=%'
+                and t.table_name not like '%20%'
+              group by t.column_name) b
+    on a.column_name = b.column_name;
+    
+select 'comment on column "' || a.table_name || '"."' || a.column_name ||
+       '" is ''' || b.comments || ''';'
+  from (select *
+          from user_col_comments d
+         where (d.comments is null or d.comments like '%?%')
+           and d.table_name not like '%=%'
+           and d.table_name not like '%20%') a
+  left join (select t.column_name, max(t.comments) as comments from user_col_comments@uapdblink t
+              where t.comments is not null
+                and t.comments not like '%?%'
+                and t.table_name not like '%=%'
+                and t.table_name not like '%20%'
+              group by t.column_name) b
+    on a.column_name = b.column_name;
+	
+select 'comment on table ' || a.table_name || '  is  ''' || b.table_comment ||
+       ''';'
+  from (select *
+          from user_tab_comments t
+         where t.table_type = 'TABLE'
+           and (t.comments is null or t.comments like '%?%')
+           and t.table_name not like '%20%') a
+  join mysql_table_comments b
+    on a.table_name = upper(b.table_name);
+
+select dbms_pipe.receive_message('RDS', 10) from dual;
+
+
+netstat -anop |grep ' LISTEN ' |awk '{print $4"  "$7" "system("pwdx "substr($7,0,index($7,"/")-1))}'
+
+curl -u 'rensy:3edc$RFV' https://jira.asiainfo-sec.com:8443/rest/api/2/issue/SSSIA-3153 |jq .
+curl -u 'rensy:3edc$RFV' https://jira.asiainfo-sec.com:8443/rest/api/2/issue/SSSIA-3240/comment
+curl -D- -u 'rensy:3edc$RFV' -X POST --data '{    "fields": {       "project":       {           "key": "SSSIA"       },"components": [{"id":"10602"}], "customfield_10007":[{"id":"11440"}], "duedate":"2020-08-05","assignee":{"name": "rensy"},      "summary": "REST ye merry gentlemen.",       "description": "Creating of an issue using project keys and issue type names using the REST API",       "issuetype": {          "name": "BUG"       }   }}' -H "Content-Type: application/json" https://jira.asiainfo-sec.com:8443/rest/api/2/issue/
+jps -q|awk '{cmd="pstree -p "$1"|wc -l";print $1,system(cmd)}'|sed '$!N;s/\n/ /g'
+lsof -P |awk '{a[$2]++}END{for(i in a){print i" "a[i]}}'
+
+while true; do sleep 1;nc 10.21.171.181 29290 < ./wyd/log_test_new.txt ; done
+./pulsar-admin topics subscriptions persistent://4a/audit/parse_devlog_hndxtest
+./pulsar-admin topics unsubscribe -s 'shared-subscription-test' persistent://4a/audit/parse_devlog_hndxtest
+while true do;nc 10.21.171.181 29290 < ./wyd/log_test_new.txt ; done
+
+
+for i in /tmp/*; do echo $i; find $i |wc -l|sort -nr; done
+awk  '$1=="Count:"{print $0}' all.txt |awk -F'[()]' '{print $2}'|sed 's/s//g'|awk '$1>5000{print $0}'|sort -n
+awk  '$1=="Count:"{print $3}' all.txt |sed -e 's/Time=//g' -e 's/s//g'|awk '$1>100{print $0}'|sort -n
+awk  '$1=="Count:"{print $3}' all.txt |sed -e 's/Time=//g' -e 's/s//g'|awk '$1>500{print $0}'|sort -n
+awk  '$1=="Count:"{print $5}' all.txt |sed -e 's/Lock=//g' -e 's/s//g'|awk '$1>1{print $0}'|sort -n
+awk  '$1=="Count:"{print $6}' all.txt |sed -e 's/(//g' -e 's/s)//g'|awk '$1>1{print $0}'|sort -n
+import requests
+s = requests.session()
+s.auth = ('用户名', '密码')
+r = s.get("URL")
+print(r.text)
+@renshunyu
+
+def getIssue(id):
+    URL = 'https://jira.asiainfo-sec.com:8443/rest/api/2/issue/'
+    s = requests.session()
+    s.auth = ('rensy', '3edc$RFV')
+    r = s.get(URL+id)
+    return r.text
+	
+sed -n 'H;${G;s/\r\n/ /g;s/\n/ /g;p}' test|wc -l
+sed -n 'H;${x;s/\r\n/ /g;s/\n/ /g;p}' test|wc -l
+sed -n 'H;1!{/^# Time:/{x;s/\r\n/ /g;s/\n/ /g;p}}' slow.log  >test1
+sed 's/localhost \[\]/\[localhost\]/g' test1|sort -nr -k13|head -n 10
+
+i=`cat test`&&j=`echo $i|sed 's/ /p;/g'`"p"&&echo $j|sed -n $j top10.txt
+sed 's/localhost \[\]/\[localhost\]/g' test1|sort -nr -k13|head -n 10
+awk '{print $13" "NR}' test1|sort -nr -k1
+awk '{if($13!="Query_time:"){print $13" "NR}else{print $14" "NR}}' test1|sort -nr -k1|head -n 10|awk '{print $2}'
+i=`awk '{if($13!="Query_time:"){print $13" "NR}else{print $14" "NR}}' test1|sort -nr -k1|head -n 10|awk '{print $2}'`&&j=`echo $i|sed 's/ /p;/g'`"p"&&echo $j|sed -n $j test1
+
+pstree -p PID
+
+sed -n 'H;1!{/^# Time:/{x;s/\r\n/ /g;s/\n/ /g;p}}' slow.log >test1 
+sed 's/localhost \[\]/\[localhost\]/g' test1|sort -nr -k13|head -n 10 
+awk '{if(FNR==1){print $0}}' *|awk '{a[$0]++}END{for(i in a){print i" "a[i]}}'
+
+sed -n '1H;1!{/^comment/{x;/YYYYMM/p};/^comment/!{H}}' allcomments.sql >YYYYMMANDORGID.sql
+sed -n '1H;1!{/^comment/{x;/YYYYMM/!p};/^comment/!{H}}' allcomments.sql >NOMONTH.sql
+sed -n '1H;1!{/^comment/{x;/ORGID/!p};/^comment/!{H}}' YYYYMMANDORGID.sql >YYYYMM.sql
+sed -n '1H;1!{/^comment/{x;/ORGID/p};/^comment/!{H}}' YYYYMMANDORGID.sql >ORGID.sql
+grep -E 'CREATE|create' rsdu.sql|grep -E 'TABLE|table'|awk '{print $3}'|sed 's/"//g'
+sed  ':a;N;s/\n/\\|/g;ba' mssb.sql
+sed -n '1H;1!{/^comment/{x;/IAP_DEV_MIDDLE_RESULT\|IAP_DATA_UPLOAD_SCHEDULE\|IAP_DEV_SENSITIVE_RESULT\|IAP_DB_SENSITIVE_MAPPING\|IAP_HOST_SENSITIVE_MAPPING\|IAP_APP_SENSITIVE_RESULT\|IAP_APP_SENSITIVE_MAPPING\|DATA_UPLOAD_RESULT\|IAP_DATA_UPLOAD_CHECK_RESULT\|IAP_NET_DATA_UPLOAD_SCHEDULE\|IAP_NET_DB_SENSITIVE_MAPPING\|IAP_NET_HOST_SENSITIVE_MAPPING\|IAP_NET_APP_SENSITIVE_RESULT\|IAP_NET_APP_SENSITIVE_MAPPING\|IAP_NET_DEV_SENSITIVE_RESULT\|DATA_NET_UPLOAD_RESULT\|IAP_NET_DATA_UPLOAD_RESULT\|IAP_NET_DEV_MIDDLE_RESULT\|IAP_DATA_UPLOAD_SCHEDULE_NXNET\|IAP_APP_SENSITIVE_MAPPING_NX\|IAP_APP_SENSITIVE_RESULT_NX\|DATA_REPORT_RESULTS\|SENSITIVE_PERSONNEL_LIST\|IAP_DEV_SENSITIVE_MAPPING_NX\|ZYONLINE_REPORT_FILE\|ZYONLINE_REPORT_INCREASE\|IAP_SENSITIVE_OPERLOG_RESULT\|DR_OPERATECONTENT_CHARSET\|DR_MAINACCT_INCREASE_DAY\|DR_4A_LOGINAPP_DAY\|DR_COMPLAIN_MONTH\|DATA_UPLOAD_TASK_INFO\|IAP_DATA_UPLOAD_PROCESS\|DR_2_4A_APP_SUB_ROLE_DAY\|DR_2_4A_LOGIN_APP_DAY\|DR_2_4A_LOGIN_DAY\|DR_2_4A_MAIN_ACCT_DAY\|DR_2_4A_MAIN_ACCT_MONTH\|DR_2_APP_ACCT_DAY\|DR_2_APP_ACCT_MONTH\|DR_2_DEV_SUB_ACCT_MONTH\|DR_2_GOLD_DAY\|DR_2_MAIN_SUB_ACCT_MONTH\|DR_2_NO_GOLD_DAY\|DR_2_PERSON_DAY\|DR_2_PERSON_MONTH\|DR_COMM_4A_APP_ROLE_MONTH\|DR_COMM_4A_APP_RP_MINUTE\|DR_COMM_4A_PERMISSION_MONTH\|DR_COMM_ASSET_INFOR_MONTH\|DR_COMM_GOLD_APPLY_DAY\|DR_COMM_GOLD_APPROVAL_DAY\|DR_COMM_INTERFACE_CALL_DAY\|DR_COMM_SENSI_DATA_ENCOD_DAY\|DR_COMM_SENSITIVE_OP_WO_DAY\|DR_IT_4A_APP_ACCT_MINUTE\|DR_IT_4A_APP_ACCT_MONTH\|DR_IT_4A_APP_SUB_ROLE_MINUTE\|DR_IT_4A_LOGIN_APP_MINUTE\|DR_IT_4A_LOGIN_MINUTE\|DR_IT_4A_MAIN_ACCT_MINUTE\|DR_IT_4A_MAIN_ACCT_MONTH\|DR_IT_AUDIT_REPORT_DAY\|DR_IT_DEV_SUB_ACCT_MONTH\|DR_IT_GOLD_MINUTE\|DR_IT_MAIN_SUB_ACCT_MONTH\|DR_IT_NO_GOLD_MINUTE\|DR_IT_SENSITIVE_PERSON_MINUTE\|DR_IT_SENSITIVE_PERSON_MONTH\|DATA_UPLOAD_TASK_SCHEDULE\|DR_MONITOR_RESULT_DOWNLOAD\|DR_MONITOR_LAST_TASK_INFO/!p};/^comment/!{H}}' NOMONTH.sql >NORSD.sql
+
+
+sed -e 's/iap\.jdbc\.password=.*/iap\.jdbc\.password=16|-98|-1|-3|122|-48|-50|59|127|121|54|-32|63|109|-24|-56|5/g' -e 's/iap\.jdbc\.username=.*/iap\.jdbc\.username=audit30testa/g' -e 's/iap\.url\.server=.*/iap\.url\.server=jdbc:oracle:thin:@10\.21\.171\.220:1521:iap/g' `find . -name env.properties`
+
+curl -c cookies http://10.21.171.240:8088/zentao/?mode=getconfig
+curl -c cookies http://10.21.171.240:8088/zentao/api-getSessionID.json
+curl -i -X POST -b cookies -H "'Content-Type': 'application/x-www-form-urlencoded'"  -d 'account=admin&password=1qaz!QAZ' http://10.21.171.240:8088/zentao/user-login
+curl -i -X POST 'http://10.21.171.240:8088/zentao/testcase-browse-1--byModule-all-id_asc-0-10000-1.json?zentaosid=8a49b1o8mf24113duvfhblipt6'|grep status |jq .data|sed -e 's/\\\\/\\/g' -e 's/\\"/"/g' -e 's/^"//g' -e 's/"$//g'|jq .cases |jq 'keys'|jq .[]
+#linux对比目录
+diff 1 2 -urNaq
+#ASCII转汉字
+native2ascii [ inputfile ] [ outputfile ]
+
+grep '' `find . -name pom.xml` |sed -n '/fastjson/{N;p}'
+date "+%S %M %H * * ?" -d '20 second'
+svn log -r 178174:177855
+
+for i in `svn log -r 178174 --verbose|grep 'products'|awk -F'/products/ailkiap30/program/iap/' '{print $2}'` ;do svn log -r178174:177855  $i ; done|grep -E '^r'
+
+find . -type f -size +1G
+

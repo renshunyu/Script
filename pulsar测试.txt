@@ -1,0 +1,281 @@
+解析
+bin/pulsar-admin functions update \
+--jar ./functions_02/xml-parse-function-jar-with-dependencies.jar \
+--classname com.asiainfo.dap.XmlParseFunction \
+--inputs persistent://4a/audit/flume-rensy-tcp \
+--output persistent://4a/audit/par-rensy-tcp \
+--user-config '{"errorTopic":"persistent://4a/audit/par-error-rensy","unParseTopic":"persistent://4a/audit/par-diea-rensy","logTagName":"LOG4A","identityNames":" 4AAthLog,4ABOSSLog,4ABASSLog,4ABOMCLog,4AIAPLog,4AESOPLog,CTBOSS,4AJTNGPAASLog,JTNGAIPT,JTNGSPSJ,JTNGQYZX,JTNGXHZW,JINGCGT,JINGCRDS,JTNGZHZC,JTNGJHXT,4ALMPLog,JTNGYJQD,JTNGWNP,4ABDCLog,JTNGDQAP2,JTNGDQAP3,JTNGBBOSS,4AJTNGSPTLLog,4ASMPLog,JTNGBASSNEW,JTNGCSP,JTNGXHZW,4AVGOPLog,JTNGNRJF,JTNGECOP,JTNGUSIM,4AUSIMLog,4AECOPLog,JTTYMHLog,4ASIMSLog,JTNGJLWZ,4AAuditLog,JTNGSYJZJF,JTNGSYJZJF_RZS,JTNGSYJZJF_RZF,JTNGSYJZJF_QDF,JTNGCSVC,JTNGPCC,JTNGSYJZJF_EJDS,4ASmcLog,JTNGWZW,JTNGXQGL,JTNGNKYY,JTNGBDC,JTNGDQAP1,JTNGZBPT,JTNGYZWH,JTNGJTTS,JTNGHGPT,JTNGDQAP4,JTNGKHTY,JINGCGT,JTNGAIPT,JTNGSZBOMC,JTNGFXZC,JTNGSYHUZHJQS,4AAppLog,4AFortLog21,4AFortLog31,4AFortLog41,4AFortLog51,4AFortLog22,4AFortLog32,4AFortLog42,4AFortLog52,4AFortLog23,4AFortLog33,4AFortLog43,4AFortLog53", "unIdentityNameTopic":"persistent://4a/audit/unIdentityNameTopic-rensy","projectName":"zongbu"}' \
+--tenant 4a \
+--namespace audit \
+--name rensy-app-test \
+--processing-guarantees EFFECTIVELY_ONCE \
+--cpu 2 \
+--ram 2147483648 \
+--disk 68719476736 \
+--parallelism 1
+
+bin/pulsar-admin functions status \
+--tenant 4a \
+--namespace audit \
+--name rensy-app-test \
+
+bin/pulsar-admin functions stop \
+--tenant 4a \
+--namespace audit \
+--name rensy-app-test
+
+bin/pulsar-admin functions start \
+--tenant 4a \
+--namespace audit \
+--name rensy-app-test
+
+原始日志入mysql
+bin/pulsar-admin sinks update \
+--classname com.asiainfo.dap.JdbcAutoSchemaSink \
+--archive ./lrfei/pulsar-mysql-sink-2.4.0.nar \
+--inputs persistent://4a/audit/par-rensy-tcp \
+--tenant 4a \
+--namespace audit \
+--name pulsar-mysql-appori-sink-rensy \
+--sink-config-file ./connectors/pulsar-mysql-appori-sink-rensy.yaml \
+--cpu 4 \
+--ram 12884901888 \
+--disk 68719476736 \
+--parallelism 1
+
+bin/pulsar-admin sinks status \
+--tenant 4a \
+--namespace audit \
+--name pulsar-mysql-appori-sink-rensy
+
+bin/pulsar-admin sinks stop \
+--tenant 4a \
+--namespace audit \
+--name pulsar-mysql-appori-sink-rensy
+
+bin/pulsar-admin sinks start \
+--tenant 4a \
+--namespace audit \
+--name pulsar-mysql-appori-sink-rensy
+
+标准化日志入mysql
+bin/pulsar-admin sinks update \
+--classname com.asiainfo.dap.JdbcAutoSchemaSink \
+--archive ./lrfei/pulsar-mysql-sink-2.4.0.nar \
+--inputs persistent://4a/audit/apps718-rensy \
+--tenant 4a \
+--namespace audit \
+--name pulsar-mysql-appstd-sink-rensy \
+--sink-config-file ./connectors/pulsar-mysql-appstd-sink-rensy.yaml \
+--cpu 4 \
+--ram 12884901888 \
+--disk 68719476736 \
+--parallelism 1
+
+bin/pulsar-admin sinks status \
+--tenant 4a \
+--namespace audit \
+--name pulsar-mysql-appstd-sink-rensy
+
+bin/pulsar-admin sinks stop \
+--tenant 4a \
+--namespace audit \
+--name pulsar-mysql-appstd-sink-rensy
+
+bin/pulsar-admin sinks start \
+--tenant 4a \
+--namespace audit \
+--name pulsar-mysql-appstd-sink-rensy
+
+标准化日志入oracle
+bin/pulsar-admin sinks update \
+--classname com.asiainfo.dap.OracleAutoSchemaSink \
+--archive ./lrfei/pulsar-oracle-sink-2.4.0.nar \
+--inputs persistent://4a/audit/apps718-rensy \
+--tenant 4a \
+--namespace audit \
+--name pulsar-oracle-appstd-sink-rensy \
+--sink-config-file ./connectors/pulsar-oracle-appstd-sink-rensy.yaml \
+--cpu 4 \
+--ram 12884901888 \
+--disk 68719476736 \
+--parallelism 1
+
+bin/pulsar-admin sinks status \
+--tenant 4a \
+--namespace audit \
+--name pulsar-oracle-appstd-sink-rensy
+
+bin/pulsar-admin sinks stop \
+--tenant 4a \
+--namespace audit \
+--name pulsar-oracle-appstd-sink-rensy
+
+bin/pulsar-admin sinks start \
+--tenant 4a \
+--namespace audit \
+--name pulsar-oracle-appstd-sink-rensy
+
+
+标准化日志入es
+bin/pulsar-admin sinks create \ --classname com.asiainfo.dap.ElasticSearchSink \ --archive ./lrfei/pulsar-es-sink-2.4.0.nar \ --inputs persistent://4a/audit/apps718-rensy \ --tenant 4a \ --namespace audit \ --name std_app_applog_es_sink_rensy \ --sink-config-file ./lrfei/std_applog_es_sink.yaml \ --cpu 8 \ --ram 12884901888 \ --disk 68719476736 \ --parallelism 1
+
+bin/pulsar-admin sinks status \ --tenant 4a \ --namespace audit \ --name std_app_applog_es_sink_rensy
+bin/pulsar-admin sinks stop \ --tenant 4a \ --namespace audit \ --name std_app_applog_es_sink_rensy
+bin/pulsar-admin sinks start \ --tenant 4a \ --namespace audit \ --name std_app_applog_es_sink_rensy
+
+原始日志：persistent://4a/audit/flume-rensy-tcp
+解析后日志：persistent://4a/audit/par-rensy-tcp
+标准化日志：persistent://4a/audit/apps718-rensy
+
+
+
+
+
+
+
+
+
+
+bin/pulsar-admin functions status \
+--tenant 4a \
+--namespace audit \
+--name rensy-app-test 
+
+bin/pulsar-admin functions get \
+--tenant 4a \
+--namespace audit \
+--name rensy-app-test
+
+
+bin/pulsar-admin sinks update \
+--classname com.asiainfo.dap.JdbcAutoSchemaSink \
+--archive ./connectors/pulsar-mysql-sink-2.4.0.nar \
+--inputs persistent://4a/audit/par-rensy-tcp \
+--tenant 4a \
+--namespace audit \
+--name pulsar-mysql-appori-sink-rensy \
+--sink-config-file ./connectors/pulsar-mysql-appori-sink-rensy.yaml \
+--cpu 4 \
+--ram 12884901888 \
+--disk 68719476736 \
+--parallelism 1
+
+bin/pulsar-admin sinks status \
+--tenant 4a \
+--namespace audit \
+--name pulsar-mysql-appori-sink-rensy 
+
+
+
+bin/pulsar-admin sinks update \
+--classname com.asiainfo.dap.JdbcAutoSchemaSink \
+--archive ./connectors/pulsar-mysql-sink-2.4.0.nar \
+--inputs persistent://4a/audit/apps718-rensy \
+--tenant 4a \
+--namespace audit \
+--name pulsar-mysql-appstd-sink-rensy \
+--sink-config-file ./connectors/pulsar-mysql-appstd-sink-rensy.yaml \
+--cpu 4 \
+--ram 12884901888 \
+--disk 68719476736 \
+--parallelism 1
+
+bin/pulsar-admin sinks status \
+--tenant 4a \
+--namespace audit \
+--name pulsar-mysql-appstd-sink-rensy 
+
+
+
+bin/pulsar-admin sinks update \
+--classname com.asiainfo.dap.OracleAutoSchemaSink \
+--archive ./connectors/pulsar-oracle-sink-2.4.0.nar \
+--inputs persistent://4a/audit/apps718-rensy \
+--tenant 4a \
+--namespace audit \
+--name pulsar-oracle-appstd-sink-rensy \
+--sink-config-file ./connectors/pulsar-oracle-appstd-sink-rensy.yaml \
+--cpu 4 \
+--ram 12884901888 \
+--disk 68719476736 \
+--parallelism 1
+
+bin/pulsar-admin sinks status \
+--tenant 4a \
+--namespace audit \
+--name pulsar-oracle-appstd-sink-rensy 
+
+
+
+bin/pulsar-admin sinks update \
+--classname com.asiainfo.dap.OracleAutoSchemaSink \
+--archive ./connectors/pulsar-oracle-sink-2.4.0.nar \
+--inputs persistent://4a/audit/sessionCmdlogTopic-rensy \
+--tenant 4a \
+--namespace audit \
+--name pulsar-oracle-cmdstd-sink-rensy \
+--sink-config-file ./connectors/pulsar-oracle-cmdstd-sink-rensy.yaml \
+--cpu 4 \
+--ram 12884901888 \
+--disk 68719476736 \
+--parallelism 1
+
+bin/pulsar-admin sinks status \
+--tenant 4a \
+--namespace audit \
+--name pulsar-oracle-cmdstd-sink-rensy 
+
+
+
+bin/pulsar-admin sinks status \
+--tenant 4a \
+--namespace audit \
+--name zjy-oracle-appgoldstd-sink
+
+
+
+bin/pulsar-admin sink status \
+--name std_app_applog_es_sink_rensy \
+--namespace audit \
+--tenant 4a
+
+bin/pulsar-admin sinks update \ --classname com.asiainfo.dap.ElasticSearchSink \ --archive ./connectors/pulsar-es-sink-2.4.0.nar \ --inputs persistent://4a/audit/apps718-rensy \ --tenant 4a \ --namespace audit \ --name std_app_applog_es_sink_rensy \ --sink-config-file ./connectors/pulsar-es-appStd-sink-rensy.yaml \ --cpu 8 \ --ram 12884901888 \ --disk 68719476736 \ --parallelism 1
+
+
+
+
+bin/pulsar-admin sink status \
+--name std_cmdlog_es_sink_rensy \
+--namespace audit \
+--tenant 4a
+
+bin/pulsar-admin sinks update \ --classname com.asiainfo.dap.ElasticSearchSink \ --archive ./connectors/pulsar-es-sink-2.4.0.nar \ --inputs persistent://4a/audit/sessionCmdlogTopic-rensy \ --tenant 4a \ --namespace audit \ --name std_cmdlog_es_sink_rensy \ --sink-config-file ./connectors/pulsar-es-sessioncmdStd-sink-rensy.yaml \ --cpu 8 \ --ram 12884901888 \ --disk 68719476736 \ --parallelism 1
+
+
+
+
+bin/pulsar-admin sink status \
+--name std_sessionlog_es_sink_rensy \
+--namespace audit \
+--tenant 4a
+
+bin/pulsar-admin sinks update \ --classname com.asiainfo.dap.ElasticSearchSink \ --archive ./connectors/pulsar-es-sink-2.4.0.nar \ --inputs persistent://4a/audit/sessionlogTopic-rensy \ --tenant 4a \ --namespace audit \ --name std_sessionlog_es_sink_rensy \ --sink-config-file ./connectors/pulsar-es-sessionStd-sink-rensy.yaml \ --cpu 8 \ --ram 12884901888 \ --disk 68719476736 \ --parallelism 1
+
+
+
+
+  unInsertTopic: persistent://4a/audit/apporiUnInsertTopic-rensy
+  errorTopic: persistent://4a/audit/apporiInsertErrorTopic-rensy
+  
+  unInsertTopic: persistent://4a/audit/bossUnInsertTopic-rensy
+  errorTopic: persistent://4a/audit/bossInsertErrorTopic-rensy
+
+
+sessioncmdlog=persistent://4a/audit/sessionCmdlogTopic-rensy
+
+
+project = SSSIA AND issuetype = BUG AND status in (开放, bug修复中, 待验证, 验证中) AND assignee in (lizp, li.jintai, jiangbing3, chenxiang5, li.junjun, tanrq, zhangjy11, li.haoyun, wang.yadong, sunqc5, rensy, chenchen19, dong.chunfu, yangsong5, zhao.linhao)
+
+grep -Po '<IDENTITY_NAME>.*?</IDENTITY_NAME>' *.COMPLETED|awk -F'<|>' '{a[$3]++}END{for(i in a){print i" "a[i]}}'
+logFilter.log\.*(?<!COMPLETED|tar|gz)$|log_audit\.log.*(?<!COMPLETED|tar|gz)$|.+\.log(?<!COMPLETED|tar|gz)$|.+\.xml(?<!COMPLETED|tar|gz)$|.+\.dat(?<!COMPLETED|tar|gz)$
