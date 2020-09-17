@@ -835,3 +835,23 @@ for i in `svn log -r 178174 --verbose|grep 'products'|awk -F'/products/ailkiap30
 
 find . -type f -size +1G
 
+curl -X POST 'http://10.21.171.51:15100/asia-a4/oauth/token?grant_type=client_credentials&client_id=a4-audit-workflow&client_secret=afa22a71ffcf0cf06KrqatRutgkkgTkmY8BXtQ==&scope=audit_workflow'
+Authorization
+http://10.1.198.53:20003/workflow/test/test
+http://10.1.198.53:20003/workflow/wfstrategy/autowf
+{
+	"resourceId": "test",
+	"startTime": "2020-09-08 17:27:17",
+	"endTime": "2020-09-08 17:27:17",
+	"resourceName": "lidptest2",
+	"tableName": "system_mould_result",
+    "toEmps":"lc_admin,wuzhigang7737"
+}
+
+
+
+
+
+sed '/TokenSoap/s/http.*services/http:\/\/10.1.198.66:18282\/uac\/services/g' iap-business.properties  uap-business.properties
+
+sed '/TokenSoap/s/http.*services/http:\/\/10.1.236.141:7081\/uac\/services/g' iap-business.properties  uap-business.properties
